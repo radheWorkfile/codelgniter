@@ -1,0 +1,72 @@
+
+
+<!-- base section start from here.  -->
+
+ <li class="nav-item">
+ <a href="<?php echo site_url('message') ?>" class="nav-link ">
+ <i class="fa fa-comment"></i>
+     <span class="title">Message</span>
+ </a>
+</li>
+
+
+// <!-- search js for member in message section start from here. -->
+<script>
+    document.getElementById('searchBox').addEventListener('input', function() {
+        var filter = this.value.toLowerCase();
+        var members = document.querySelectorAll('#memberListContainer .member-item');
+
+        members.forEach(function(member) {
+            var label = member.querySelector('label');
+            var name = label.textContent || label.innerText;
+            var checkbox = member.querySelector('.form-check-input');
+            var memberId = checkbox.getAttribute('data-member-id');
+            
+            if (name.toLowerCase().indexOf(filter) > -1) {
+                member.style.display = '';
+            } else {
+                member.style.display = 'none';
+            }
+
+            var checkedMembers = JSON.parse(localStorage.getItem('checkedMembers')) || [];
+
+            if (checkedMembers.includes(memberId)) {
+                checkbox.checked = true;
+            } else {
+                checkbox.checked = false;
+            }
+        });
+    });
+
+    document.querySelectorAll('.form-check-input').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            var checkedMembers = JSON.parse(localStorage.getItem('checkedMembers')) || [];
+            var memberId = this.getAttribute('data-member-id');
+            
+            if (this.checked) {
+                if (!checkedMembers.includes(memberId)) {
+                    checkedMembers.push(memberId);
+                }
+            } else {
+                var index = checkedMembers.indexOf(memberId);
+                if (index !== -1) {
+                    checkedMembers.splice(index, 1);
+                }
+            }
+            localStorage.setItem('checkedMembers', JSON.stringify(checkedMembers));
+        });
+    });
+
+    window.addEventListener('load', function() {
+        var checkedMembers = JSON.parse(localStorage.getItem('checkedMembers')) || [];
+        document.querySelectorAll('.form-check-input').forEach(function(checkbox) {
+            var memberId = checkbox.getAttribute('data-member-id');
+            if (checkedMembers.includes(memberId)) {
+                checkbox.checked = true;
+            }
+        });
+    });
+</script>
+// <!-- search js for member in message section end here. -->
+
+<!-- base section start from here.  -->

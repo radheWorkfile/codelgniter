@@ -1,0 +1,2 @@
+ $data['member_message'] = $this->db->select('*')->from('message')->where(array('mem_id'=>$this->session->user_id))->get()->result_array();
+        $data['countMember'] = $this->db->select('id,status')->from('message')->where(array('mem_id'=>$this->session->user_id, 'status' => 1 ))->get()->result_array();

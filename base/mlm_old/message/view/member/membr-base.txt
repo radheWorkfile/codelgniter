@@ -1,0 +1,60 @@
+<style>
+#cus-message{font-size:12px;padding:0.8rem 0rem 0rem 1rem;}
+.dropdown-link {
+    padding: 1.5rem 0.5rem;
+}
+#badge {
+    padding: 0.6rem 1rem;
+    background-color: #f44a92;
+    color: white;
+    border-radius: 50%;
+}
+.menu {
+    min-width: 450px !important;
+    padding: 0;
+    margin: 0;
+}
+.menu-item {
+    padding: 1rem 1rem;
+    height: auto;
+    border-bottom: 1px solid #d2d2d2;
+}
+</style>
+
+
+
+ <!--notification section start from here for member. -->
+                 <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li class="dropdown dropdown-usermenu">
+                <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" aria-expanded="true">
+                <span> <i class="fa fa-comments" aria-hidden="true"></i> All Message
+                <span id="badge"><?php echo count($countMember);?></span>
+                </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-usermenu pull-right menu">
+                <?php foreach($member_message as $mem): ?>
+                 <?php if($mem['status'] == 1):?>
+                 <li class="menu-item" data-id="<?php echo base_url('member/onOffSec'); ?>" onclick="showAlert('<?php echo $mem['id']; ?>', this.getAttribute('data-id'))"><b><?php echo $mem['message']; ?></b></li>
+                 <?php else:?>
+                 <li class="menu-item"><?php echo $mem['message']?$mem['message']:'';?></li>
+                 <?php endif;?>
+                <?php endforeach; ?>
+                </ul>
+                </li>
+                <!--notification section End here for member. -->
+
+
+
+<script>
+    function showAlert(id, url) {
+        $.ajax({
+            type: "POST",
+            url: url, 
+            data: {'id': id},
+            success: function(data) {
+                console.log(data);
+                $('#viewDetails').html(data); 
+            },
+        });
+    }
+</script>
