@@ -19,16 +19,25 @@
     height: auto;
     border-bottom: 1px solid #d2d2d2;
 }
+    @media (min-width: 360px) and (max-width: 576px) {
+    #memMessage {position: absolute;right: 0.4rem;top: -0.6rem;}
+    .messText{display:none;}
+    .font-size-1{font-size:3.2rem;}
+    .menu-item {padding: 1rem 3rem;height: auto;border-bottom: 1px solid #d2d2d2;}
+    }
 </style>
 
 
 
- <!--notification section start from here for member. -->
-                 <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li class="dropdown dropdown-usermenu">
+     <!-- toggle buttons end -->
+
+                 <!--notification section start from here for member. -->
+                <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown dropdown-usermenu" id="memMessage">
                 <a href="#" class="dropdown-toggle dropdown-link" data-toggle="dropdown" aria-expanded="true">
-                <span> <i class="fa fa-comments" aria-hidden="true"></i> All Message
-                <span id="badge"><?php echo count($countMember);?></span>
+                <span> <i class="fa fa-comments font-size-1" aria-hidden="true"></i> <span class="messText">Messages</span>
+                <span id="badge" class="messText"><?php echo count($countMember);?></span>
                 </span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-usermenu pull-right menu">
