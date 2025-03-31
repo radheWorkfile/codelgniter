@@ -1,0 +1,20 @@
+        <style>
+        #ar_custom_man{
+        max-height: 150px; margin-top:3rem;padding:0.5rem;
+        }
+        
+        @media only screen and (max-width: 768px) {
+        #ar_custom_man {
+        max-height: 44px;
+        margin-top: 0rem;
+        padding: 0.5rem;
+        }
+        }
+        </style>
+        
+        <tr>
+        <td></td>
+        <td class="textgreen">
+        <?php echo ($member->qr_code) ? '<img src="' . base_url() . 'uploads/' . $member->qr_code . '" alt="QR Code" id="ar_custom_man" />' : 'NA'; ?>
+        </td>
+        </tr>

@@ -58,3 +58,18 @@
 </ul>
 </li>
 <!--notification section End here for member. -->
+
+
+<script>
+    function showAlert(id, url) {
+        $.ajax({
+            type: "POST",
+            url: url, 
+            data: {'id': id},
+            success: function(data) {
+                console.log(data);
+                $('#viewDetails').html(data); 
+            },
+        });
+    }
+</script>

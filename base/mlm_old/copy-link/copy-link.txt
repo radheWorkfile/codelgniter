@@ -1,0 +1,46 @@
+
+
+
+    <tr>
+    <th class="textwhite">UPI Address</th><td class="textgreen">:&nbsp;
+    <?php if ($receiver_details['phone']) : ?>
+    <span id="copyPhoneText" style="cursor: pointer; color: #28a745;"><i class="fa fa-clone" aria-hidden="true"></i></span>
+    <span id="copyStatus" style="visibility: hidden; color:rgb(180, 178, 178); margin-left: 10px;">Copy Link</span>
+    <input type="text" value="<?php echo $receiver_details['phone']; ?>" id="btcAddress" style="position: absolute; left: -9999px;" />
+    <?php else: ?> NA <?php endif; ?>
+    </td>
+    </tr>
+
+
+    <script>
+  document.getElementById('copyPhoneText')?.addEventListener('mouseover', function() {
+    document.getElementById('copyStatus').style.visibility = 'visible';
+  });
+
+  document.getElementById('copyPhoneText')?.addEventListener('mouseout', function() {
+    document.getElementById('copyStatus').style.visibility = 'hidden';
+  });
+
+  document.getElementById('copyPhoneText')?.addEventListener('click', function() {
+    var copyText = document.getElementById("btcAddress");
+    var copyStatus = document.getElementById("copyStatus");
+
+    if (copyText) {
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+
+      var successful = document.execCommand("copy");
+
+      if (successful) {
+        copyStatus.textContent = 'Copied!';
+      } else {
+        copyStatus.textContent = 'Not copied';
+      }
+
+      copyStatus.style.visibility = 'visible';
+      setTimeout(function() {
+        copyStatus.style.visibility = 'hidden';
+      }, 2000);
+    }
+  });
+</script>
