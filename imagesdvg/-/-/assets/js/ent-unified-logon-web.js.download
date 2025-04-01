@@ -1,0 +1,1 @@
+utag.globals.dle.enrichments['ent-unified-logon-web'] = {"Gb":true, "gbBlacklistMaskSimpleSelector":['[name="password"]', '[name="pin"]'], "gbMode":"blacklist", "GbDev":true, "gbBlacklistMaskSimpleSelectorDev":['[name="password"]', '[name="pin"]'], "gbModeDev":"blacklist"}
