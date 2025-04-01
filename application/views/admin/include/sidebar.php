@@ -24,15 +24,14 @@
 					</a>
 				</li>
 
-
                 <li class="<?php echo ($getClass == 'admin/employee') ? 'active show' : ''; ?>">
-                <a href="<?php echo base_url('employee/');?>" class="has-arrow">
+                <a href="javaScript:void(0);" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i></div>
                 <div class="menu-title">Employee</div>
                 </a>
                 <ul>
                 <li><a href="<?php echo base_url('admin/employee');?>"><i class='bx bx-radio-circle'></i>Create Employee</a></li>
-                <li><a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Manage Employee</a></li>
+                <!-- <li><a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Manage Employee</a></li> -->
                 </ul>
                 </li>
 
