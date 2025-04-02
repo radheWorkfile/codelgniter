@@ -1,353 +1,277 @@
-<?php
- //session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">  
-<head>
-	<title>Raj Aryan Nursing & Paramedical College</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="description"
-        content="Raj Aryan Nursing & Paramedical College is a new initiative of Aryaman Educational Trust in the field of health education aiming at furnishing humanity with well trained,  professionally expert nurses and midwives that can provide unparalleled maternity services.">
-	<meta name="keywords" content="Best College For Nursing, Best College For Paramedical, Best Nursing & Paramedical College In Bihar, Nursing Colleges In Bihar, Paramedical College In Bihar, Affordable Nursing College In Bihar" />
-	<!--// Meta tag Keywords -->
+        <!DOCTYPE html>
+        <?php include('default.php');?>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - <?php echo $company_1;?></title>
+        <?php include('include/css.php');?>
+        </head>
+        <body>
+        <?php include('include/header.php');?>
 
-    <?php include("include/css.php") ?>
-</head>
-<body>
-	<?php
-		include("include/header.php");
-	?>	
-		<!--slider-->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-	<ol class="carousel-indicators">
-	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-	  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner">
-			<div class="carousel-item active">
-				  <div class="card bg-light text-white slider">
-				  <img class="d-block w-100 card-img" src="images/4.jpg" alt="Third Slide slide">
-				  <div class="card-img-overlay">
-					  <div class="row text-center">
-						  <div class="col-1"></div>
-						  	<div class="col-8 text-left ">
-							  <h1 class="card-title caption-line">Best College For <br>Nursing & Paramedical</h1>
-							  <div class="row mt-3 d-none">
-								  <div class="col-1"></div>
-								  <div class="col-5 text-center">A. N. M.
-									  <p class="mt-2"><a href="a-n-m.php" class="btn btn-sm btn-danger">Eligibility</a></p>
-								  </div>
-								  <div  class="d-none">G. N. M.
-									  <p class="mt-2"><a href="g-n-m.php" class="btn btn-sm btn-danger">Eligibility</a></p>
-								  </div>
-								  <div  class="d-none">B. Sc. Nursing
-									  <p class="mt-2"><a href="bsc-nursing.php" class="btn btn-sm btn-danger">Eligibility</a></p>
-								  </div>
-								  <div class="col-6"></div>
-							  </div>
-							  <div class="row mt-2">
-								<div class="col-1"></div>
-								    <div class="col-9">
-									 <p  class="d-none">Call Us <i class="fas fa-phone fa-rotate-90 px-1 "></i><span>
-									 +91 9905417686 <span class="text-warning">/</span> +91 9308819517</span></p>
-									</div>
-								<div class="col-2"></div>
-							  </div>
-						   </div>
-						  <div class="col-3"></div>
-					    </div>
-				    </div>
-				</div>
-			</div>
-	  <div class="carousel-item">
-			<div class="card bg-light text-white slider">
-			<img class="d-block w-100 card-img" src="images/3.jpg" alt="second slide">
-			<div class="card-img-overlay">
-				<div class="row text-center">
-					<div class="col-lg-2 col-sm-1"></div>
-					<div class="col-lg-6 col-sm-10 text-left ">
-						<h3 class="card-title caption-line">Our Facilities</h3>
-						<div class="row mt-3">
-							<div class="col-md-1"></div>
-							<div class="col-md-9">
-								<ol>
-									<li>A Team of Nursing Experts</li>
-									<li>Well Equipped Lab Rooms</li>
-									<li>Modern Class Rooms</li>
-									<li>Extra Facilities For Girls</li>
-								</ol>
-							</div>
-							<div class="col-md-2"></div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-1"></div>
-				</div>
-			</div>
-			</div>
-	  </div>
-	  <div class="carousel-item">
-	  <div class="card bg-light text-white slider">
-	  <img class="d-block w-100 card-img" src="images/1.jpg" alt="First slide">
-	  <div class="card-img-overlay">
-		  <div class="row text-center">
-			  <div class="col-lg-2 col-sm-1"></div>
-			  <div class="col-lg-6 col-sm-10 text-left ">
-				  <h3 class="card-title caption-line">Placement &amp; Training Cell</h3>
-				  <div class="row mt-3">
-					  <div class="col-md-1"></div>
-					  <div class="col-md-9">
-						  <ol >
-							  <li>Campus Interview Arrangement</li>
-							  <li>Class Extension Arrangement</li>
-							  <li>Hospital Visit Arrangement</li>
-							  <li>Extra Training Facility</li>
-						  </ol>
-					  </div>
-					  <div class="col-md-2"></div>
-				  </div>
-			  </div>
-			  <div class="col-lg-4 col-sm-1"></div>
-		  </div>
-	  </div>
-	  </div>
-	</div>
-	</div>
-	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Next</span>
-	</a>
-  </div>
-<!--//slider-->
-</header>
+    <main>
+        <!-- Banner -->
+        <section class="section image-infinite-bg position-relative"
+            style="background-size: cover; background-position: center ;padding: 15em 1em 15em 1em;"
+            data-images='["image/image-1920x900-3.jpg" , "image/image-1920x900-2.jpg"]'>
+            <div class="r-container h-100">
+                <div class="image-overlay"></div>
+                <div class="d-flex flex-column justify-content-center gap-3 h-100 position-relative"
+                    style="max-width: 768px; z-index: 2;">
+                    <h2 class="text-title text-white fw-bold font-1 lh-1 text-shadow text-anim"><?php echo $heading;?></h2>
+                    <p class="text-white f-18 text-font text-shadow text-anim">Aryaman College of Higher Studies fosters academic excellence, innovation, and leadership, empowering students to achieve success and global recognition.</p>
+                    <div>
+                        <a type="button" href="about_us.php"
+                            class="btn bg-accent-color text-font rounded-0">View More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<main>
-	<section>
-	<?php
-	include("include/sideform.php"); 
-	?>
-	<div class="container mt-lg-5 mt-3">
-		<div class="row">
-			<div class="col-md-8">
-				<h3 class="text-danger mb-2">Welcome to <span class="special-font">Raj Aryan Nursing &amp; Paramedical College</span></h3>
-				<p class="text-justify text-dark">Raj Aryan Nursing & Paramedical College is a new initiative of Aryaman Educational Trust in the field of health education aiming at furnishing humanity with well trained, humanitarian, professionally expert nurses and midwives that can provide unparalleled maternity services.</p>
-				<p class="text-justify text-dark">Our college has highly appreciated teaching facility, who believes that good education is the root of a highly successful professional career.The college conducts regular exam so that students have a feedback to work harder and to get better. The teaching methods adopted, promote multi disciplinary enquiry and practical application of problems. Interactive methods of teaching are employed so that there is a high degree of interaction between of students and the teacher in the classroom.</p>
-			</div>
-			<div class="col-md-4">
-				<h3 class="text-danger mb-2 special-font">Our Mission</h3>
-				<p class="text-justify text-dark">Our mission is to develop and expand opportunities for each condidate and all to have excellent and pleasent nursing facilities and experiences. We are working in the direction of making a healthy society full of hopes for the future.We believe in our team and we will achieve our goal on time with your blessings and our hard work.</p>
-			</div>
-		</div>
-	</div>
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-md-12">
-				<table class="table table-hover">
-					<thead>
-						<tr class="text-center bg-danger text-light">
-							<th scope="col" colspan="4">COURSES AND ELIGIBILITY CRITERIA</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">Course </th>
-							<td>
-								<p class="text-red font-weight-bold">A. N. M.</p>
-								<span class="small">Females Only</span>
-							</td>
-							<td class="d-none">
-								<p class="text-red font-weight-bold">G. N. M.</p>
-								<span class="small">Males &amp; Female</span>
-							</td>
-							<td class="d-none">
-								<p class="text-red font-weight-bold">B. Sc. Nursing</p>
-								<span class="small">Males  &amp; Females</span>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">Duration </th>
-							<td>
-								<p class="text-red ">24 Months</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">36 Months</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">48 Months</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">Academic Qualification </th>
-							<td>
-								<p class="text-red ">Intermediate or equivalents</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">Intermediate or equivalents</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">Intermediate or equivalents</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">Age Limit </th>
-							<td>
-								<p class="text-red ">15 to 35 years</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">15 to 35 years</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">15 to 35 years</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">Admission Process </th>
-							<td>
-								<p class="text-red ">On the basis of written exam and interview Exam</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">On the basis of written exam and interview Exam</p>
-							</td>
-							<td class="d-none">
-								<p class="text-red ">On the basis of written exam and interview Exam</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-	<div class="container mt-5">
-			<div class="row">
-				<div class="col-md-12">
-						<table class="table table-hover">
-								<thead>
-								  <tr class="text-center bg-danger text-light">
-									<th scope="col" colspan="2">DISCIPLINARY GUIDELINE</th>
-								  </tr>
-								</thead>
-								<tbody>
-								  <tr>
-									<th scope="row">1</th>
-									<td>The students shall not do anything that may be judged as discriminating on their part against any of their college mates, members of staff and others on the basis of caste , creed, nationality, race, colour gender and religion.</td>
-								  </tr>
-								  <tr>
-									<th scope="row">2</th>
-									<td>The students shall have to exercise punctually and practically honour the routine and schedules laid down by the college and its peripheral or subsidiary wings likes hostel, mess, etc…</td>
-								  </tr>
-								  <tr>
-									<th scope="row">3</th>
-									<td>The student shall not do incriminating act nor shall they encourage others do so.</td>
-								  </tr>
-								  <tr>
-									<th scope="row">4</th>
-									<td>The students shall have to keep trying to behave more and more in conformity with the principles and manners recommended for good quality working professional nurses and midwives by incorporating in their manners the spirit of team work, honesty , commitment, cleanness and high standard of spiritual and moral values.</td>
-								  </tr>
-								</tbody>
-							  </table>
-							</div>
-						</div>
-					</div>
-				</section>
-	<!-- contact -->
-	<section class="contact" id="contact">
-		<div class="container pb-xl-3 pb-lg-1">
-			<h3 class="text-danger text-center font-weight-bold mb-4">Our Slient Features</h3>
-			<div class="row mx-sm-0 mx-2 mb-0">
-				<!-- map -->
-				<div class="col-lg-6 map" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-					<table class="table table-hover">
-						<thead>
-						  <tr class="text-center bg-danger text-light">
-							<th scope="col" colspan="2">ALL FEATURES</th>
-						  </tr>
-						</thead>
-						<tbody>
-						  <tr>
-							<th scope="row">1</th>
-							<td>Commited and sensible administrative and management system which is responsible to make future bright in the filed of nursing.</td>
-						  </tr>
-						  <tr>
-							<th scope="row">2</th>
-							<td>Highly qualified faculty membersthat are commited to quality teaching and meet national standards.</td>
-						  </tr>
-						  <tr>
-							<th scope="row">3</th>
-							<td>We have a special taraining and placement cell to arrange opportunities for freshers.</td>
-						  </tr>
-						  <tr>
-							<th scope="row">4</th>
-							<td>Schlorship facility for eligible students.</td>
-						  </tr>
-						  <tr>
-							<th scope="row">5</th>
-							<td>The college has well furnished salubrious hostel with supporting facilities like mess and recreational and area.</td>
-						  </tr>
-						  <tr>
-							<th scope="row">6</th>
-							<td>Adaquote recreational and sporting facilities like Badminton, Basketball, Carrom, Chess, etc.</td>
-						  </tr>
-						  <tr>
-							<th scope="row">7</th>
-							<td>Noise and pollution free campus and its surrounding.</td>
-						  </tr>
-						</tbody>
-					  </table>
-				</div>
-				<!-- //map -->
-				<!-- contact form -->
-				<div class="col-lg-6 main_grid_contact" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-					<div class="form-w3ls p-md-5 p-4">
-						<h4 class="mb-4 sec-title-w3 let-spa text-danger">Feel free To Write Us</h4>
-						<form action="formhandler.php" method="post">
-								<div class="form-group">
-									<input class="form-control" type="text" name="name" 
-									id="name" placeholder="Name" required="">
-								</div>
-								<div class=" form-group">
-									<input class="form-control" type="email" name="email" id="email" placeholder="Email" required="">
-								</div>
-							<div class="form-group">
-								<input class="form-control" type="text" name="mobile" id="mobile" placeholder="Phone Number" required="">
-							</div>
-							<div class="form-group">
-								<textarea name="message" id="message" rows="4" placeholder="Message" required=""></textarea>
-							</div>
-							<div class="row mb-0">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input type="text" class="form-control bg-dark text-white text-center"  id="disabledInput" type="number" value=" <?php echo $n1; ?> + <?php echo $n2; ?> =" disabled> 
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<input  type="number" name="uanswer" class="form-control" placeholder="?" required="required" data-error="Answer is required.">
-									   
-									</div>
-								</div>
-							</div>
-							<div class="input-group1 text-right">
-								<button class="btn btn-sm py-2 mt-0 w-100" type="submit" name="submit_home" id="submit_home">Submit</button>
-							</div>
-						</form>
-					</div>
-				</div>
-				<!-- //contact form -->
-			</div>
-		</div>
-	</section>
-	<!-- //contact -->
-</main>
-	<!--including footer.php-->
-	<?php
-		include("include/footer.php");
-	?>
+
+         <section class="section">
+            <div class="r-container">
+            <div class="d-flex flex-lg-row flex-column-reverse gap-3">
+                       
+            <div class="col col-lg-9">
+            <div class="d-flex flex-column gap-3 p-3">
+            <h4 class="text-cark font-1 lh-1 fw-semibold text-anim"><span class="text-info">Welcome To</span> <?php echo $company_1;?></h4>
+            <p class="text-gray text-justify" data-aos="fade-up" data-aos-duration="1000"><span class="text-info font-weight-6">Aryaman College of Higher Studies</span>, a new initiative of Aryaman Educational Trust, is dedicated to advancing health education by producing well-trained, compassionate, and professionally skilled nurses and midwives. Our mission is to empower these healthcare professionals to provide unparalleled maternity services, ensuring the well-being of mothers and infants alike. The college’s focus is on nurturing not just technical expertise but also humanitarian values, fostering a generation of caregivers who are both competent and compassionate.</p>
+            <p class="text-gray text-justify" data-aos="fade-up" data-aos-duration="2000">Our expert faculty shapes students' futures with interactive teaching, critical thinking, and a multidisciplinary curriculum. Regular exams and constructive feedback ensure graduates are prepared to excel in real-world healthcare challenges.</p>
+            <div class="border-bottom w-100"></div>
+             </div>
+            </div>
+
+            <div class="col col-lg-3">
+            <div class="left"></div>
+            <div class="position-relative ps-5 mt-4 jump"style="border-right:5px solid #400000;border-radius:1rem;">
+            <img src="image/image-600x700-1.jpg" alt="" class="img-fluid rounded-3" style="z-index: -2;">
+            </div>
+            </div>
+
+            </div>
+            </div>
+            </section>
+
+    
+      <!-- courses and eligibility criteria section start from here. -->
+            <section class="section m-top-6">
+            <div class="r-container">
+            <div class="d-flex flex-column gap-3 justify-content-center text-center">
+            <h5 class="text-white font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">COURSES AND ELIGIBILITY CRITERIA</h5>
+            <div class="row row-cols-1 row-cols-lg-2">
+            <table class="table table-hover m-3" style="text-align: left;" data-aos="fade-up" data-aos-duration="3000">
+                        
+            <tbody>
+            <tr>
+            <td>Course</td>
+            <td>A. N. M. (Females Only)</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>Duration</td>
+            <td>24 Months</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>Academic Qualification</td>
+            <td>Intermediate or equivalents</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>Age Limit</td>
+            <td>15 to 35 years</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>Admission Process</td>
+            <td>On the basis of written exam and interview</td>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+                        
+            </div>
+            </div>
+            </div>
+            </section>
+
+           <!-- courses and eligibility criteria section end here. -->
+
+
+
+
+
+        
+
+
+
+
+                      <!-- What They Say ? -->
+                      <section class="section pt-0 position-relative bg-r-dard">
+            <div class="r-container">
+                <div class="overflow-hidden rounded-4">
+                    <div class="row row-cols-1 row-cols-lg-2 mt_5">
+                        <div class="col bg-accent-color text-white ">
+                            <div class="d-flex flex-column gap-3 p-5 h-100 justify-content-center">
+                                <h3 class="font-1 lh-1 fw-bold fs-1" data-aos="zoom-left" data-aos-duration="3000">Our Mission</h3>
+                                <p class="fs-6 text-justify">
+                                Our mission is to develop and expand opportunities for each condidate and all to have excellent and pleasent nursing facilities and experiences. We are working in the direction of making a healthy society full of hopes for the future.We believe in our team and we will achieve our goal on time with your blessings and our hard work.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="col bg-light text-white">
+                            <div class="overflow-hidden h-100 d-flex align-items-center">
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-column gap-3 p-4 text-black">
+                                                <ul class="d-flex flex-row gap-2 p-0 m-0 text-warning"
+                                                    style="list-style: none;">
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                </ul>
+                                                <p>By finishing the A.N.M. course at Aryaman College of Higher Studies, students develop essential nursing capabilities, ensuring a successful career in healthcare where they can offer quality care and create a positive impact.
+                                                </p>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row gap-3">
+                                                        <img src="image/image-400x400-1.jpg" alt=""
+                                                            class="img-fluid rounded-circle border-dashed-1" width="70" height="70">
+                                                        <div class="d-flex flex-column h-100 justify-content-center">
+                                                            <span class="text-black">Ashish kumar</span>
+                                                            <span class="text-gray">Bihar Nalanda</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accent-color" style="font-size: 3rem;">
+                                                        <i class="fa-solid fa-quote-right"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-column gap-3 p-4 text-black">
+                                                <ul class="d-flex flex-row gap-2 p-0 m-0 text-warning"
+                                                    style="list-style: none;">
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                </ul>
+                                                <p>Completing the A.N.M. course at Aryaman College of Higher Studies equips students with fundamental nursing skills, preparing them to excel in healthcare professions and make a meaningful impact by providing excellent patient care.</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row gap-3">
+                                                        <img src="image/image-400x400-2.jpg" alt=""
+                                                            class="img-fluid rounded-circle border-dashed-1" width="70" height="70">
+                                                        <div class="d-flex flex-column h-100 justify-content-center">
+                                                            <span class="text-black">Arihant kumar</span>
+                                                            <span class="text-gray">Bihar Nalanda</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accent-color" style="font-size: 3rem;">
+                                                        <i class="fa-solid fa-quote-right"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-column gap-3 p-4 text-black">
+                                                <ul class="d-flex flex-row gap-2 p-0 m-0 text-warning"
+                                                    style="list-style: none;">
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                    <li><i class="fa-solid fa-star"></i></li>
+                                                </ul>
+                                                <p>Aryaman College of Higher Studies’ A.N.M. program equips students with crucial nursing expertise, preparing them for thriving healthcare careers, capable of delivering top-notch care and making a lasting, positive difference in patients’ lives.
+                                                </p>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row gap-3">
+                                                        <img src="image/image-400x400-3.jpg" alt=""
+                                                            class="img-fluid rounded-circle border-dashed-1" width="70" height="70">
+                                                        <div class="d-flex flex-column h-100 justify-content-center">
+                                                            <span class="text-black">Kundan kumar</span>
+                                                            <span class="text-gray">Bihar Sharif</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accent-color" style="font-size: 3rem;">
+                                                        <i class="fa-solid fa-quote-right"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        
+      <!-- courses and eligibility criteria section start from here. -->
+      <section class="section">
+            <div class="r-container">
+            <div class="d-flex flex-column gap-3 justify-content-center text-center">
+            <h5 class="text-white font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">DISCIPLINARY GUIDELINE</h5>
+            <div class="row row-cols-1 row-cols-lg-2">
+            <table class="table table-hover m-3" style="text-align: left;" data-aos="fade-up" data-aos-duration="3000">
+                        
+            <tbody>
+
+            <tr>
+            <td>1.&nbsp;</td>
+            <td>The students shall not do anything that may be judged as discriminating on their part against any of their college mates, members of staff and others on the basis of caste , creed, nationality, race, colour gender and religion.</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>2.&nbsp;</td>
+            <td>The students shall have to exercise punctually and practically honour the routine and schedules laid down by the college and its peripheral or subsidiary wings likes hostel, mess, etc…</td>
+            <td></td>
+            </tr>
+
+            <tr>
+            <td>3.&nbsp;</td>
+            <td>The student shall not do incriminating act nor shall they encourage others do so.</td>
+            <td></td>
+            </tr>
+
+            <tr>
+            <td>4.&nbsp;</td>
+            <td>The students shall have to keep trying to behave more and more in conformity with the principles and manners recommended for good quality working professional nurses and midwives by incorporating in their manners the spirit of team work, honesty , commitment, cleanness and high standard of spiritual and moral values.</td>
+            <td></td>
+            </tr>
+           
+            </tbody>
+            </table>
+                        
+            </div>
+            </div>
+            </div>
+            </section>
+
+           <!-- courses and eligibility criteria section end here. -->
+
+    </main>
+
+
+    <?php include('include/footer.php');?>
+    <?php include('include/js.php');?>
+
+    
 </body>
-
 </html>
