@@ -109,44 +109,43 @@
                                             placeholder="Message"></textarea>
                                     </div>
 
-                                    <div class="form-group col-md-12 mx-1">
-								<div class="outer-box">
-									<div class="inner-box1 d-flex justify-content-around  py-2"
-										style="background-color:white;">
-										<span class="text-secondary">Enter Captcha &nbsp;</span>
-										<div class="captcha-box-in d-flex align-items-center ">
-											<div class="in-colo">
-												<span id="first"></span>
-												<span id="plus">+</span>
-												<span id="second"></span>
-											</div>
-											<!-- <div class="set-pa "> <a  onclick="refresh();"><i
-															class="fa-solid fa-arrows-rotate"></i></a></div> -->
-										</div>
-
-									</div>
-								</div>
-							</div>
 
 
-                           
+                        <div class="form-group col-md-12 mx-1">
+                        <div class="outer-box">
+                        <div class="inner-box1 d-flex justify-content-around  py-2"
+                        style="background-color:white;">
+                        <span class="text-secondary">Enter Captcha &nbsp;</span>
+                        <div class="captcha-box-in d-flex align-items-center ">
+                        <div class="in-colo">
+                        <span id="first"></span>
+                        <span id="plus">+</span>
+                        <span id="second"></span>
+                        </div>
+                        <!-- <div class="set-pa "> <a  onclick="refresh();"><i
+                        class="fa-solid fa-arrows-rotate"></i></a></div> -->
+                        </div>
+                        </div>
+                        </div>
+                        </div>
 
-                            <div class="mb-3 mt-3">
-                            <input type="text" class="form-control py-2 px-4"
-									oninput="this.value = this.value.toUpperCase().replace(/[^0-9]/g, '').replace(/(\  *?)\  */g, '$1')"
-									id="num" placeholder="Enter Captcha Here" class="set-sum py-2 mt-3" onkeyup="myFunction()" />
-                                        <div class="invalid-feedback">
-                                            The field is required.
-                                        </div>
-                                    </div>
 
 
-                                    <div class="mb-3">
-                                        <button type="submit" class="btn bg-dark text-white py-3" id="submitButton"
-                                        onclick="return Handleform();">
-                                            Send Message
-                                        </button>
-                                    </div>
+                        <div class="mb-3 mt-3">
+                        <input type="text" class="form-control py-2 px-4"
+                        oninput="this.value = this.value.toUpperCase().replace(/[^0-9]/g, '').replace(/(\  *?)\  */g, '$1')"
+                        id="num" placeholder="Enter Captcha Here" class="set-sum py-2 mt-3" onkeyup="myFunction()" />
+                        <div class="invalid-feedback">
+                        The field is required.
+                        </div></div>
+
+                        <div class="mb-3">
+                        <button  class="btn bg-dark text-white py-3" id="submitButton"
+                        type="submit" onclick="return Handleform();">Send Message</button>
+                        </div>
+
+
+
                                 </form>
 
                             </div>

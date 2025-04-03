@@ -107,7 +107,7 @@
                         
             
             <div class="col col-lg-4">
-            <h5 class="text-white text-center font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">OBJECTIVE OF THIS COURSE</h5>
+            <h5 class="text-white text-center font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">COURSE ELIGIBILITY</h5>
 
               <div class="mt-4 display-flex p-2 pb-2 border-bottom-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
               <div class="">1.&nbsp;&nbsp;</div>
@@ -129,7 +129,7 @@
             <div lass="col col-lg-1"> </div>
                         
             <div class="col col-lg-7">
-            <h5 class="text-white text-center font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">OBJECTIVE OF THIS COURSE</h5>
+            <h5 class="text-white text-center font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">ADMISSION PROCESS</h5>
             
             
               <div class="mt-4 display-flex p-2 pb-2 border-bottom-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
@@ -142,35 +142,13 @@
               <div class="">Few institutes also provide direct admission based on the candidate's performance at the 10+2 level..</div>
               </div>
                         
-           
             </div>
-
-          
-
 
             </div>
             </div>
             </section>
 
-
-
-
-
-
-
-
-       
-
-
-
-
-       
-       
-
-      
     </main>
-
-   
 <?php include('include/footer.php');?>
 <?php include('include/js.php');?>
 </body>
