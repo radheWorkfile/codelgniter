@@ -1,49 +1,10 @@
-<link href="assets/css/vendor/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/vendor/brands.css">
-    <link rel="stylesheet" href="assets/css/vendor/regular.css">
-    <link rel="stylesheet" href="assets/css/vendor/solid.css">
-    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <link rel="shortcut icon" href="<?php echo $favicon;?>" type="image/x-icon">
-
-    <!-- ***************************************************************** -->
-
-    <style>
-        p{
-            color:black;
-        }
-    </style>
-
-    
-    <!-- // text-anim   text-anim2   #preloader    sticky-header    tg-swiper__slider  masonary-active  
-        popup-image    counter-number     progress-bar    popup-video    wowAnimation    aosAnimation   -->
-
-    <!-- h - roteate ( class="aos-init aos-animate" data-aos="flip-up" data-aos-duration="2000" ) -->
-    <!-- use in pragraph ->  data-aos="fade-up" data-aos-duration="3000" -->
-    <!-- use in Headming ->  text-anim   text-anim2   -->
-    <!-- Number count -> .counter-number    -->
-    <!-- .box-icon ( keep style.css for rotate icon )    -->
-    <!-- p tag of aos => data-aos="zoom-in" data-aos-duration="3000"  -->
-    <!-- p tag  of aos => data-aos="fade-up" data-aos-duration="3000"  -->
-    <!-- image -> .image-anim (for css shadow)   .jump (image jump)   .movingX ( movieing images ) -->
-
-
-    <link rel="stylesheet" href="assets/media/css/animate.min.css">
-    <link rel="stylesheet" href="assets/media/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/media/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/media/css/aos.css">
-    <link rel="stylesheet" href="assets/media/css/jquery.datetimepicker.min.css">
-
-
-    <style>
-        .mission-man{border: 1px solid #490b0b;
-  border-radius: 3rem;
-  padding: 0.1rem 1rem;}
-    </style>
-
- 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/select2/select2.css" />
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="css/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="css/animate/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />

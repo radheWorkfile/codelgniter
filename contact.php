@@ -1,118 +1,104 @@
 <!DOCTYPE html>
-<?php include('default.php');?>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - <?php echo $company_1;?></title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="<?php echo $company;?>" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us | <?php echo $company;?></title>
     <?php include('include/css.php');?>
-    <style>
-       @media(min-width:991px)
-       {
-        .cus-box{padding-right:6rem;}
-       }
-       @media(max-width:600px)
-       {
-        .cus-box{padding:0rem;}
-       }
-    </style>
-</head>
+  </head>
 
-<body>
-<?php include('include/header.php');?>
+  <body>
+   <?php include('include/header.php');?>
 
-    <main>
-        <!-- Banner -->
-        <section class="section position-relative" style="background-image: url(image/image-1920x900-7.jpg);">
-            <div class="r-container">
-                <div class="image-overlay"></div>
-                <div class="position-relative" style="z-index: 2;">
-                    <h1 class="font-1 fw-bold text-white">Contact Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li><a href="javaScript:void(0);" class="text-white">Home  &nbsp;&nbsp; |</a></li>
-                            <li class="breadcrumb-item fw-bold active" aria-current="page">&nbsp;&nbsp;Contact Us</li>
-                        </ol>
-                    </nav>
-                </div>
+
+    <section class="inner-banner bg-overlay-black-70 bg-holder" style="background-image: url('images/bg/06.jpg');">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1 class="text-white">Contact Us</h1>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="r-container">
-                <div class="row row-cols-1 row-cols-lg-2">
-                    <div class="col mb-3 cus-box">
-                        <div class="d-flex flex-column gap-3 h-100 justify-content-center">
-                            <h3 class="font-1 lh-1 fw-bold fs-1">Get In Touch</h3>
-                            <p>Contact us today for support, inquiries, or feedback. We’re ready to assist, value your input, and ensure a smooth experience.</p>
-                            <div class="d-flex flex-column">
-                            </div>
-                            <div class="d-flex flex-column gap-3">
+            <div class="d-flex justify-content-center ">
+              <ol class="breadcrumb mb-0 p-0">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item active"><span>Contact Us</span></li>
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-                            <div class="col col-lg-12 m-top-3">
-                            <div class="position-relative mt-3 bg-g-blue py-3 px-3">
-                            <p class="text-center"style="font-size:4rem;"><i class="fa-solid fa-map-location-dot text-white"></i></p>
-                            <p class="text-center text-white font-weight-6"><?php echo $address;?></p>
-                            </div>
-                            </div>
-
-                            <div class="col col-lg-12">
-                            <div class="position-relative mt-3 bg-g-blue py-3 px-3">
-                            <p class="text-center"style="font-size:4rem;"><i class="fa-solid fa-envelope text-white"></i></p>
-                            <p class="text-center text-white font-weight-6"><?php echo $email;?></p>
-                            </div>
-                            </div>
-
-                            <!-- <div class="col col-lg-12">
-                            <div class="position-relative mt-3 bg-danger py-3 px-3">
-                            <p class="text-center"style="font-size:4rem;"><i class="fa-solid fa-phone"></i></p>
-                            <p class="text-center"><?php echo $mobile_1. ' | '. $mobile_2;;?></p>
-                            </div>
-                            </div> -->
-
-                               
-                            </div>
-                            
-                        </div>
+    <section class="space-ptb">
+      <div class="container">
+        <div class="row">
+         
+          <div class="col-lg-4 mt-5">
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="d-flex mb-3 bg-primary p-5 border-radius mb-4">
+                    <div class="text-primary mr-3">
+                      <i class="fas fa-3x fa-map-signs text-white"></i>
                     </div>
-                    <div class="col mb-3">
-                        <div class="bg-accent-color rounded-4">
-                            <div class="h-100 d-flex flex-column p-5">
-                                <h6 class="font-2 text-white mb-3">Contact Us</h6>
-                                <!-- <h3 class="font-1 lh-1 fw-bold fs-1 mb-3 text-white">GFill The Form</h3> -->
-                                
-                                <form method="post" action="formhandler.php">
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control py-2 px-4" name="name" id="name"
-                                            placeholder="Name" required>
-                                        <div class="invalid-feedback">
-                                            The field is required.
-                                        </div> 
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="email" class="form-control py-2 px-4" name="email" id="email"
-                                            placeholder="Email" required>
-                                        <div class="invalid-feedback">
-                                            The field is required.
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="number" class="form-control py-2 px-4" name="number" id="number"
-                                            placeholder="Mobile Number" required maxlength="10">
-                                        <div class="invalid-feedback">
-                                            The field is required.
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <textarea class="form-control py-2 px-4" id="message" name="message" rows="2"
-                                            placeholder="Message"></textarea>
-                                    </div>
+                    <div class="recent-post-info">
+                      <span class="text-white">17504 Carlton Cuevas Rd Gulfport, MS, 39503</span>
+                    </div>
+                  </div>
+                </div>
+              
+              <div class="col-lg-12">
+                  <div class="d-flex bg-dark p-5 border-radius">
+                    <div class="text-white mr-3">
+                      <i class="fas fa-3x fa-headphones-alt"></i>
+                    </div>
+                    <div class="recent-post-info">
+                      <span class="text-white">+(704) 279-1249<br> 24 X 7 online support</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 mt-4">
+                  <div class="d-flex mb-3 p-5 border-radius mb-4"style="background-color:#5d5307;">
+                    <div class="text-primary mr-3">
+                      <i class="far fa-3x fa-envelope text-white"></i>
+                    </div>
+                    <div class="recent-post-info">
+                      <span class="text-white">letstalk@academic.com<br> Mon-Fri 8:30am-6:30pm</span>
+                    </div>
+                  </div>
+                </div>
 
 
+              </div>
+          </div>
+   
+          <div class="col-lg-1 mb-4 mb-lg-0"></div>
+          
 
-                        <div class="form-group col-md-12 mx-1">
-                        <div class="outer-box">
+          <div class="col-lg-6 mb-4 mb-lg-0"style="border:1px solid #d2d2d2;padding:4rem;">
+            <h4 class="">Get in touch</h4>
+            <p>Contact Us for expert guidance and support.</p>
+            <form action="formhandler.php">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control bg-white border" name="name" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control bg-white border" name="number" id="number" placeholder="Phone Number">
+                </div>
+                <div class="form-group col-md-12">
+                  <input type="email" class="form-control bg-white border" name="email" id="email" placeholder="Email Address">
+                </div>
+                <div class="form-group col-md-12">
+                  <textarea class="form-control bg-white border" rows="4" id="message" name="message" placeholder="Message"></textarea>
+                </div>
+
+                       <div class="form-group col-md-12 mx-1">
+                        <div class="outer-box"style="border:1px solid #f1f1f1;">
                         <div class="inner-box1 d-flex justify-content-around  py-2"
                         style="background-color:white;">
                         <span class="text-secondary">Enter Captcha &nbsp;</span>
@@ -130,51 +116,53 @@
                         </div>
 
 
-
-                        <div class="mb-3 mt-3">
+                        <div class="form-group col-md-12 mb-3">
+                        <div style="border:1px solid #f1f1f1;">
                         <input type="text" class="form-control py-2 px-4"
                         oninput="this.value = this.value.toUpperCase().replace(/[^0-9]/g, '').replace(/(\  *?)\  */g, '$1')"
                         id="num" placeholder="Enter Captcha Here" class="set-sum py-2 mt-3" onkeyup="myFunction()" />
-                        <div class="invalid-feedback">
-                        The field is required.
-                        </div></div>
+                        </div>
+                       </div>
 
-                        <div class="mb-3">
+                       <div class="mb-3">
                         <button  class="btn bg-dark text-white py-3" id="submitButton"
                         type="submit" onclick="return Handleform();">Send Message</button>
                         </div>
+              </div>
+            </form>
+          </div>
 
 
 
-                                </form>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    contact -->
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!--=================================
+    Map -->
+    <section class="map">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-sm-12">
+            <div class="map h-500">
+              <!-- iframe START -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.978736187896!2d85.34814687416036!3d25.372029124599482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f297a4bd104831%3A0x5e24d78b4919bf87!2sASHOKA%20COLLEGE%20OF%20PROFESSIONAL%20STUDIES!5e0!3m2!1sen!2sin!4v1743594734528!5m2!1sen!2sin" width="600" style="width: 100%; height: 100%;"></iframe>
+              <!-- iframe END -->
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Map -->
 
-        <section class="pb-5">
-            <div class="r-container">
-                <div class="mb-3">
-
-                    <iframe loading="lazy" class="maps overflow-hidden rounded-3"
-                        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d57438.916158994616!2d85.24839522288292!3d25.871706814612974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x39ed6b00259228c1%3A0xe4c3833771e21a!2sAryaman%20college%20of%20higher%20studies%2C%20V7CQ%2BMR5%2C%20Dumra%20-%20Jalalpur%20-%20Madarpur%20-%20Bhagwanpur%20Rd%2C%20Bhagwanpur%2C%20Bafapur%20Banthu%2C%20Bihar%20844114!3m2!1d25.871631599999997!2d85.2896239!4m0!5e0!3m2!1sen!2sin!4v1743578761193!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        title="<?php echo $company_2;?>"
-                        aria-label="<?php echo $company_1;?>"></iframe>
-                </div>
-            </div>
-        </section>
-
-    </main>
+    <?php include('include/footer.php');?>
+    <?php include('include/js.php');?>
 
 
-
-<?php include('include/footer.php');?>
-<?php include('include/js.php');?>
-
-<script>
+    <script>
 
 	var firstNu = document.getElementById("first");
 	var num1 = (firstNu.innerHTML = Math.floor(Math.random() * 100));
@@ -238,5 +226,5 @@
 </script>
 
 
-</body>
+  </body>
 </html>

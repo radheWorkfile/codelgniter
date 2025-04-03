@@ -1,77 +1,102 @@
-
-
-    <!-- Header -->
-     <?php include('./default.php');?>
-
-    <section class="bg-accent-color-1 py-3">
-        <div class="r-container">
-            <div class="row">
-            <div class="d-flex flex-lg-row flex-column justify-content-lg-between justify-content-center gap-3">
-             <ul class="d-flex m-0 flex-lg-row flex-column justify-content-center align-items-center gap-3 text-white font-2 text-center text-lg-start"
-                    style="list-style: none;">
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="<?php echo $call;?>" class="text-white"> : <?php echo $mobile_1.' / '.$mobile_1;?></a></li>
-                    <!-- <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="<?php echo $emailLink;?>" class="text-white"><?php echo $email;?></a></li> -->
-                </ul>
-                <div class="social-container justify-content-center">
-                    <a href="https://www.facebook.com/" class="social-item bg-info">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://www.twitter.com/" class="social-item bg-info">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://www.youtube.com/" class="social-item bg-info">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="sticky-top bg-white">
-        <div class="r-container">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <div class="logo-container">
-                        <img src="<?php echo $logoPatn;?>" alt="" class="img-fluid" style="height:4rem;">
-                        </div>
-                    </a>
-                    <button class="navbar-toggler accent-color border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars-staggered"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 font-2 fw-semibold gap-lg-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about_us.php">About Us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="true">
-                                    Service
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="anm_course.php">A. N. M.</a></li>
+   <!--================================= Header -->
+   
+   <?php include('default.php');?>
+   <link rel="shortcut icon" href="<?php echo $favicon;?>" />
+    <header class="header header-sticky">
+        <div class="topbar bg-dark py-3 d-none d-lg-flex">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="d-none d-lg-flex align-items-center text-center">
+                            <div class="mr-3 d-inline-block">
+                                <a class="text-white" href="mailto:gethelp@university.com"><i class="far fa-envelope mr-2"></i><span>&nbsp;</span><?php echo $email;?></a>
+                            </div>
+                            <div class="mr-auto d-inline-block">
+                                <a class="text-white" href="mailto:gethelp@university.com"><i class="fas fa-phone-alt mr-2"></i><span>&nbsp;</span><?php echo $mobile_1.' | '.$mobile_2;?></a>
+                            </div>
+                            <div class="social-icon">
+                                <ul class="social-icon">
+                                    <li>
+                                        <a href="<?php echo $facebook;?>"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo $twitter;?>"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo $linkedin;?>"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo $instagram;?>"><i class="fab fa-instagram"></i></a>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="admission.php">Admission</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="placement.php">Placement</a>
-                            </li>
-                           
-                        </ul>
-                        <a href="contact.php" type="button" class="btn button bg-accent-color" type="submit">
-                        Contact Us</a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
-    </section>
-    <!-- End  of Header -->
+        <div class="header-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="d-lg-flex align-items-center">
+                            <!-- logo -->
+                            <a class="navbar-brand logo" href="index.php">
+                                <img src="<?php echo $logoPatn;?>" alt="Logo" style="height:5rem;">
+                            </a>
+                            <nav class="navbar navbar-expand-lg">
+
+                                <!-- Navbar toggler START-->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                                <!-- Navbar toggler END-->
+
+                                <!-- Navbar START -->
+                                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                                    <ul class="navbar-nav">
+                                         <li class="nav-item">
+                                            <a class="nav-link" href="index.php"><i class="fa fa-home" style="font-size:1rem;" aria-hidden="true"></i> Home</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.php">About Us</a>
+                                        </li>
+
+                                     
+
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Course<i class="fas fa-chevron-down fa-xs"></i>
+                      </a>
+                                            <!-- Dropdown Menu -->
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="bba_course.php"><i class="fa fa-book" aria-hidden="true"></i> &nbsp;B. B. A.</a></li>
+                                                <li><a class="dropdown-item" href="bca_course.php"><i class="fa fa-book" aria-hidden="true"></i> &nbsp;B. C. A.</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="admission.php">Admission</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="placement_cell.php">Placement</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <!-- Navbar END-->
+                                <div class="col-sm-4 text-md-right mb-4 mb-sm-0">
+                                <a class="btn btn-primary" href="contact.php"><i class="fa fa-user-circle" aria-hidden="true"></i> Contact Us</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--=================================
+    Header -->

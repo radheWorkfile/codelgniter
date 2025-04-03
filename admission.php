@@ -1,79 +1,77 @@
-<!DOCTYPE html>
-<?php  include('default.php');?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admission - <?php echo $company_1;?></title>
-    <?php include('include/css.php');?>
-</head>
-
-<body>
-<?php include('include/header.php');?>
-    <main>
-        <!-- Banner -->
-        <section class="section position-relative" style="background-image: url(image/admission.jpg);">
-            <div class="r-container">
-                <div class="image-overlay"></div>
-                <div class="position-relative" style="z-index: 2;">
-                    <h1 class="font-1 fw-bold text-white">Admission</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li><a href="index.php" class="text-white"><b>Home</b> &nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
-                            <li class="breadcrumb-item fw-bold active" aria-current="page">Admission</li>
-                        </ol>
-                    </nav>
-                </div>
+      <!DOCTYPE html>
+      <?php include('default.php');?>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="keywords" content="HTML5 Template" />
+      <meta name="description" content="<?php echo $company;?>" />
+      <meta name="author" content="potenzaglobalsolutions.com" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Admission | <?php echo $company;?></title>
+      <?php include('include/css.php');?>
+      </head>
+      <body>
+      <?php include('include/header.php');?>
+    <!--=================================
+    inner-header -->
+    <section class="inner-banner bg-overlay-black-70 bg-holder" style="background-image: url('images/bg/04.jpg');">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1 class="text-white">Admission</h1>
             </div>
-        </section>
-
-
-            <section class="section">
-            <div class="r-container">
-            <div class="d-flex flex-lg-row flex-column-reverse gap-3">
-
-            <div class="col col-lg-3">
-            <div class="left"></div>
-            <div class="position-relative mt-4">
-            <img src="image/Eligibility-img.JPG" alt="" class="img-fluid rounded-3" style="z-index: -2;">
+            <div class="d-flex justify-content-center ">
+              <ol class="breadcrumb mb-0 p-0">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item active text-white"><span>Placement Cell</span></li>
+            </ol>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    inner-header -->
+
+    <!--=================================
+    about -->
+    <section class="space-ptb" style="background-image: url(images/about/admission-img.jpg);">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-8 col-lg-8">
+            <div class="section-title mb-4">
+              <h2 class="title text-maroon">Eligibility Details & Admission Procedure</h2>
+              <p class="text-justify">Ashoka College of Professional Studies invites dedicated individuals to apply for our Bachelor of Computer Applications (BCA) and Bachelor of Business Administration (BBA) programs. We seek candidates with relevant academic qualifications, a strong commitment to personal and professional growth, and the drive to excel in their chosen field.</p>
+              <p class="mb-0">Our selection process is thorough and merit-based. It includes an evaluation of academic performance, work experience (if applicable), and alignment with the core values of Ashoka College. Shortlisted candidates will undergo further assessments, which may include interviews and written tests. The final selection is based on a comprehensive review, focusing on academic excellence, potential impact, and readiness to contribute to the dynamic learning environment at Ashoka College.</p>
             </div>
-            
-            <div class="col col-lg-9">
-            <div class="d-flex flex-column gap-3 p-3">
-            <h4 class="text-cark font-1 lh-1 fw-semibold text-anim"><span class="text_dark">Eligibility & Selection Criteria</h4>
-            <p class="text-gray text-justify" data-aos="fade-up" data-aos-duration="1000">The A. N. M. program seeks dedicated individuals with relevant academic qualifications, professional experience, and the required age or residency status. Candidates should demonstrate strong problem-solving skills, leadership potential, and a commitment to growth. Required documents like transcripts, ID proof, and certificates will be needed for verification.</p>
-            <p class="text-gray text-justify" data-aos="fade-up" data-aos-duration="2000">Selection is based on a rigorous evaluation process, considering academic excellence, work experience, and alignment with A. N. M.’s core values. Candidates who meet the initial criteria will undergo further assessments, including interviews and possibly written tests. The final decision is made after a comprehensive review, focusing on merit, potential impact, and readiness to contribute to the program’s success.</p>
-            <div class="border-bottom w-100"></div>
-             </div>
-            </div>
-
-            </div>
-            </div>
-            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    about -->
 
 
 
+    <section class="space-pt">
+      <div class="container">
+        <div class="row align-items-center">
 
-
-
-            <!-- courses and eligibility criteria section start from here. -->
-            <section class="section m-top-6">
-            <div class="r-container">
-            <div class="d-flex flex-column gap-3 justify-content-center text-center">
-            <h5 class="text-white font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">COURSES AND ELIGIBILITY CRITERIA</h5>
-            <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col-xl-12 col-lg-12">
+            <div class="section-title mb-4">
+            <h5 class="text-white font-1 lh-1 fw-semibold bg-maroon py-2 text-center">ADMISSION PROCESS</h5>
             <table class="table table-hover m-3" style="text-align: left;" data-aos="fade-up" data-aos-duration="3000">
                         
             <tbody>
             <tr>
             <td>Course</td>
-            <td>A. N. M. (Females Only)</td>
+            <td>B. B. A &nbsp; & &nbsp; B. C. A.</td>
             <td></td>
             </tr>
             <tr>
             <td>Duration</td>
-            <td>24 Months</td>
+            <td>3 Years</td>
             <td></td>
             </tr>
             <tr>
@@ -93,89 +91,82 @@
             </tr>
             </tbody>
             </table>
-                        
             </div>
             </div>
-            </div>
-            </section>
 
-           <!-- courses and eligibility criteria section end here. -->
+        </div>
+      </div>
+    </section>
 
 
-                 <!-- courses and eligibility criteria section start from here. -->
-      <section class="section m-top-6">
-            <div class="r-container">
-            <div class="d-flex flex-column gap-3 justify-content-center text-center">
-            <h5 class="text-white font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim">MODE & METHOD OF SELECTION</h5>
-            <div class="row row-cols-1 row-cols-lg-2">
+
+    <section class="space-pt space-pb">
+      <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-xl-12 col-lg-12">
+            <div class="section-title mb-4">
+            <h5 class="text-white text-center font-1 lh-1 fw-semibold bg-maroon py-2 text-anim">MODE & METHOD OF SELECTION</h5>
             <table class="table table-hover m-3" style="text-align: left;" data-aos="fade-up" data-aos-duration="3000">
                         
-            <tbody>
-
-            <tr>
-            <td>1.&nbsp;</td>
-            <td>Advertisement inviting application for admission are put up in selected newspapers ahead of the start of every new batch.</td>
-            <td></td>
-            </tr>
-            <tr>
-            <td>2.&nbsp;</td>
-            <td>Candidates seeking admission are required to submit duly filled up application form along with others required documents.</td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>3.&nbsp;</td>
-            <td>Application form is made available at the school office with brochure for a charge of RS. 500 payable in cash.</td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>4.&nbsp;</td>
-            <td>Eligible candidates are called for written test.</td>
-            <td></td>
-            </tr>
-
-
-            <tr>
-            <td>5.&nbsp;</td>
-            <td>Candidates who pass the written exam are called for interview.</td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>6.&nbsp;</td>
-            <td>At the time of admission selected candidates are asked to produce original certificates for verification.</td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>7.&nbsp;</td>
-            <td>Candidates finally selected through interview are, on payment of the required admission fee, admitted to the school for the course.</td>
-            <td></td>
-            </tr>
-           
-            </tbody>
-            </table>
-                        
+                        <tbody>
+            
+                        <tr>
+                        <td>1.&nbsp;</td>
+                        <td>Advertisement inviting application for admission are put up in selected newspapers ahead of the start of every new batch.</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <td>2.&nbsp;</td>
+                        <td>Candidates seeking admission are required to submit duly filled up application form along with others required documents.</td>
+                        <td></td>
+                        </tr>
+            
+                        <tr>
+                        <td>3.&nbsp;</td>
+                        <td>Application form is made available at the school office with brochure for a charge of RS. 500 payable in cash.</td>
+                        <td></td>
+                        </tr>
+            
+                        <tr>
+                        <td>4.&nbsp;</td>
+                        <td>Eligible candidates are called for written test.</td>
+                        <td></td>
+                        </tr>
+            
+            
+                        <tr>
+                        <td>5.&nbsp;</td>
+                        <td>Candidates who pass the written exam are called for interview.</td>
+                        <td></td>
+                        </tr>
+            
+                        <tr>
+                        <td>6.&nbsp;</td>
+                        <td>At the time of admission selected candidates are asked to produce original certificates for verification.</td>
+                        <td></td>
+                        </tr>
+            
+                        <tr>
+                        <td>7.&nbsp;</td>
+                        <td>Candidates finally selected through interview are, on payment of the required admission fee, admitted to the school for the course.</td>
+                        <td></td>
+                        </tr>
+                       
+                        </tbody>
+                        </table>
             </div>
             </div>
-            </div>
-            </section>
 
-           <!-- courses and eligibility criteria section end here. -->
-       
+        </div>
+      </div>
+    </section>
 
-
-
-
-       
-       
-
-      
-    </main>
 
    
-<?php include('include/footer.php');?>
-<?php include('include/js.php');?>
-</body>
+
+
+   <?php include('include/footer.php');?>
+   <?php include('include/js.php');?>
+  </body>
 </html>
