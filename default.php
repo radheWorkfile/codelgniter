@@ -12,7 +12,7 @@
  $logoPatn = 'images/logo.png';
  $favicon = 'images/logo.png';
  $footerText = 'Ashoka College of Professional Studies empowers students with expert knowledge, practical skills, and leadership training for success in diverse careers.';
- $company = 'Ashoka College of Professional Studies';
+ $company = 'R@kr';
  $company_1 = 'ASHOKA COLLEGE OF PROFESSIONAL STUDIES';
  $heading = 'Ashoka College of Professional Studies';
  $mobile_1 = '+91 9430679729';

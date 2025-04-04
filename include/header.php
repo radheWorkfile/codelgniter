@@ -21,14 +21,14 @@
     <a href="#">MyLogo</a>
     </div>
     <ul class="nav-links">
-    <li class="mx-2"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
-    <li class="mx-2"><a href="#">About</a></li>
+    <li class="mx-2"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
+    <li class="mx-2"><a href="about.php">About</a></li>
     <li class="dropdown mx-2">
     <a href="#">Services</a>
     <ul class="dropdown-menu">
-    <li><a href="#">Web Design</a></li>
-    <li><a href="#">App Development</a></li>
-    <li><a href="#">SEO Services</a></li>
+    <li><a href="web_design.php">Web Design</a></li>
+    <li><a href="app_development.php">App Development</a></li>
+    <li><a href="digital_marketing.php">Digital Marketing</a></li>
     </ul>
     </li class="mx-2">
     <li class="mx-2"><a href="contact.php">Contact</a></li>
