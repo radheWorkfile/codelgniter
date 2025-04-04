@@ -31,7 +31,7 @@
     <li><a href="#">SEO Services</a></li>
     </ul>
     </li class="mx-2">
-    <li class="mx-2"><a href="#">Contact</a></li>
+    <li class="mx-2"><a href="contact.php">Contact</a></li>
     </ul>
     <p class="m-0"><a href="#" class="button"><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Register Now</a></p>
     <div class="burger" id="burger">
