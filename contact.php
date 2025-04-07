@@ -1,103 +1,118 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="<?php echo $company;?>" />
-    <meta name="author" content="potenzaglobalsolutions.com" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Contact Us | <?php echo $company;?></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- title -->
+    <title>Contact Us | <?php echo $heading;?></title>
+    <?php include('default.php');?>
     <?php include('include/css.php');?>
-  </head>
+</head>
+<body>
+  <?php include('include/header.php');?>
 
-  <body>
-   <?php include('include/header.php');?>
-
-
-    <section class="inner-banner bg-overlay-black-70 bg-holder" style="background-image: url('images/bg/06.jpg');">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-12">
-            <div class="text-center">
-              <h1 class="text-white">Contact Us</h1>
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb" style="background: url(assets/images/about/01.jpg)">
+            <div class="container">
+                <h2 class="breadcrumb-title">Contact Us</h2>
+                <ul class="breadcrumb-menu">
+                    <li><a href="index.php">Home</a></li>
+                    <li class="active">Contact Us</li>
+                </ul>
             </div>
-            <div class="d-flex justify-content-center ">
-              <ol class="breadcrumb mb-0 p-0">
-              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active"><span>Contact Us</span></li>
-            </ol>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+        <!-- breadcrumb end -->
 
 
-    <section class="space-ptb">
-      <div class="container">
-        <div class="row">
-         
-          <div class="col-lg-4 mt-5">
-            <div class="row">
-              <div class="col-lg-12">
-                  <div class="d-flex mb-3 bg-primary p-5 border-radius mb-4">
-                    <div class="text-primary mr-3">
-                      <i class="fas fa-3x fa-map-signs text-white"></i>
+        <!-- contact area -->
+        <div class="contact-area py-120">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="contact-info">
+                                <div class="contact-info-icon">
+                                    <i class="fal fa-map-location-dot"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Office Address</h5>
+                                    <p>Lachchu Bigha, Nalanda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact-info">
+                                <div class="contact-info-icon">
+                                    <i class="fal fa-phone-volume"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Call Us</h5>
+                                    <p><?php echo $mobile_1.' / '.$mobile_2;?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact-info">
+                                <div class="contact-info-icon">
+                                    <i class="fal fa-envelopes"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Email Us</h5>
+                                    <p><a href="<?php echo $mail;?>"><?php echo $email;?></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact-info">
+                                <div class="contact-info-icon">
+                                    <i class="fal fa-alarm-clock"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Open Time</h5>
+                                    <p>Mon - Sat (10.00AM - 04.00PM)</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="recent-post-info">
-                      <span class="text-white">17504 Carlton Cuevas Rd Gulfport, MS, 39503</span>
-                    </div>
-                  </div>
                 </div>
-              
-              <div class="col-lg-12">
-                  <div class="d-flex bg-dark p-5 border-radius">
-                    <div class="text-white mr-3">
-                      <i class="fas fa-3x fa-headphones-alt"></i>
-                    </div>
-                    <div class="recent-post-info">
-                      <span class="text-white">+(704) 279-1249<br> 24 X 7 online support</span>
-                    </div>
-                  </div>
-                </div>
+                <div class="contact-wrapper">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="contact-img">
+                                <img src="assets/images/about/3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 align-self-center">
+                            <div class="contact-form">
+                                <div class="contact-form-header">
+                                    <h2>Get In Touch</h2>
+                                    <p>Get in touch with us today for more information and inquiries about our programs and admissions! </p>
+                                </div>
+                                <form method="post" action="formhandler.php">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" max-length="10" class="form-control" id="number" name="number" placeholder="Your Mobile Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" cols="30" rows="2" id="message" class="form-control" placeholder="Write Your Message"></textarea>
+                                    </div>
 
-                <div class="col-lg-12 mt-4">
-                  <div class="d-flex mb-3 p-5 border-radius mb-4"style="background-color:#5d5307;">
-                    <div class="text-primary mr-3">
-                      <i class="far fa-3x fa-envelope text-white"></i>
-                    </div>
-                    <div class="recent-post-info">
-                      <span class="text-white">letstalk@academic.com<br> Mon-Fri 8:30am-6:30pm</span>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-          </div>
-   
-          <div class="col-lg-1 mb-4 mb-lg-0"></div>
-          
-
-          <div class="col-lg-6 mb-4 mb-lg-0"style="border:1px solid #d2d2d2;padding:4rem;">
-            <h4 class="">Get in touch</h4>
-            <p>Contact Us for expert guidance and support.</p>
-            <form action="formhandler.php">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control bg-white border" name="name" id="name" placeholder="Your Name">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control bg-white border" name="number" id="number" placeholder="Phone Number">
-                </div>
-                <div class="form-group col-md-12">
-                  <input type="email" class="form-control bg-white border" name="email" id="email" placeholder="Email Address">
-                </div>
-                <div class="form-group col-md-12">
-                  <textarea class="form-control bg-white border" rows="4" id="message" name="message" placeholder="Message"></textarea>
-                </div>
-
-                       <div class="form-group col-md-12 mx-1">
+                                    <div class="form-group col-md-12 mx-1">
                         <div class="outer-box"style="border:1px solid #f1f1f1;">
                         <div class="inner-box1 d-flex justify-content-around  py-2"
                         style="background-color:white;">
@@ -124,107 +139,93 @@
                         </div>
                        </div>
 
-                       <div class="mb-3">
-                        <button  class="btn bg-dark text-white py-3" id="submitButton"
-                        type="submit" onclick="return Handleform();">Send Message</button>
+                       
+
+
+                                    <button type="submit" onclick="return Handleform();" id="submitButton" class="theme-btn">Send
+                                        Message <i class="far fa-paper-plane"></i></button>
+                                  
+                                </form>
+                            </div>
                         </div>
-              </div>
-            </form>
-          </div>
-
-
-
-        </div>
-      </div>
-    </section>
-    <!--=================================
-    contact -->
-
-    <!--=================================
-    Map -->
-    <section class="map">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-          <div class="col-sm-12">
-            <div class="map h-500">
-              <!-- iframe START -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.978736187896!2d85.34814687416036!3d25.372029124599482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f297a4bd104831%3A0x5e24d78b4919bf87!2sASHOKA%20COLLEGE%20OF%20PROFESSIONAL%20STUDIES!5e0!3m2!1sen!2sin!4v1743594734528!5m2!1sen!2sin" width="600" style="width: 100%; height: 100%;"></iframe>
-              <!-- iframe END -->
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!--=================================
-    Map -->
+        <!-- end contact area -->
 
-    <?php include('include/footer.php');?>
-    <?php include('include/js.php');?>
+        <!-- map -->
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.006094540979!2d85.34675697416033!3d25.371112224636843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2975363495643%3A0x37ce816facd8a3f4!2sAshoka%20nursing%20%26%20paramedical%20college!5e0!3m2!1sen!2sin!4v1743760272598!5m2!1sen!2sin" width="600"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
+<?php include('include/footer.php');?>
+<?php include('include/js.php');?>
 
-    <script>
+<script>
 
-	var firstNu = document.getElementById("first");
-	var num1 = (firstNu.innerHTML = Math.floor(Math.random() * 100));
+var firstNu = document.getElementById("first");
+var num1 = (firstNu.innerHTML = Math.floor(Math.random() * 100));
 
-	var secNum = document.getElementById("second");
-	var num2 = (secNum.innerHTML = Math.floor(Math.random() * 10));
+var secNum = document.getElementById("second");
+var num2 = (secNum.innerHTML = Math.floor(Math.random() * 10));
 
-	function myFunction() {
-		var userInput = document.getElementById("num");
-		var inputValu = userInput.value;
-		return inputValu;
-	}
-	var storeRandomValue = parseInt(num1) + parseInt(num2);
+function myFunction() {
+    var userInput = document.getElementById("num");
+    var inputValu = userInput.value;
+    return inputValu;
+}
+var storeRandomValue = parseInt(num1) + parseInt(num2);
 
 </script>
 
 <script>
-    //  name  email  subject  message
-	function Handleform() {
-		var name = document.getElementById('name').value;
-		var email = document.getElementById('email').value;
-		var phone = document.getElementById('number').value;
-		var message = document.getElementById('message').value;
-		var namePattern = /^[A-Za-z\s\-]+$/;
-		var phoneRegex = /^\d{10}$/;
-		var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-		var dued = myFunction();
-		if (!name) {
-			alert("Please Enter Name");
-			return false;
-		} else if (!namePattern.test(name)) {
-			alert("Enter Correct Name");
-		} else if (!email) {
-			alert("Enter Email Id");
-			return false;
-		} else if (!emailRegex.test(email)) {
-			alert("Enter Valid Email");
-			return false;
-		} else if (!phone) {
-			alert("Please Enter Phone Number");
-			return false;
-		} else if (!phoneRegex.test(phone)) {
-			alert("Enter Correct Number");
-			return false;
-		} else if (!message) {
-			alert("Enter Message");
-			return false;
-		} else if (!dued) {
-			alert("Please Enter Captcha");
-			return false;
-		} else if (namePattern.test(dued)) {
-			alert("Enter Only Number");
-			return false;
-		}
-		else if (dued != storeRandomValue) {
-			alert("Enter Correct Captcha");
-			return false;
-		}
+//  name  email  subject  message
+function Handleform() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('number').value;
+    var message = document.getElementById('message').value;
+    var namePattern = /^[A-Za-z\s\-]+$/;
+    var phoneRegex = /^\d{10}$/;
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    var dued = myFunction();
+    if (!name) {
+        alert("Please Enter Name");
+        return false;
+    } else if (!namePattern.test(name)) {
+        alert("Enter Correct Name");
+    } else if (!email) {
+        alert("Enter Email Id");
+        return false;
+    } else if (!emailRegex.test(email)) {
+        alert("Enter Valid Email");
+        return false;
+    } else if (!phone) {
+        alert("Please Enter Phone Number");
+        return false;
+    } else if (!phoneRegex.test(phone)) {
+        alert("Enter Correct Number");
+        return false;
+    } else if (!message) {
+        alert("Enter Message");
+        return false;
+    } else if (!dued) {
+        alert("Please Enter Captcha");
+        return false;
+    } else if (namePattern.test(dued)) {
+        alert("Enter Only Number");
+        return false;
+    }
+    else if (dued != storeRandomValue) {
+        alert("Enter Correct Captcha");
+        return false;
+    }
 
-	}
+}
 </script>
 
 
-  </body>
+</body>
 </html>

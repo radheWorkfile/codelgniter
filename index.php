@@ -1,320 +1,631 @@
 <!DOCTYPE html>
-<?php include('default.php');?>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="<?php echo $company;?>" />
-    <meta name="author" content="potenzaglobalsolutions.com" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home | <?php echo $company;?></title>
-    <?php include('include/css.php');?>
-  </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <?php include('default.php'); ?>
+    <title>Home | <?php echo $heading; ?></title>
+    <?php include('include/css.php'); ?>
+</head>
 
-  <body>
+<body>
+    <?php include('include/header.php'); ?>
 
-  <?php include('include/header.php');?>
-    <!--=================================
-    Banner -->
-    <section class="banner position-ralative">
-      <div id="main-slider" class="swiper-container h-800 h-lg-700 h-md-600 h-sm-400">
-        <div class="swiper-wrapper">
-          <!-- Swiper Slider 1-->
-          <div class="swiper-slide align-items-center d-flex bg-overlay-black-40" style="background-image: url(images/bg/03.jpg); background-size: cover; background-position: center center;">
-            <div class="swipeinner container">
-              <div class="row justify-content-center text-center">
-                <div class="col-lg-10 col-md-12">
-                  <div class="slider-1">
-                    <div class="animated" data-swiper-animation="fadeInUp" data-duration="1s" data-delay="0.25s">
-                      <h1 class="animated text-white mb-4 text-shadow" data-swiper-animation="fadeInUp" data-duration="1.5s" data-delay="0.25s"><?php echo $company;?></h1>
-                      <div class="animated text-white px-lg-5" data-swiper-animation="fadeInUp" data-duration="2.5s" data-delay="0.25s">
-                        <p class="d-none d-sm-block text-shadow">Ashoka Nursing & Paramedical College offers top-tier education in nursing and paramedical sciences, fostering skilled professionals dedicated to healthcare excellence and community well-being.</p>
-                      </div>
-                      <a href="about.php" class="animated4 btn btn-white mt-4 mr-1 mr-sm-2" data-swiper-animation="fadeInUp" data-duration="3.5s" data-delay="0.25s">Read More<span></span></a>
-                      <a href="contact.php" class="animated4 btn btn-primary mt-4 ml-1 ml-sm-2" data-swiper-animation="fadeInUp" data-duration="3.5s" data-delay="0.25s">Contact Us<span></span></a>
+    <!-- hero slider -->
+    <div class="hero-section">
+        <div class="hero-slider owl-carousel owl-theme">
+            <div class="hero-single" style="background: url(assets/images/slider/slider-3.jpg); height:500px;">
+                <div class="container">
+                    <div class="row align-items-center mt-5">
+                        <div class="col-md-12 col-lg-7">
+                            <div class="hero-content">
+
+                                <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s"
+                                    style="width:150%;">
+                                    <?php echo $company; ?>
+                                </h1>
+                                <p data-animation="fadeInLeft" data-delay=".75s">
+                                    Ashoka Nursing & Paramedical College provides excellent healthcare education,
+                                    fostering skilled, compassionate professionals.
+                                </p>
+                                <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
+                                    <a href="about.php" class="theme-btn">About More<i
+                                            class="fas fa-arrow-right-long"></i></a>
+                                    <a href="contact.php" class="theme-btn theme-btn2">Learn More<i
+                                            class="fas fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Swiper Slider 2-->
-          <div class="swiper-slide align-items-center d-flex bg-overlay-black-40" style="background-image: url(images/bg/01.jpg); background-size: cover; background-position: center center;">
-            <div class="swipeinner container">
-              <div class="row justify-content-start">
-                <div class="col-xl-8 col-lg-10 col-md-12">
-                  <div class="slider-2">
-                    <div class="animated" data-swiper-animation="fadeInUp" data-duration="1s" data-delay="0.25s">
-                      <h1 class="animated text-white mb-4" data-swiper-animation="fadeInUp" data-duration="1s" data-delay="0.25s">The Education You Want. The Attention You Deserve</h1>
-                      <div class="animated text-dark" data-swiper-animation="fadeInUp" data-duration="2.5s" data-delay="0.25s">
-                       <p class="text-white d-none d-sm-block">There are basically six key areas to higher achievement. Some people will tell you there are four while others may tell you there are eight.</p>
-                      </div>
-                      <a href="#" class="animated4 btn btn-dark mt-4" data-swiper-animation="fadeInUp" data-duration="3s" data-delay="0.25s">Learn More<span></span></a>
+            <div class="hero-single" style="background: url(assets/images/slider/slider-1.jpg);height:500px;">
+                <div class="container">
+                    <div class="row align-items-center mt-5">
+                        <div class="col-md-12 col-lg-7">
+                            <div class="hero-content">
+                                <h6 class="hero-sub-title" data-animation="fadeInDown" data-delay=".25s">
+                                    Welcome To ANPC!
+                                </h6>
+                                <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
+                                    Start Your Beautiful And <span>Bright</span> Future
+                                </h1>
+                                <p data-animation="fadeInLeft" data-delay=".75s">
+                                    Ashoka Nursing & Paramedical College provides comprehensive healthcare education,
+                                    developing compassionate and proficient professionals for the industry.
+                                </p>
+                                <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
+                                    <a href="about.html" class="theme-btn">About More<i
+                                            class="fas fa-arrow-right-long"></i></a>
+                                    <a href="contact.html" class="theme-btn theme-btn2">Learn More<i
+                                            class="fas fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="hero-single" style="background: url(assets/images/slider/slider-2.jpg);height:500px;">
+                <div class="container">
+                    <div class="row align-items-center mt-5">
+                        <div class="col-md-12 col-lg-7">
+                            <div class="hero-content">
+                                <h6 class="hero-sub-title" data-animation="fadeInDown" data-delay=".25s">
+                                    Welcome To ANPC!
+                                </h6>
+                                <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
+                                    Start Your Beautiful And <span>Bright</span> Future
+                                </h1>
+                                <p data-animation="fadeInLeft" data-delay=".75s">
+                                    With a focus on excellence, Ashoka Nursing & Paramedical College equips students
+                                    with the skills to excel in healthcare professions.
+                                </p>
+                                <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
+                                    <a href="about.html" class="theme-btn">About More<i
+                                            class="fas fa-arrow-right-long"></i></a>
+                                    <a href="contact.html" class="theme-btn theme-btn2">Learn More<i
+                                            class="fas fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-     <!-- Pagination -->
-      <div class="swiper-button-prev text-white"><i class="fa fa-arrow-left"></i></div>
-      <div class="swiper-button-next text-white"><i class="fa fa-arrow-right"></i></div>
-    </section>
-    <!--=================================
-    Banner -->
+    </div>
+    <!-- hero slider end -->
 
 
-    <!--=================================
-    About -->
-    <section class="m-top-13">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 mb-4 mb-lg-0 pr-xl-6">
-            <div class="section-title mb-4">
-              <h1 class="title"><span class="text-maroon"  data-duration="1s">Tailored Learning, </span></h1>
-              <h2 class="title"><span class="text-maroon"  data-duration="1s"></span> Remarkable Achievements</h2>
-              <p class="mb-1 mb-lg-5 text-justify">Ashoka College of Professional Studies is a premier institution offering quality education across various disciplines. It emphasizes academic excellence, practical skills, and holistic development through dynamic learning, experienced faculty, and industry-relevant programs..</p>
+
+
+
+    <!-- about area -->
+    <div class="about-area py-3 py-lg-5">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <div class="col-lg-7">
+                    <div class="about-right wow fadeInRight" data-wow-delay=".25s">
+                        <div class="site-heading mb-3">
+                            <span class="site-title-tagline">Welcome to ANPC</span>
+                            <h2 class="site-title">
+                                Fueling Your Passion for <span>Success</span> <br>Through Education</h2>
+                        </div>
+                        <p class="about-text text-justify">
+                            Ashoka Nursing & Paramedical College offers a well-rounded healthcare education through a
+                            comprehensive curriculum that seamlessly combines academic learning with hands-on
+                            experience. This approach ensures that students acquire not only the essential theoretical
+                            knowledge for their careers but also develop the practical skills and confidence needed to
+                            excel in the healthcare field. The college’s focus on real-world application helps students
+                            master both the technical and interpersonal skills required in nursing and paramedical
+                            professions.
+                        </p>
+                        <p class="about-text text-justify mt-4">
+                            Ashoka Nursing & Paramedical College blends theory and practice to shape skilled healthcare
+                            professionals. The college nurtures commitment, expertise, and compassion, empowering
+                            graduates to make a meaningful impact and drive positive change in the healthcare industry.
+                        </p>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-1"></div>
+
+                <div class="col-lg-4">
+                    <div class=" wow fadeInLeft" data-wow-delay=".25s">
+                        <div class="about-img">
+                            <div class="row g-4 mt-5">
+                                <div class="col-md-6" style="width:100%;">
+                                    <img class="img-1" src="assets/images/about/02.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <p class="mb-2 mb-lg-5 text-justify">At Ashoka College, students thrive in an engaging learning environment with expert faculty and modern facilities. The college fosters growth through activities, workshops, and internships, promoting leadership, critical thinking, and lifelong learning.</p>
-            <a href="about.php" class="btn btn-primary btn-round">Read More</a>
-          </div>
-          <div class="col-lg-5 pr-lg-5">
+        </div>
+    </div>
+    <!-- about area end -->
+
+
+    <!-- counter area -->
+    <div class="counter-area pt-60 pb-60">
+        <div class="container">
             <div class="row">
-             
-              <div class="col-sm-5 mt-sm-5 mt-4">
-                <img class="img-fluid mb-sm-2 w-100 border-radius" src="images/about/02.jpg" alt="">
-              </div>
-              <div class="col-sm-7">
-                <img class="img-fluid w-100 border-radius" src="images/about/01.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--=================================
-    About -->
-
-    <!--=================================
-    Counter -->
-    <section class="space-pb padding-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="counter">
-              <div class="counter-icon">
-                <i class="flaticon-team-1"></i>
-              </div>
-              <div class="counter-content">
-                <span class="timer" data-to="1790" data-speed="10000">1790</span>
-                <label>Satisfied Students</label>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
-            <div class="counter">
-              <div class="counter-icon">
-                <i class="flaticon-diploma-1"></i>
-              </div>
-              <div class="counter-content align-self-center">
-                <span class="timer" data-to="245" data-speed="10000">245</span>
-                <label>Course Completed</label>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3 mb-4 mb-md-0">
-            <div class="counter">
-              <div class="counter-icon">
-                <i class="flaticon-support"></i>
-              </div>
-              <div class="counter-content">
-                <span class="timer" data-to="491" data-speed="10000">491</span>
-                <label>Expert Advisors</label>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="counter">
-              <div class="counter-icon">
-                <i class="flaticon-trophy-1"></i>
-              </div>
-              <div class="counter-content">
-                <span class="timer" data-to="1090" data-speed="10000">346</span>
-                <label>Award Winning</label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--=================================
-    Counter -->
-
-    <!--=================================
-    Action box -->
-    <section class="space-ptb bg-overlay-black-80 bg-holder" data-jarallax='{"speed": 0.5}' style="background-image: url(images/bg/09.jpg);">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center">
-            <span class="text-white d-block mb-4 h6 font-weight-normal">Are you ready to start your journey with us?</span>
-            <h2 class="text-white mb-4 display-7">Education for Individual and Social Responsibility</h2>
-            <a class="btn btn-primary mr-sm-3 mt-3" href="contact.php">Become A Student</a>
-            <a class="btn btn-white mt-3" href="about.php">Discover More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--=================================
-    Action box -->
-
-
-
-      <!--=================================
-    Counter -->
-    <section class="space-pb padding-5">
-      <div class="container">
-        <div class="row">
-        
-          <div class="col-sm-12 col-lg-12">
-          <h5 class="text-white font-1 lh-1 fw-semibold bg-r-dard py-2 text-anim text-center">DISCIPLINARY GUIDELINE</h5>
-            <table class="table table-hover m-3 aos-init aos-animate" style="text-align: left;" data-aos="fade-up" data-aos-duration="3000">
-                        
-                        <tbody>
-            
-                        <tr>
-                        <td>1.&nbsp;</td>
-                        <td>The students shall not do anything that may be judged as discriminating on their part against any of their college mates, members of staff and others on the basis of caste , creed, nationality, race, colour gender and religion.</td>
-                        <td></td>
-                        </tr>
-                        <tr>
-                        <td>2.&nbsp;</td>
-                        <td>The students shall have to exercise punctually and practically honour the routine and schedules laid down by the college and its peripheral or subsidiary wings likes hostel, mess, etc…</td>
-                        <td></td>
-                        </tr>
-            
-                        <tr>
-                        <td>3.&nbsp;</td>
-                        <td>The student shall not do incriminating act nor shall they encourage others do so.</td>
-                        <td></td>
-                        </tr>
-            
-                        <tr>
-                        <td>4.&nbsp;</td>
-                        <td>The students shall have to keep trying to behave more and more in conformity with the principles and manners recommended for good quality working professional nurses and midwives by incorporating in their manners the spirit of team work, honesty , commitment, cleanness and high standard of spiritual and moral values.</td>
-                        <td></td>
-                        </tr>
-                       
-                        </tbody>
-                        </table>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!--=================================
-    Counter -->
-
-
-
-   <!--=================================
-    Testimonial-->
-    <section class="space-ptb bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="owl-carousel testimonial-center" data-nav-arrow="false" data-nav-dots="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0" data-autoheight="true">
-              <!-- item-01 START -->
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="testimonial-quote text-center mb-4">
-                    <i class="fas fa-quote-left fa-2x text-white"></i>
-                  </div>
-                    <div class="text-center">
-                      <h5 class="mb-4">You won’t regret it. I can’t say enough about Ashoka College of Professional Studies. <span class="text-primary"> It’s the perfect choice for building a <br>successful future.</span></h5>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
+                        <div class="icon">
+                            <img src="assets/img/icon/course.svg" alt="">
+                        </div>
+                        <div>
+                            <span class="counter" data-count="+" data-to="16" data-speed="3000">15 +</span>
+                            <h6 class="title">+ Total Courses </h6>
+                        </div>
                     </div>
-                  <div class="testimonial-content">
-                    <p class="mb-lg-5">This is where you spark powerful change, embrace freedom in your thoughts, and feel a sense of accomplishment—walking confidently 10 years into your future.</p>
-                  </div>
-                  <div class="testimonial-author">
-                    <div class="testimonial-avatar avatar avatar-md mr-0 border-dashed-1">
-                      <img class="img-fluid " src="images/avatar/02.jpg" alt="">
-                    </div>
-                    <div class="testimonial-name">
-                      <h5 class="name">Arihant Kumar.</h5>
-                      <span>- Manager</span>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <!-- item-01 END -->
-
-              <!-- item-02 START -->
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="testimonial-quote text-center mb-4">
-                    <i class="fas fa-quote-left fa-2x text-white"></i>
-                  </div>
-                    <div class="text-center">
-                      <h5 class="mb-4">Ashoka College of Professional Studies impressed me on multiple levels.<span class="text-primary">I wish I had discovered it sooner—it’s truly the perfect <br>choice for my future.</span></h5>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
+                        <div class="icon">
+                            <img src="assets/img/icon/graduation.svg" alt="">
+                        </div>
+                        <div>
+                            <span class="counter" data-count="+" data-to="5411" data-speed="3000">1900</span>
+                            <h6 class="title">+ Our Students</h6>
+                        </div>
                     </div>
-                  <div class="testimonial-content">
-                    <p>These changes are purposeful because they are the ones you choose, guiding you to live the life you desire and fulfill your dreams.</p>
-                  </div>
-                  <div class="testimonial-author">
-                    <div class="testimonial-avatar avatar avatar-md mr-0 border-dashed-1">
-                      <img class="img-fluid " src="images/avatar/05.jpg" alt="">
-                    </div>
-                    <div class="testimonial-name">
-                      <h5 class="name">Ashish kumar.</h5>
-                      <span>- Our Teacher</span>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <!-- item-02 END -->
-
-              <!-- item-03 START -->
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="testimonial-quote text-center mb-4">
-                    <i class="fas fa-quote-left fa-2x text-white"></i>
-                  </div>
-                    <div class="text-center">
-                      <h5 class="mb-4">hanks, everyone! Keep up the great work—I didn’t even<span class="text-primary"><br>need any training.</span></h5>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
+                        <div class="icon">
+                            <img src="assets/img/icon/teacher-2.svg" alt="">
+                        </div>
+                        <div>
+                            <span class="counter" data-count="+" data-to="53" data-speed="3000">750</span>
+                            <h6 class="title">+ Skilled lecturers</h6>
+                        </div>
                     </div>
-                  <div class="testimonial-content">
-                    <p>Stepping away from comfort leads to personal freedom and fulfillment. Take the step now with Ashoka College of Professional Studies.</p>
-                  </div>
-                  <div class="testimonial-author">
-                    <div class="testimonial-avatar avatar avatar-md mr-0 border-dashed-1">
-                      <img class="img-fluid " src="images/avatar/03.jpg" alt="">
-                    </div>
-                    <div class="testimonial-name">
-                      <h5 class="name">Uma Shanker.</h5>
-                      <span>- Team Leader</span>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <!-- item-03 END -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
+                        <div class="icon">
+                            <img src="assets/img/icon/award.svg" alt="">
+                        </div>
+                        <div>
+                            <span class="counter" data-count="+" data-to="30" data-speed="3000">30</span>
+                            <h6 class="title">+ Win Awards</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!--=================================
-    Testimonial-->
+    </div>
+    <!-- counter area end -->
 
 
 
 
 
 
-  <?php include('include/footer.php');?>
-  <?php include('include/js.php');?>
+
+    <!-- team-area -->
+    <div class="team-area py-4 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="site-heading text-center">
+                        <span class="site-title-tagline"><i class="fa fa-user"></i> Our Teachers</span>
+                        <h2 class="site-title">Meet With Our <span>Teachers</span></h2>
+                        <p>Meet with our experienced teachers who guide and inspire, providing valuable insights and
+                            support throughout your educational journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-item wow fadeInUp" data-wow-delay=".25s">
+                        <div class="team-img">
+                            <img src="assets/images/team/01.jpg" alt="thumb">
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="team-content">
+                            <div class="team-bio">
+                                <h5><a href="teacher-single.html">Angela Vigil</a></h5>
+                                <span>A. N. M. Teacher</span>
+                            </div>
+                        </div>
+                        <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-item wow fadeInUp" data-wow-delay=".50s">
+                        <div class="team-img">
+                            <img src="assets/images/team/02.jpg" alt="thumb">
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="team-content">
+                            <div class="team-bio">
+                                <h5><a href="teacher-single.html">Arihant kumar</a></h5>
+                                <span>B. Sc. Teacher</span>
+                            </div>
+                        </div>
+                        <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-item wow fadeInUp" data-wow-delay=".75s">
+                        <div class="team-img">
+                            <img src="assets/images/team/03.jpg" alt="thumb">
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="team-content">
+                            <div class="team-bio">
+                                <h5><a href="teacher-single.html">Ashish kumar</a></h5>
+                                <span>M. Sc. Teacher</span>
+                            </div>
+                        </div>
+                        <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-item wow fadeInUp" data-wow-delay="1s">
+                        <div class="team-img">
+                            <img src="assets/images/team/04.jpg" alt="thumb">
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="team-content">
+                            <div class="team-bio">
+                                <h5><a href="teacher-single.html">Ophelia D</a></h5>
+                                <span>O. T. Trainer</span>
+                            </div>
+                        </div>
+                        <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- team-area end -->
 
 
-  </body>
+
+
+
+
+
+
+
+
+    <!-- enroll area-->
+    <div class="enroll-area pt-80 pb-80">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item-1">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed font-size-1" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <span><i class="far fa-question"></i></span> &nbsp; What are the eligibility
+                                        criteria for admission?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Eligibility varies by course, but generally includes a completed application, a
+                                        specific academic qualification, and meeting age requirements.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item-1 mt-4">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button font-size-1" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span><i class="far fa-question "></i></span> &nbsp;What programs does Ashoka
+                                        Nursing & Paramedical College offer?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body ">
+                                        <p class="font-size-1"> Ashoka Nursing & Paramedical College offers a wide range
+                                            of courses including ANM, GNM, B.Sc. Nursing, M.Sc. Nursing, DPT, and more.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-1 mt-4">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed font-size-1" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <span><i class="far fa-question"></i></span> &nbsp; What are the admission
+                                        requirements for nursing programs?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        The admission requirements vary by course, but generally include a completed
+                                        application form, educational transcripts, and meeting specific eligibility
+                                        criteria such as age and academic qualifications.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item-1 mt-4">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed font-size-1" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <span><i class="far fa-question"></i></span> &nbsp; Does Ashoka Nursing &
+                                        Paramedical College offer hands-on training?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Yes, the college offers practical, hands-on training in state-of-the-art
+                                        facilities to ensure students are well-prepared for real-world healthcare
+                                        environments.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item-1 mt-4">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed font-size-1" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <span><i class="far fa-question"></i></span> &nbsp; How can I apply to Ashoka
+                                        Nursing & Paramedical College?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Applications can be submitted online through the college's official website or
+                                        directly at the college’s admission office, along with the necessary documents.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="enroll-right wow fadeInUp" data-wow-delay=".25s">
+                            <div class="skill-content">
+                                <div class="site-heading mb-3">
+                                    <h2 class="site-title text-white">
+                                        Explore Your <span>Creativity And Talent</span> With Us
+                                    </h2>
+                                </div>
+                                <p class="text-white">
+                                    There are many variations of passages available but the majority have suffered
+                                    alteration in some form by injected humour randomised words which don't look even
+                                    slightly believable. If you are going to use passage you need sure there anything
+                                    embarrassing first true generator on the Internet.
+                                </p>
+                                <div class="skills-section">
+                                    <div class="progress-box">
+                                        <h5>Our Students <span class="pull-right">85%</span></h5>
+                                        <div class="progress" data-value="85">
+                                            <div class="progress-bar" role="progressbar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="contact.html" class="theme-btn mt-5">Learn More<i
+                                        class="fas fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- enroll area end -->
+
+
+
+
+
+    <!-- testimonial area -->
+    <div class="testimonial-area pt-80 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="site-heading text-center">
+                        <span class="site-title-tagline"> Testimonials</span>
+                        <h2 class="site-title text-dark">What Our Students <span>Say's</span></h2>
+                        <p class="">Our students consistently share how transformative their experience has been at our
+                            college. From hands-on training in ANM and GNM to in-depth academic knowledge in B.Sc
+                            Nursing, they appreciate our commitment to both theory and practical learning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-slider owl-carousel owl-theme">
+                <div class="testimonial-item man-testimonial-box wow fadeInUp" data-wow-delay=".25s">
+                    <div class="testimonial-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p>
+                            At Ashoka Nursing & Paramedical College, I’m gaining top-tier healthcare education to make a
+                            real impact!
+                        </p>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-author-img">
+                            <img src="assets/images/testimonial/01.jpg" alt="">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Anthony Nicoll</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
+                </div>
+                <div class="testimonial-item man-testimonial-box wow fadeInUp" data-wow-delay=".50s">
+                    <div class="testimonial-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p>
+                            The education I’m receiving at Ashoka Nursing & Paramedical College is preparing me for a
+                            significant healthcare contribution.
+                        </p>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-author-img">
+                            <img src="assets/images/testimonial/02.jpg" alt="">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Richard Lock</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
+                </div>
+                <div class="testimonial-item man-testimonial-box wow fadeInUp" data-wow-delay=".75s">
+                    <div class="testimonial-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p>
+                            I’m receiving world-class healthcare training at Ashoka Nursing & Paramedical College,
+                            preparing me to create a positive impact.
+                        </p>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-author-img">
+                            <img src="assets/images/testimonial/03.jpg" alt="">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Randal Grand</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
+                </div>
+                <div class="testimonial-item man-testimonial-box wow fadeInUp" data-wow-delay="1s">
+                    <div class="testimonial-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p>
+                            Ashoka Nursing & Paramedical College equips me with essential tools and education to make a
+                            real difference in healthcare.
+                        </p>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-author-img">
+                            <img src="assets/images/testimonial/04.jpg" alt="">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Edward Miles</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
+                </div>
+                <div class="testimonial-item man-testimonial-box">
+                    <div class="testimonial-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p>
+                            At Ashoka Nursing & Paramedical College, I’m gaining skills and knowledge to make a lasting
+                            healthcare impact.
+                        </p>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-author-img">
+                            <img src="assets/images/testimonial/05.jpg" alt="">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Ninal Gordon</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial area end -->
+
+
+
+
+    <!-- youtube part  -->
+    <!-- <div class="container-fluid py-2 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/Bao7CT02jls"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- youtube part / -->
+
+
+
+
+
+    <?php include('include/footer.php'); ?>
+    <?php include('include/script.php'); ?>
+</body>
+
 </html>
