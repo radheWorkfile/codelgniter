@@ -1,0 +1,65 @@
+  image view with scratch => 
+
+
+
+
+
+
+<style>
+        .upload-container {
+            border: 2px solid red;
+            width: 92%;
+            height:4rem;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #image-preview {
+            margin-top: -1rem;
+            max-width: 100%;
+            height: 3rem;
+            display: none; 
+        }
+        #upload-message {
+            display: block;
+        }
+    </style>
+
+
+
+    <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-10">
+                                    <div class="upload-container" onclick="document.getElementById('payment_img').click();">
+                                    <p id="upload-message">Click anywhere here to upload an image</p>
+                                    <input type="file" id="payment_img" name="payment_img" style="display: none;" accept="image/*" onchange="previewImage();">
+                                    <!-- Image preview will appear here -->
+                                    <img id="image-preview" src="" alt="Image Preview">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                 </div>
+
+
+
+
+
+                                 <script>
+                                    function previewImage() {
+                                        const file = document.getElementById('payment_img').files[0];
+                                        const reader = new FileReader();
+                                        reader.onloadend = function () {
+                                            const imagePreview = document.getElementById('image-preview');
+                                            const uploadMessage = document.getElementById('upload-message');
+                                            if (file) {
+                                                imagePreview.src = reader.result;
+                                                imagePreview.style.display = 'block'; 
+                                                uploadMessage.style.display = 'none'; 
+                                            }
+                                        };
+                                
+                                        if (file) {
+                                            reader.readAsDataURL(file);
+                                        }
+                                    }
+                                </script>                                 
