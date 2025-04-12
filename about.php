@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>About us | <?php echo $company; ?></title>
     <?php include('default.php'); ?>
+    <title>About us | <?php echo $heading; ?></title>
     <?php include('include/css.php'); ?>
 </head>
 

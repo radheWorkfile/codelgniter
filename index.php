@@ -59,9 +59,9 @@
                                     developing compassionate and proficient professionals for the industry.
                                 </p>
                                 <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                                    <a href="about.html" class="theme-btn">About More<i
+                                    <a href="about.php" class="theme-btn">About More<i
                                             class="fas fa-arrow-right-long"></i></a>
-                                    <a href="contact.html" class="theme-btn theme-btn2">Learn More<i
+                                    <a href="contact.php" class="theme-btn theme-btn2">Learn More<i
                                             class="fas fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
@@ -85,9 +85,9 @@
                                     with the skills to excel in healthcare professions.
                                 </p>
                                 <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                                    <a href="about.html" class="theme-btn">About More<i
+                                    <a href="about.php" class="theme-btn">About More<i
                                             class="fas fa-arrow-right-long"></i></a>
-                                    <a href="contact.html" class="theme-btn theme-btn2">Learn More<i
+                                    <a href="contact.php" class="theme-btn theme-btn2">Learn More<i
                                             class="fas fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
@@ -129,8 +129,6 @@
                             professionals. The college nurtures commitment, expertise, and compassion, empowering
                             graduates to make a meaningful impact and drive positive change in the healthcare industry.
                         </p>
-
-
                     </div>
                 </div>
 
@@ -240,7 +238,7 @@
                         </div>
                         <div class="team-content">
                             <div class="team-bio">
-                                <h5><a href="teacher-single.html">Angela Vigil</a></h5>
+                                <h5><a href="teacher-single.php">Angela Vigil</a></h5>
                                 <span>A. N. M. Teacher</span>
                             </div>
                         </div>
@@ -260,7 +258,7 @@
                         </div>
                         <div class="team-content">
                             <div class="team-bio">
-                                <h5><a href="teacher-single.html">Arihant kumar</a></h5>
+                                <h5><a href="teacher-single.php">Arihant kumar</a></h5>
                                 <span>B. Sc. Teacher</span>
                             </div>
                         </div>
@@ -280,7 +278,7 @@
                         </div>
                         <div class="team-content">
                             <div class="team-bio">
-                                <h5><a href="teacher-single.html">Ashish kumar</a></h5>
+                                <h5><a href="javascript:void(0)">Ashish kumar</a></h5>
                                 <span>M. Sc. Teacher</span>
                             </div>
                         </div>
@@ -300,7 +298,7 @@
                         </div>
                         <div class="team-content">
                             <div class="team-bio">
-                                <h5><a href="teacher-single.html">Ophelia D</a></h5>
+                                <h5><a href="">Ophelia D</a></h5>
                                 <span>O. T. Trainer</span>
                             </div>
                         </div>
@@ -441,7 +439,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="contact.html" class="theme-btn mt-5">Learn More<i
+                                <a href="contact.php" class="theme-btn mt-5">Learn More<i
                                         class="fas fa-arrow-right-long"></i></a>
                             </div>
                         </div>

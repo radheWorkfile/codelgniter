@@ -1,5 +1,3 @@
-<!--  p - data-aos="fade-up" data-aos-duration="3000" /  h - text-anim  -->
-<!-- Eduka - School, College, University And Courses HTML5 Template -->
 <?php
 $logo = 'assets/images/logo.png';
 $favicon = 'assets/images/logo.png';

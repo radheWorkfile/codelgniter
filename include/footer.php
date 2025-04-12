@@ -9,7 +9,7 @@
             <div class="row footer-widget-wrapper pt-100 pb-70">
                 <div class="col-md-6 col-lg-4">
                     <div class="footer-widget-box about-us">
-                        <a href="#" class="footer-logo">
+                        <a href="./index.php" class="footer-logo">
                             <img src="<?php echo $logo; ?>" alt="">
                         </a>
                         <p class="mb-3 text-justify">
@@ -22,12 +22,11 @@
                     <div class="footer-widget-box list">
                         <h4 class="footer-widget-title">Quick Links</h4>
                         <ul class="footer-list">
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Home</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Admission</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Placement</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Courses</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
+                            <li><a href="index.php"><i class="fas fa-caret-right"></i> Home</a></li>
+                            <li><a href="about.php"><i class="fas fa-caret-right"></i> About Us</a></li>
+                            <li><a href="admission.php"><i class="fas fa-caret-right"></i> Admission</a></li>
+                            <li><a href="placement.php"><i class="fas fa-caret-right"></i> Placement</a></li>
+                            <li><a href="contact.php"><i class="fas fa-caret-right"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,12 +34,13 @@
                     <div class="footer-widget-box list">
                         <h4 class="footer-widget-title">Our Courses</h4>
                         <ul class="footer-list">
-                            <li><a href="#"><i class="fas fa-caret-right"></i> A. N. M.</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> G. N. M.</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> B. Sc. Nursing</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> P. B. B. Sc. Nursing</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> M. Sc. Nursing</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Dresser</a></li>
+                            <li><a href="anm_course.php"><i class="fas fa-caret-right"></i> A. N. M.</a></li>
+                            <li><a href="gnm_course.php"><i class="fas fa-caret-right"></i> G. N. M.</a></li>
+                            <li><a href="bsc_nursing.php"><i class="fas fa-caret-right"></i> B. Sc. Nursing</a></li>
+                            <li><a href="pbbsc_nursing.php"><i class="fas fa-caret-right"></i> P. B. B. Sc. Nursing</a>
+                            </li>
+                            <li><a href="msc_nursing.php"><i class="fas fa-caret-right"></i> M. Sc. Nursing</a></li>
+                            <li><a href="dresser.php"><i class="fas fa-caret-right"></i> Dresser</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,7 +51,8 @@
                             <ul class="footer-contact">
                                 <li><i class="far fa-map-marker-alt"></i><?php echo $address; ?></li>
                                 <li><a href="tel:<?php echo $mobile_1 . ' | ' . $mobile_2; ?>"><i
-                                            class="far fa-phone"></i><?php echo $mobile_1 . ' | ' . $mobile_2; ?></a></li>
+                                            class="far fa-phone"></i><?php echo $mobile_1 . ' | ' . $mobile_2; ?></a>
+                                </li>
                                 <li><a href="<?php echo $mail; ?>"><i
                                             class="far fa-envelope"></i><?php echo $email; ?></a></li>
                             </ul>

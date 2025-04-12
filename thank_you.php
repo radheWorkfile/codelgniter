@@ -6,8 +6,8 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thank you - <?php echo $company; ?></title>
         <?php include('default.php'); ?>
+        <title>Thank you - <?php echo $company; ?></title>
         <?php include('include/css.php'); ?>
 </head>
 
