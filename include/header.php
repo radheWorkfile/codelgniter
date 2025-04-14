@@ -201,6 +201,4 @@ border-radius: 30px; transition: background 0.3s ease, transform 0.3s ease;box-s
 /* navbar button section end here. */
 
 
-
-
 </style>
