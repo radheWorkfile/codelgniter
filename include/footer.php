@@ -6,10 +6,10 @@
                 <h3 class="mb-sm-3 mb-2 pb-lg-2">Our Address</h3>
 
                 <div class="row address-grid">
-                    <div class="col-md-3 col-sm-4 col-2 address-left text-center">
+                    <div class="col-md-2 col-sm-1 col-1  address-left text-center">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="col-md-9 col-sm-8 col-10 address-right">
+                    <div class="col-md-9 col-sm-8 col-10 adjust-footer address-right">
                         <p> Mohhadinpur, Ramghat, <br> Nalanda, Bihar <br> Pin No : 801305</p>
                     </div>
                 </div>
@@ -18,19 +18,19 @@
                 <div class="address">
                     <h3 class="mb-sm-3 mb-2 pb-lg-2"> Contact Us</h3>
                     <div class="row address-grid">
-                        <div class="col-md-3 col-sm-4 col-2 address-left text-center">
+                        <div class="col-md-2 col-sm-1 col-1  address-left text-center">
                             <i class="fas fa-phone fa-rotate-90 px-2 "></i>
                         </div>
-                        <div class="col-md-9 col-sm-8 col-10 address-right">
+                        <div class="col-md-9 col-sm-8 adjust-footer col-10 address-right">
                             <p>+91 9905417686</p>
                             <p>+91 9308819517</p>
                         </div>
                     </div>
                     <div class="row address-grid my-3">
-                        <div class="col-md-3 col-sm-4 col-2 address-left text-center">
+                        <div class="col-md-2 col-sm-1 col-1  address-left text-center">
                             <i class="fa fa-envelope"></i>
                         </div>
-                        <div class="col-md-9 col-sm-8 col-10 address-right">
+                        <div class="col-md-9 col-sm-8 adjust-footer col-10 address-right">
                             <p>
                                 <a href="mailto:ranpc06@gmail.com">ranpc06@gmail.com</a>
                             </p>
@@ -111,15 +111,16 @@
         <div class="row">
             <!-- copyright -->
             <p class="col-lg-12 copy-right-grids text-bl text-lg-left text-center mt-lg-2 ">
-                <div class="col-10">
-                    <span class="float-left small">© 2019 Raj Aryan Nursing &amp; Paramedical College | All
-                        Rights Reserved |</span>
-                </div>
-                <div class="col-2">
-                    <span class="float-right small">Designed by
-                        <a href="https://www.camwel.com/" target="_blank" class="text-colors"><img src="./images/camwel_logo.png" style="width:50%"></a></span>
-                </div>
-                 
+            <div class="col-10">
+                <span class="float-left small">© 2019 Raj Aryan Nursing &amp; Paramedical College | All
+                    Rights Reserved |</span>
+            </div>
+            <div class="col-2">
+                <span class="float-right small">Designed by
+                    <a href="https://www.camwel.com/" target="_blank" class="text-colors"><img
+                            src="./images/camwel_logo.png" style="width:50%"></a></span>
+            </div>
+
             </p>
             <!-- //copyright -->
 
@@ -132,5 +133,12 @@
 <!-- //move top icon -->
 
 <script src="js/jquery.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<script>
+    new WOW().init();
+</script>

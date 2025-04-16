@@ -1,0 +1,40 @@
+
+<!--  p - data-aos="fade-up" data-aos-duration="3000" /  h - text-anim  -->
+<!-- // text-anim   text-anim2   #preloader    sticky-header    tg-swiper__slider  masonary-active  
+        popup-image    counter-number     progress-bar    popup-video    wowAnimation    aosAnimation   -->
+<!-- h - roteate ( class="aos-init aos-animate" data-aos="flip-up" data-aos-duration="2000" ) -->
+<!-- use in pragraph ->  data-aos="fade-up" data-aos-duration="3000" -->
+<!-- use in Headming ->  text-anim   text-anim2   -->
+<!-- Number count -> .counter-number    -->
+<!-- .box-icon ( keep style.css for rotate icon )    -->
+<!-- p tag of aos => data-aos="zoom-in" data-aos-duration="3000"  -->
+<!-- p tag  of aos => data-aos="fade-up" data-aos-duration="3000"  -->
+<!-- image -> .image-anim (for css shadow)   .jump (image jump)   .movingX ( movieing images ) -->
+
+<!-- ***************************************************************** -->
+
+  <link rel="stylesheet" href="assets/media/css/animate.min.css">
+    <link rel="stylesheet" href="assets/media/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/media/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/media/css/aos.css">
+    <link rel="stylesheet" href="assets/media/css/jquery.datetimepicker.min.css">
+
+<!-- ***************************************************************** -->
+
+<script src="assets/media/js/vendor/jquery-3.7.1.min.js"></script>
+<script src="assets/media/js/bootstrap.bundle.min.js"></script>
+<script src="assets/media/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/media/js/swiper-bundle.min.js"></script>
+<script src="assets/media/js/ajax-form.js"></script>
+<script src="assets/media/js/wow.min.js"></script>
+<script src="assets/media/js/aos.js"></script>
+<script src="assets/media/js/jquery.datetimepicker.min.js"></script>
+<script src="assets/media/js/gsap.min.js"></script>
+<script src="assets/media/js/ScrollTrigger.min.js"></script>
+<script src="assets/media/js/SplitText.min.js"></script>
+<script src="assets/media/js/jquery.counterup.min.js"></script>
+<script src="assets/media/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/media/js/isotope.pkgd.min.js"></script>
+<script src="assets/media/js/main.js"></script>
+
+<!-- ***************************************************************** -->
