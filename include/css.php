@@ -15,4 +15,18 @@
         background-color: #f4f4f4;
         box-shadow: 5px 5px 5px #d2d2d2;
     }
-</style>
+
+
+    .cus-width {
+    background: url(assets/images/bg/anm_banner.jpg) no-repeat center center;
+    }
+
+    @media (max-width: 600px) {
+    .cus-width {
+        width: 100%;
+        height: 180px;
+    }
+    .cus-font{font-size:1.5rem!important;}
+    }
+    
+    </style>

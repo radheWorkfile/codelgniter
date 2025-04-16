@@ -16,9 +16,9 @@
     <?php include('include/header.php');?>
 
          <!-- breadcrumb -->
-         <div class="site-breadcrumb" style="background: url(assets/images/bg/anm_banner.jpg)">
+         <div class="site-breadcrumb cus-width" style="background: url(assets/images/bg/anm_banner.jpg)">
             <div class="container">
-                <h2 class="breadcrumb-title">G. N. M. [ General Nursing and Midwifery ]</h2>
+                <h2 class="breadcrumb-title wow fadeInLeft cus-font" data-wow-delay=".50s">G. N. M. [ General Nursing and Midwifery ]</h2>
                 <ul class="breadcrumb-menu">
                     <li><a href="index.php">Home</a></li>
                     <li class="active">G. N. M.</li>
@@ -90,28 +90,28 @@
 
             <div class="col-xl-7 col-lg-7">
             <div class="section-title mb-4">
-            <h2 class="site-title text-info"style="font-size: 35px;">OBJECTIVE OF THIS COURSE</h2>
-            <div class="mt-2 display-flex p-2 pb-2 py-2 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <h2 class="site-title text-info wow fadeInRight" data-wow-delay=".50s" style="font-size: 35px;">OBJECTIVE OF THIS COURSE</h2>
+            <div class="mt-2 display-flex p-2 pb-2 py-2 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">1.&nbsp;&nbsp;</div>
             <div class="">Flexibility, adaptability, empathy, organizational skills, and time management.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">2.&nbsp;&nbsp;</div>
             <div class="">Leadership skills, determination, tenacity, and ability to conduct researcht.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">3.&nbsp;&nbsp;</div>
             <div class="">Physical fitness.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">4.&nbsp;&nbsp;</div>
             <div class="">Good communication and observation skills which are crucial to good nursing.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">5.&nbsp;&nbsp;</div>
             <div class="">Ongoing vigilance to patient condition changes and their care implications.</div>
             </div>

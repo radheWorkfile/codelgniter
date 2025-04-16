@@ -15,9 +15,9 @@
     <?php include('include/header.php');?>
 
          <!-- breadcrumb -->
-         <div class="site-breadcrumb" style="background: url(assets/images/bg/anm_banner.jpg)">
+         <div class="site-breadcrumb cus-width" style="background: url(assets/images/bg/anm_banner.jpg)">
             <div class="container">
-                <h2 class="breadcrumb-title"> P. B. B. Sc. Nursing </h2>
+                <h2 class="breadcrumb-title wow fadeInLeft" data-wow-delay=".50s"> P. B. B. Sc. Nursing </h2>
                 <ul class="breadcrumb-menu">
                     <li><a href="index.php">Home</a></li>
                     <li class="active">P. B. B. Sc. Nursing</li>
@@ -33,12 +33,12 @@
             <div class="col-lg-7">
             <div class="about-right wow fadeInRight" data-wow-delay=".25s">
             <div class="site-heading mb-3">
-            <h2 class="site-title"style="font-size: 35px;">Post Basic Bachelor of <span>Science in Nursing</span> </h2>
+            <h2 class="site-title wow fadeInLeft" data-wow-delay=".50s" style="font-size: 35px;">Post Basic Bachelor of <span>Science in Nursing</span> </h2>
             </div>
-            <p class="about-text text-justify">
+            <p class="about-text text-justify wow fadeInLeft" data-wow-delay="1s">
             Post Basic B.Sc. Nursing (P. B. B. Sc. Nursing) at <b>Ashoka Nursing & Paramedical College</b> is an advanced program designed for registered nurses who have completed their General Nursing and Midwifery (G.N.M.) diploma. This program enhances their knowledge and skills, preparing them for specialized roles in diverse healthcare settings. The curriculum covers advanced nursing practices, healthcare management, nursing research, and clinical skills, equipping graduates for leadership positions in hospitals and community health environments.
             </p>
-            <p class="about-text text-justify mt-4">
+            <p class="about-text text-justify mt-4 wow fadeInLeft" data-wow-delay="1s">
             The P. B. B. Sc. Nursing program focuses on both theoretical knowledge and practical application, refining clinical decision-making, patient care strategies, and communication skills. Graduates are well-prepared to assume roles such as charge nurses, nursing educators, and healthcare managers, delivering high-quality, patient-centered care while contributing effectively to the advancement of healthcare services.
             </p>
             </div>
@@ -88,28 +88,28 @@
 
             <div class="col-xl-7 col-lg-7">
             <div class="section-title mb-4">
-            <h2 class="site-title text-info"style="font-size: 35px;">OBJECTIVE OF THIS COURSE</h2>
-            <div class="mt-2 display-flex p-2 pb-2 py-2 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <h2 class="site-title text-info wow fadeInUp" data-wow-delay=".50s" style="font-size: 35px;">OBJECTIVE OF THIS COURSE</h2>
+            <div class="mt-2 display-flex p-2 pb-2 py-2 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">1.&nbsp;&nbsp;</div>
             <div class="">Flexibility, adaptability, empathy, organizational skills, and time management.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">2.&nbsp;&nbsp;</div>
             <div class="">Leadership skills, determination, tenacity, and ability to conduct researcht.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">3.&nbsp;&nbsp;</div>
             <div class="">Physical fitness.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">4.&nbsp;&nbsp;</div>
             <div class="">Good communication and observation skills which are crucial to good nursing.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".50s">
             <div class="">5.&nbsp;&nbsp;</div>
             <div class="">Ongoing vigilance to patient condition changes and their care implications.</div>
             </div>

@@ -8,17 +8,17 @@
                 <div class="header-top-left">
                     <div class="header-top-social">
                         <span>Follow Us: </span>
-                        <a href="<?php echo $facebook; ?>"><i class="fab fa-facebook-f"></i></a>
-                        <a href="<?php echo $instagram; ?>"><i class="fab fa-instagram"></i></a>
-                        <a href="<?php echo $youtube; ?>"><i class="fab fa-youtube"></i></a>
-                        <a href="<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i></a>
+                        <a target="_blank" href="<?php echo $facebook; ?>"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" href="<?php echo $instagram; ?>"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="<?php echo $youtube; ?>"><i class="fab fa-youtube"></i></a>
+                        <a target="_blank" href="<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="header-top-right">
                     <div class="header-top-contact">
                         <ul>
                             <li>
-                                <a href="<?php echo $call; ?>"><i class="far fa-phone-volume"></i>
+                                <a href="<?php echo $tel; ?>"><i class="far fa-phone-volume"></i>
                                     <?php echo $mobile_1 . ' | ' . $mobile_2; ?></a>
                             </li>
                         </ul>

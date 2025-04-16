@@ -14,7 +14,6 @@ $copyright = "© copyright 2025, ANPC. All rights reserved ";
 $mail = 'mailto:anpc85@gmail.com';
 $tel = 'tel:9430679729';
 
-
 $whatsapp = 'https://wa.me/9430679729';
 $facebook = 'https://www.facebook.com';
 $twitter = 'https://x.com';

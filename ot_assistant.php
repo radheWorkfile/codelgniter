@@ -14,9 +14,9 @@
     <?php include('include/header.php');?>
 
          <!-- breadcrumb -->
-         <div class="site-breadcrumb" style="background: url(assets/images/bg/anm_banner.jpg)">
+         <div class="site-breadcrumb cus-width" style="background: url(assets/images/bg/anm_banner.jpg)">
             <div class="container">
-                <h2 class="breadcrumb-title"> O. T. Assistant </h2>
+                <h2 class="breadcrumb-title wow fadeInLeft" data-wow-delay="0.5s"> O. T. Assistant </h2>
                 <ul class="breadcrumb-menu">
                     <li><a href="index.php">Home</a></li>
                     <li class="active">O. T. Assistant</li>
@@ -30,14 +30,14 @@
         <div class="container">
             <div class="row g-4 align-items-center">
             <div class="col-lg-7">
-            <div class="about-right wow fadeInRight" data-wow-delay=".25s">
+            <div class="about-right wow fadeInLeft" data-wow-delay="1s">
             <div class="site-heading mb-3">
-            <h2 class="site-title"style="font-size: 35px;"> O. T. Assistant <span>[ Operation Theatre Assistant ]</span> </h2>
+            <h2 class="site-title wow fadeInLeft" data-wow-delay="1s" style="font-size: 35px;"> O. T. Assistant <span>[ Operation Theatre Assistant ]</span> </h2>
             </div>
-            <p class="about-text text-justify">
+            <p class="about-text text-justify ow fadeInLeft" data-wow-delay="1s">
             At <b>Ashoka Nursing & Paramedical College</b>, we provide specialized training for students to excel as Operation Theatre (O.T.) Assistants. They play a crucial role in surgical settings by preparing the environment, sterilizing instruments, setting up equipment, and supporting the surgical team with tools, patient positioning, and vital signs monitoring.
             </p>
-            <p class="about-text text-justify mt-4">
+            <p class="about-text text-justify mt-4 ow fadeInRight" data-wow-delay="1s">
             Our training program equips students with essential technical skills, knowledge of medical terminology, aseptic techniques, and infection control practices. Graduates are prepared to work effectively under pressure, ensuring safe and efficient surgical procedures and high-quality patient care.
             </p>
             </div>
@@ -49,7 +49,7 @@
                 <div class="wow fadeInLeft" data-wow-delay=".25s">
                 <div class="about-img">
                     <div class="row g-4">
-                    <div class="col-md-6" style="width: 100%">
+                    <div class="col-md-6 wow fadeInRight" data-wow-delay="1s" style="width: 100%">
                         <img class="img-1" src="assets/images/course-img/09.jpg" alt="" />
                     </div>
                     </div>
@@ -88,27 +88,27 @@
             <div class="col-xl-7 col-lg-7">
             <div class="section-title mb-4">
             <h2 class="site-title text-info"style="font-size: 35px;">OBJECTIVE OF THIS COURSE</h2>
-            <div class="mt-2 display-flex p-2 pb-2 py-2 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-2 border-y-1 on-hover wow fadeInUp" data-wow-delay=".25s">
             <div class="">1.&nbsp;&nbsp;</div>
             <div class="">Flexibility, adaptability, empathy, organizational skills, and time management.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".25s">
             <div class="">2.&nbsp;&nbsp;</div>
             <div class="">Leadership skills, determination, tenacity, and ability to conduct researcht.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".25s">
             <div class="">3.&nbsp;&nbsp;</div>
             <div class="">Physical fitness.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".25s">
             <div class="">4.&nbsp;&nbsp;</div>
             <div class="">Good communication and observation skills which are crucial to good nursing.</div>
             </div>
 
-            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover" data-aos="fade-up" data-aos-duration="3000">
+            <div class="mt-2 display-flex p-2 pb-2 py-3 border-y-1 on-hover wow fadeInUp" data-wow-delay=".25s">
             <div class="">5.&nbsp;&nbsp;</div>
             <div class="">Ongoing vigilance to patient condition changes and their care implications.</div>
             </div>

@@ -346,12 +346,12 @@
                             <div class="accordion-item-1 mt-4">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button font-size-1" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         <span><i class="far fa-question "></i></span> &nbsp;What programs does Ashoka
                                         Nursing & Paramedical College offer?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                <div id="collapseOne" class="accordion-collapse collapse"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body ">
                                         <p class="font-size-1"> Ashoka Nursing & Paramedical College offers a wide range

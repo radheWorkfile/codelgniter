@@ -17,9 +17,9 @@
     <?php include('include/header.php'); ?>
 
     <!-- breadcrumb -->
-    <div class="site-breadcrumb" style="background: url(assets/images/bg/admission_banner.jpg)">
+    <div class="site-breadcrumb cus-width" style="background: url(assets/images/bg/admission_banner.jpg)">
         <div class="container">
-            <h2 class="breadcrumb-title">Admission</h2>
+            <h2 class="breadcrumb-title wow fadeInLeft" data-wow-delay="1s">Admission</h2>
             <ul class="breadcrumb-menu">
                 <li><a href="index.php">Home</a></li>
                 <li class="active">Admission</li>

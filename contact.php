@@ -18,7 +18,7 @@
     <?php include('include/header.php'); ?>
 
     <!-- breadcrumb -->
-    <div class="site-breadcrumb" style="background: url(assets/images/about/01.jpg)">
+    <div class="site-breadcrumb cus-width" style="background: url(assets/images/about/01.jpg)">
         <div class="container">
             <h2 class="breadcrumb-title">Contact Us</h2>
             <ul class="breadcrumb-menu">

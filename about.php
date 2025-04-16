@@ -17,9 +17,9 @@
     <?php include('include/header.php'); ?>
 
     <!-- breadcrumb -->
-    <div class="site-breadcrumb" style="background: url(assets/images/about/04.jpg)">
+    <div class="site-breadcrumb cus-width" style="background: url(assets/images/about/04.jpg)">
         <div class="container">
-            <h2 class="breadcrumb-title">About Us</h2>
+            <h2 class="breadcrumb-title wow fadeInLeft" data-wow-delay=".50s">About Us</h2>
             <ul class="breadcrumb-menu">
                 <li><a href="index.php">Home</a></li>
                 <li class="active">About Us</li>
@@ -91,27 +91,27 @@
                             <div class="widget">
                                 <h4 class="widget-title">All Course</h4>
                                 <div class="course-feature-list">
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> A. N. M. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> G. N. M. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> B. Sc. Nursing
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> A. N. M. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> G. N. M. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> B. Sc. Nursing
                                     </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> P. B. B. Sc.
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> P. B. B. Sc.
                                         Nursing
                                     </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> M. Sc. Nursing
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> M. Sc. Nursing
                                     </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> Dresser </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> D. M. L. T. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> O. T. Assistant
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> Dresser </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> D. M. L. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> O. T. Assistant
                                     </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> D. P. T. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> D. O. C. T. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> D. S. I. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> B. P. T. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> B. H. M. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> B. O. C. T. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> B. M. L. T. </a>
-                                    <a href="javaScript:void(0);"><i class="far fa-check-circle"></i> B. O. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> D. P. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> D. O. C. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> D. S. I. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> B. P. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> B. H. M. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> B. O. C. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> B. M. L. T. </a>
+                                    <a href="javaScript:void(0);" class="wow fadeInUp" data-wow-delay=".50s"><i class="far fa-check-circle"></i> B. O. T. </a>
                                 </div>
                             </div>
                         </div>
@@ -120,9 +120,9 @@
                         <div class="course-details">
                             <div class="course-details">
                                 <h3 class="px-3 text-center mb-3">
-                                    <span class="cus-btn">Our Mission</span>
+                                    <span class="cus-btn wow fadeInUp" data-wow-delay=".50s">Our Mission</span>
                                 </h3>
-                                <p class="text-justify px-3">
+                                <p class="text-justify px-3 wow fadeInUp" data-wow-delay=".50s">
                                     At Ashoka Nursing & Paramedical College, our mission is to
                                     provide exceptional healthcare education that blends academic
                                     excellence with practical training. We aim to develop skilled,
@@ -137,7 +137,7 @@
                                 <h3 class="px-3 mt-4 text-center mb-3">
                                     <span class="cus-btn">Our Vision</span>
                                 </h3>
-                                <p class="text-justify px-3">
+                                <p class="text-justify px-3 wow fadeInUp" data-wow-delay=".50s">
                                     Our vision is to become a leading institution in healthcare
                                     education, recognized for producing highly skilled, dedicated
                                     professionals who excel in nursing and paramedical fields. We
@@ -152,7 +152,7 @@
                                 <h3 class="px-3 mt-4 text-center mb-3">
                                     <span class="cus-btn">Our Story</span>
                                 </h3>
-                                <p class="text-justify px-3">
+                                <p class="text-justify px-3 wow fadeInUp" data-wow-delay=".50s">
                                     Ashoka Nursing & Paramedical College was established with a
                                     vision to provide exceptional healthcare education that combines
                                     academic learning with practical experience. Since its
@@ -163,7 +163,7 @@
                                     meaningful impact in the healthcare industry.
                                 </p>
                             </div>
-                            <div class="course-details-img mb-30 mt-5">
+                            <div class="course-details-img mb-30 mt-5 wow fadeInUp" data-wow-delay="1s">
                                 <img src="assets/images/about/06.jpg" alt="thumb" />
                             </div>
                         </div>

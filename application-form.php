@@ -19,7 +19,7 @@
     <!-- breadcrumb -->
     <div class="site-breadcrumb" style="background: url(assets/images/bg/online-application.jpg)">
         <div class="container">
-            <h2 class="breadcrumb-title">Application Form</h2>
+            <h2 class="breadcrumb-title wow fadeInUp" data-wow-delay=".50s">Application Form</h2>
             <ul class="breadcrumb-menu">
                 <li><a href="index.php">Home</a></li>
                 <li class="active">Application Form</li>
@@ -33,7 +33,7 @@
     <div class="application py-120">
         <div class="container">
             <div class="application-form">
-                <h3>Book Now</h3>
+                <h3 class="wow fadeInLeft" data-wow-delay=".50s">Book Now</h3>
                 <form action="./formhandler_application.php" method="post">
                     <div class="row">
                         <h5 class="mb-3">Basic Information</h5>
