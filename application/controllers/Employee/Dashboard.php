@@ -7,21 +7,25 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         ($this->session->userdata('user_id') == '') ? redirect(base_url(), 'refresh') : ''; 
-        $this->lgCat = $this->session->userdata['user_cate'];
+        $this->logID = $this->session->userdata['user_id'];
         error_reporting(0);
     }
-
 
     public function index()
     {
         $return = array(
-            'title' => 'Manage Income',
-            'breadcrums' => 'Create Income',
+            'title' => 'Employee Dashboard',
+            'breadcrums' => 'Employee Dashboard',
             'targetListItem' => base_url('administrator/accounting/income/incomeList'),
             'layout' => 'dashboard.php',
         );
-        $this->load->view('admin/base', $return);
+        $this->load->view('employee/base', $return);
     }
 
+   
 
+     
+    
+
+  
 }

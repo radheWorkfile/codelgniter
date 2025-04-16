@@ -129,10 +129,12 @@ class Login extends CI_Controller
 		}
 
         public function logout()
-	{
-		$this->session->sess_destroy();
-		$data = array('title' => 'Login Panel', 'targetLogin' => base_url('site/login/process'));
-		$this->load->view('website/signin', $data);
-	}
+        {
+            $this->session->sess_destroy();
+            $data=array('title'=>'Login Panel');
+			$this->load->view('auth/login_page',$data);
+        }
+
+    
 	
 }
