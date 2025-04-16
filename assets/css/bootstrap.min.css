@@ -4491,7 +4491,8 @@ fieldset:disabled .btn {
         flex-direction: row
     }
     .navbar-expand-lg .navbar-nav .dropdown-menu {
-        position: absolute
+        position: absolute;
+        top: 4rem;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: var(--bs-navbar-nav-link-padding-x);
