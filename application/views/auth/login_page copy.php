@@ -35,16 +35,15 @@
 										<p class="mb-0">Please log in to your account</p>
 									</div>
 									<div class="form-body">
-									
-										  <form class="row g-3" action="<?php echo base_url('login/auth');?>" method="post">
+										<form class="row g-3">
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Email</label>
-												<input type="email" class="form-control" id="email_id" name="email_id" value="superadmin@g.com" placeholder="jhon@example.com">
+												<input type="email" class="form-control" id="inputEmailAddress" placeholder="jhon@example.com">
 											</div>
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Password</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="password" name="password" value="superadmin" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
+													<input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
 												</div>
 											</div>
 											<div class="col-md-6">
