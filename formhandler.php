@@ -10,10 +10,10 @@
         $email = trim($_POST["email"]);
         $message=trim($_POST["message"]);
         echo $name.$mobile.$email.$message;
-        $to = "mrfoudation392@gmail.com";
-        $subject = "Enquiry From mrfoudation392@gmail.com";
+        $to = "ranpc06@gmail.com";
+        $subject = "Enquiry From ranpc06@gmail.com";
         $headers =  'MIME-Version: 1.0' . "\r\n"; 
-        $headers .= 'From: ranpc.com' . "\r\n";
+        $headers .= 'From: ahe.com' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         $full_message = "<html>
                         <head><title>Enquiry Data</title></head>
@@ -43,7 +43,7 @@
                         </html>";
         $user=$email;
         $user_subject= "Thank You $name";
-        $user_headers= 'From: mrfoudation392@gmail.com.com' . "\r\n";
+        $user_headers= 'From: ranpc06@gmail.com.com' . "\r\n";
         $user_message="Dear $name.\nWelcome to Aryaman Higher Education\n We have got your query.We will reach you soon.\nThank You!";
         $uanswer=intval(trim($_POST["uanswer"]));
         if($uanswer == $answer){
