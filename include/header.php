@@ -58,6 +58,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="anm_course.php">A. N. M.</a></li>
+                                <li><a class="dropdown-item" href="bse_nursing.php">B. Sc. Nursing</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
