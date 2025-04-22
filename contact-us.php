@@ -40,7 +40,7 @@
 	?>
 	<div class="container-fluid p-0">
 		<div class="card bg-light text-danger banner">
-			<img class="card-img img-fluid" src="images/contact-us.jpg" alt="Card image">
+			<img class="card-img img-fluid cus-height" src="images/contact-us.jpg" alt="Card image">
 			<div class="card-img-overlay">
 				<div class="row d-none">
 					<div class="col-1"></div>

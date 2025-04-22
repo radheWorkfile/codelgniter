@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-  <title>ANM || Aryaman Higher Education</title>
+  <title> Electronics Engineering || Aryaman Higher Education</title>
   <!-- Meta tag Keywords -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
@@ -25,11 +25,11 @@
   ?>
   <div class="container-fluid p-0">
     <div class="card bg-light text-danger banner">
-      <img class="card-img img-fluid cus-height" src="images/courses.jpg" alt="Card image">
+      <img class="card-img img-fluid cus-height" src="images/diploma-banner.jpg" alt="Card image">
       <div class="card-img-overlay">
         <div class="row">
           <div class="col-lg-10 col-sm-11 text-center ">
-            <h3 class="card-title">A. N. M. [ Auxiliary Nursing Midwifery ]</h3><br>
+            <h3 class="card-title">  Electronics Engineering </h3><br>
             <a href="contact-us.php" class="btn btn-danger my-2">Apply Online</a>
           </div>
         </div>
@@ -44,22 +44,17 @@
         <div class="container mt-lg-5 mt-3 pl-lg-4">
           <div class="row">
             <div class="col-md-5 bg-doctor">
-              <img class="img-fluid " src="images/anm.jpg" alt="Course">
+              <img class="img-fluid " src="images/nursing/electronics-img-1.jpg" alt="Course">
               <h5
                 class=" special-font m-4 d-none d-lg-block  text-light text-center wow animate__ animate__zoomIn  animated"
                 data-wow-delay="0.5s" data-wow-duration="1.5s">
-                Best A. N. M College In BIHAR</h5>
+                Best  Electronics Engineering College In BIHAR</h5>
             </div>
             <div class="col-md-7">
               <h4 class="text-danger special-font mb-3 wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-                data-wow-duration="1.5s">A. N. M. [ Auxiliary Nursing Midwifery ]</h4>
-              <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-                data-wow-duration="1.5s">Nursing is the medical specialty of caring for the sick, and maternity
-                care is a profession that focusses on providing help to the mother during work and pregnancy. Nursing is
-                an important part of the healthcare sector. Nurses have the responsibility to ensure the smooth
-                functioning of health organizations such as Hospitals, Dispensaries, NGOs, etc. Subjects covered within
-                this course's curriculum include Anatomy & Physiology, Biological Science, Microbiology, Behavioral
-                Science, Sociology, Psychology, Fundamentals of Nursing, and First Aid.</p>
+                data-wow-duration="1.5s"> Electronics Engineering</h4>
+              <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">Electronics Engineering is the technical specialty of designing, developing, and maintaining electronic systems, and embedded system design is a profession that focuses on creating efficient and intelligent electronic devices for modern use. Electronics Engineering is an important part of the technology and innovation sector.</p>
+              <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">At Aryaman Higher Education, the Electronics Engineering program prepares students with theoretical knowledge and practical skills to manage and innovate electronic systems across industries like telecommunications, automation, healthcare, and IT. The course focuses on developing future-ready engineers for the dynamic world of electronics and embedded technology.</p>
             </div>
           </div>
         </div>
@@ -100,8 +95,8 @@
               </table>
             </div>
             <div class="col-md-4 bg-doctor">
-              <img src="images/course.jpg" alt="Aims" class="img-fluid">
-              <h5 class="m-4 d-none d-lg-block special-font text-light text-center">A. N. M. Objective</h5>
+              <img src="images/nursing/electronics-img-2.jpg" alt="Aims" class="img-fluid">
+              <h5 class="m-4 d-none d-lg-block special-font text-light text-center"> Electronics Engineering Objective</h5>
             </div>
           </div>
         </div>
@@ -122,7 +117,7 @@
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">Course</th>
                     <td>
-                      <p class="text-red font-weight-bold">A. N. M.</p>
+                      <p class="text-red font-weight-bold"> Electronics Engineering</p>
                     </td>
                     <td class="d-none">
                       <p class="text-red font-weight-bold">G. N. M.</p>
@@ -136,7 +131,7 @@
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">Duration</th>
                     <td>
-                      <p class="text-red">24 Months</p>
+                      <p class="text-red">4 Years</p>
                     </td>
                     <td class="d-none">
                       <p class="text-red">36 Months</p>

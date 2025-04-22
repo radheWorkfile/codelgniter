@@ -25,7 +25,7 @@
 	?>
 	<div class="container-fluid p-0">
 		<div class="card bg-light text-danger banner">
-			<img class="card-img img-fluid" src="images/about-us.jpg" alt="Card image">
+			<img class="card-img img-fluid cus-height" src="images/about-us.jpg" alt="Card image">
 			<div class="card-img-overlay">
 				<div class="row d-none">
 					<div class="col-lg-6 col-sm-11 text-center ">
@@ -49,24 +49,17 @@
 						<h3 class="text-danger mb-2 wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
 							data-wow-duration="1.5s"><span class="special-font">About Us</span></h3>
 						<p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-							data-wow-duration="1.5s"><b><?php echo $company; ?> </b>is a forward-looking initiative
-							launched by the Aryaman Educational Trust, dedicated to advancing health education. Its core
-							mission is to nurture compassionate, highly skilled nurses and midwives capable of
-							delivering outstanding maternity care and contributing meaningfully to society.</p>
+							data-wow-duration="1.5s"><b><?php echo $company; ?> </b> is a forward-looking initiative launched by M.R. Foundation and the Aryan Abhishek Educational Trust, with a mission to advance health education. It is dedicated to nurturing compassionate and highly skilled nurses and midwives who are capable of delivering outstanding maternity care and contributing positively to society.</p>
 						<p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-							data-wow-duration="1.5s">The college prides itself on a well-regarded teaching faculty
-							that firmly believes a strong education forms the foundation of a successful professional
-							journey. To ensure consistent academic growth, students undergo regular assessments that
-							help them track progress and stay motivated to excel.</p>
+							data-wow-duration="1.5s">The college, under the guidance of a respected teaching faculty, believes that a strong education is the foundation of a successful professional journey. Regular assessments are conducted to support academic growth, helping students track their progress and remain motivated to achieve excellence.
+
+                          </p>
 					</div>
 					<div class="col-md-4">
 						<h3 class="text-danger mb-2 special-font wow animate__ animate__zoomIn  animated"
 							data-wow-delay="0.5s" data-wow-duration="1.5s">Our Mission</h3>
 						<p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-							data-wow-duration="1.5s">Our mission is to develop and expand opportunities for each
-							condidate and all to have excellent and pleasent nursing facilities and experiences. We are
-							working in the direction of making a healthy society full of hopes for the future.We believe
-							in our team and we will achieve our goal on time with your blessings and our hard work.</p>
+							data-wow-duration="1.5s">With a mission to expand and develop opportunities for every candidate, we strive to offer excellent and pleasant nursing facilities and experiences. Our direction is clear: to build a hopeful and healthy society. We deeply believe in our team’s potential, and with your blessings and our hard work, success will come on time.</p>
 					</div>
 				</div>
 			</div>

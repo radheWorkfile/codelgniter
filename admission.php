@@ -25,7 +25,7 @@
 	?>
 	<div class="container-fluid p-0">
 		<div class="card bg-light text-danger banner">
-			<img class="card-img img-fluid" src="images/adm-banner.jpg" alt="Card image">
+			<img class="card-img img-fluid cus-height" src="images/adm-banner.jpg" alt="Card image">
 			<div class="card-img-overlay">
 				<div class="row text-center d-none">
 					<div class="col-lg-1"></div>

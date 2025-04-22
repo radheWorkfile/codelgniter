@@ -47,7 +47,7 @@
 								</h1>
 								<p class="text-center text-shadow textMan"
 									style="line-height:18px;color:#110F47;font-weight:700;">Affiliated by Health Dept.
-									Govt. of Bihar, BNRC, BUHS Patna. <br> (Managed by M.R. Foundation)</p>
+									Govt. of Bihar, BNRC, BUHS Patna. <br> ( Managed by M.R. Foundation ) <br> & <br> ( Aryan Abhishek Educational Trust )</p>
 								<p class="text-center text-shadow textMan highlight-address text-white mt-5">Arvind
 									Marg, Lachhubigha, Mahanandpur, Nagarnausa, Nalanda-801305</p>
 								<div class="row mt-3 d-none">
@@ -158,27 +158,16 @@
 						<h3 class="text-danger mb-2 wow animate__ animate__zoomIn animated" data-wow-delay="0.5s"
 							data-wow-duration="1.5s">Welcome to <span
 								class="special-font"><?php echo $company_1; ?></span></h3>
-						<p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s"
-							data-wow-duration="1.5s"> <?php echo $company_1; ?> is a new initiative of Aryaman
-							Educational Trust in the field of health education aiming at furnishing humanity with well
-							trained, humanitarian, professionally expert nurses and midwives that can provide
-							unparalleled maternity services.</p>
-						<p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s"
-							data-wow-duration="1.5s">Our college has highly appreciated teaching facility, who
-							believes that good education is the root of a highly successful professional career.The
-							college conducts regular exam so that students have a feedback to work harder and to get
-							better. The teaching methods adopted, promote multi disciplinary enquiry and practical
-							application of problems. Interactive methods of teaching are employed so that there is a
-							high degree of interaction between of students and the teacher in the classroom.</p>
+						<p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s" data-wow-duration="1.5s"> <?php echo $company_1; ?> is a new initiative of <b> M.R. Foundation</b> in the field of health education. It aims to furnish society with well-trained, compassionate, and professionally skilled nurses and midwives who can deliver exceptional maternity services and contribute meaningfully to the healthcare sector.</p>
+						<p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s" data-wow-duration="1.5s"> Under the <b>Aryan Abhishek Educational Trust</b>, Aryaman Higher Education also promotes IT education, with the mission of preparing individuals to use technological expertise in supporting and improving maternity care with a humanitarian focus.</p>
+						<p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s" data-wow-duration="1.5s"> Our college offers quality teaching, regular exams, and interactive methods to build strong, successful, and practically skilled professionals.</p>
+						
 					</div>
 					<div class="col-md-4">
 						<h3 class="text-danger mb-2 special-font wow animate__ animate__zoomIn animated"
 							data-wow-delay="0.5s" data-wow-duration="1.5s">Our Mission</h3>
 						<p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s"
-							data-wow-duration="1.5s">Our mission is to develop and expand opportunities for each
-							condidate and all to have excellent and pleasent nursing facilities and experiences. We are
-							working in the direction of making a healthy society full of hopes for the future.We believe
-							in our team and we will achieve our goal on time with your blessings and our hard work.</p>
+							data-wow-duration="1.5s">With a mission to expand and develop opportunities for every candidate, we strive to offer excellent and pleasant nursing facilities and experiences. Our direction is clear: to build a hopeful and healthy society. We deeply believe in our team’s potential, and with your blessings and our hard work, success will come on time.</p>
 					</div>
 				</div>
 			</div>

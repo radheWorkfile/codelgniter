@@ -44,8 +44,19 @@
 						<a href="#" class="nav-link">Courses<i class="fas fa-caret-down mx-1"></i></a>
 						<div class="dropdown-content">
 							<a href="a-n-m.php">A. N. M.</a>
-							<a href="g-n-m.php" class="d-none">G. N. M.</a>
-							<!-- <a href="bsc-nursing.php">B. Sc. Nursing</a> -->
+							<a href="g-n-m.php">G. N. M.</a>
+							<a href="bsc_nursing.php">B. Sc. Nursing</a>
+							<div class="dropdown-sub">
+							<a href="javascript:void(0);">Engineering ( Diploma )</a>
+							<div class="dropdown-content-1">
+							<a href="civil_eng.php">Civil Engineering</a>
+							<a href="electrical_eng.php">Electrical Engineering</a>
+							<a href="computer_science_eng.php">Computer Science & Engineering</a>
+							<a href="electronics_eng.php">Electronics Engineering</a>
+							<a href="artificial_intelligence.php">Artificial Intelligence ( AI )</a>
+							
+							</div>
+							</div>
 						</div>
 					</li>
 					<li class="nav-item">

@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-  <title>ANM || Aryaman Higher Education</title>
+  <title>B. Sc Nursing || Aryaman Higher Education</title>
   <!-- Meta tag Keywords -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
@@ -29,7 +29,7 @@
       <div class="card-img-overlay">
         <div class="row">
           <div class="col-lg-10 col-sm-11 text-center ">
-            <h3 class="card-title">A. N. M. [ Auxiliary Nursing Midwifery ]</h3><br>
+            <h3 class="card-title">B. Sc. Nursing [ Bachelor of Science in Nursing ]</h3><br>
             <a href="contact-us.php" class="btn btn-danger my-2">Apply Online</a>
           </div>
         </div>
@@ -44,22 +44,17 @@
         <div class="container mt-lg-5 mt-3 pl-lg-4">
           <div class="row">
             <div class="col-md-5 bg-doctor">
-              <img class="img-fluid " src="images/anm.jpg" alt="Course">
+              <img class="img-fluid " src="images/nursing/bsc_nursing-img-1.jpg" alt="Course">
               <h5
                 class=" special-font m-4 d-none d-lg-block  text-light text-center wow animate__ animate__zoomIn  animated"
                 data-wow-delay="0.5s" data-wow-duration="1.5s">
-                Best A. N. M College In BIHAR</h5>
+                B. Sc. Nursing College In BIHAR</h5>
             </div>
             <div class="col-md-7">
               <h4 class="text-danger special-font mb-3 wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-                data-wow-duration="1.5s">A. N. M. [ Auxiliary Nursing Midwifery ]</h4>
+                data-wow-duration="1.5s">B. Sc. Nursing[ Bachelor of Science in Nursing ]</h4>
               <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-                data-wow-duration="1.5s">Nursing is the medical specialty of caring for the sick, and maternity
-                care is a profession that focusses on providing help to the mother during work and pregnancy. Nursing is
-                an important part of the healthcare sector. Nurses have the responsibility to ensure the smooth
-                functioning of health organizations such as Hospitals, Dispensaries, NGOs, etc. Subjects covered within
-                this course's curriculum include Anatomy & Physiology, Biological Science, Microbiology, Behavioral
-                Science, Sociology, Psychology, Fundamentals of Nursing, and First Aid.</p>
+                data-wow-duration="1.5s">B. Sc. Nursing stands for Bachelor of Science in Nursing. It is a medical specialty focused on caring for the sick and providing essential maternity care during pregnancy and childbirth. This professional course emphasizes supporting mothers throughout their pregnancy and labor. Nursing is a vital part of the healthcare system, and nurses play a crucial role in maintaining the efficient operation of healthcare institutions such as hospitals, dispensaries, NGOs, and other medical facilities. The BSc Nursing curriculum includes a wide range of subjects such as Anatomy & Physiology, Biological Science, Microbiology, Behavioral Science, Sociology, Psychology, Fundamentals of Nursing, and First Aid.</p>
             </div>
           </div>
         </div>
@@ -100,8 +95,8 @@
               </table>
             </div>
             <div class="col-md-4 bg-doctor">
-              <img src="images/course.jpg" alt="Aims" class="img-fluid">
-              <h5 class="m-4 d-none d-lg-block special-font text-light text-center">A. N. M. Objective</h5>
+              <img src="images/nursing/bsc_nursing-img-2.jpg" alt="Aims" class="img-fluid">
+              <h5 class="m-4 d-none d-lg-block special-font text-light text-center">B. Sc. Nursing</h5>
             </div>
           </div>
         </div>
@@ -122,7 +117,7 @@
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">Course</th>
                     <td>
-                      <p class="text-red font-weight-bold">A. N. M.</p>
+                      <p class="text-red font-weight-bold">B. Sc. Nursing</p>
                     </td>
                     <td class="d-none">
                       <p class="text-red font-weight-bold">G. N. M.</p>
@@ -136,7 +131,7 @@
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">Duration</th>
                     <td>
-                      <p class="text-red">24 Months</p>
+                      <p class="text-red">4 Years</p>
                     </td>
                     <td class="d-none">
                       <p class="text-red">36 Months</p>
@@ -241,10 +236,7 @@
                 <tbody>
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">1</th>
-                    <td>Most ANM Nursing Colleges offering the course admits students based on performance in a relevant
-                      entrance test followed by a round of PI (Personal Interview), wherein general aptitude for the
-                      course is tested. Admission process generally varies across colleges. The final admission to the
-                      ANM course depends on the candidate's score in entrance exam and PI.</td>
+                    <td>Most B.Sc. Nursing colleges offer admission based on a candidate’s performance in relevant entrance examinations, followed by a round of Personal Interview (PI) to assess the applicant’s general aptitude and interest in the field of nursing. The admission process may vary from one institution to another. Final selection is generally based on the combined performance in the entrance test and the personal interview.</td>
                   </tr>
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">2</th>

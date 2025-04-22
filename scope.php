@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-  <title>ANM || Aryaman Higher Education</title>
+  <title>GNM || General Nursing and Midwifery</title>
   <!-- Meta tag Keywords -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
@@ -29,7 +29,7 @@
       <div class="card-img-overlay">
         <div class="row">
           <div class="col-lg-10 col-sm-11 text-center ">
-            <h3 class="card-title">A. N. M. [ Auxiliary Nursing Midwifery ]</h3><br>
+            <h3 class="card-title">G. N. M. [ General Nursing and Midwifery ]</h3><br>
             <a href="contact-us.php" class="btn btn-danger my-2">Apply Online</a>
           </div>
         </div>
@@ -48,18 +48,13 @@
               <h5
                 class=" special-font m-4 d-none d-lg-block  text-light text-center wow animate__ animate__zoomIn  animated"
                 data-wow-delay="0.5s" data-wow-duration="1.5s">
-                Best A. N. M College In BIHAR</h5>
+                Best G. N. M College In BIHAR</h5>
             </div>
             <div class="col-md-7">
               <h4 class="text-danger special-font mb-3 wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-                data-wow-duration="1.5s">A. N. M. [ Auxiliary Nursing Midwifery ]</h4>
-              <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s"
-                data-wow-duration="1.5s">Nursing is the medical specialty of caring for the sick, and maternity
-                care is a profession that focusses on providing help to the mother during work and pregnancy. Nursing is
-                an important part of the healthcare sector. Nurses have the responsibility to ensure the smooth
-                functioning of health organizations such as Hospitals, Dispensaries, NGOs, etc. Subjects covered within
-                this course's curriculum include Anatomy & Physiology, Biological Science, Microbiology, Behavioral
-                Science, Sociology, Psychology, Fundamentals of Nursing, and First Aid.</p>
+                data-wow-duration="1.5s">G. N. M. [ General Nursing and Midwifery ]</h4>
+              <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">Aryaman Higher Education offers the GNM (General Nursing and Midwifery) course, a program designed to prepare students for the medical specialty of nursing—the art and science of caring for the sick. This course also emphasizes maternity care, a profession focused on supporting mothers during pregnancy and childbirth.</p>
+              <p class="text-justify text-dark wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">Nursing plays a vital role in the healthcare sector. Nurses are responsible for ensuring the smooth functioning of health institutions like Hospitals, Dispensaries, and NGOs. The GNM curriculum includes key subjects such as Anatomy & Physiology, Biological Science, Microbiology, Behavioral Science, Sociology, Psychology, Fundamentals of Nursing, and First Aid, providing students with both theoretical knowledge and practical skills to excel in the field.</p>
             </div>
           </div>
         </div>
@@ -101,7 +96,7 @@
             </div>
             <div class="col-md-4 bg-doctor">
               <img src="images/course.jpg" alt="Aims" class="img-fluid">
-              <h5 class="m-4 d-none d-lg-block special-font text-light text-center">A. N. M. Objective</h5>
+              <h5 class="m-4 d-none d-lg-block special-font text-light text-center">G. N. M. Objective</h5>
             </div>
           </div>
         </div>
@@ -122,7 +117,7 @@
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">Course</th>
                     <td>
-                      <p class="text-red font-weight-bold">A. N. M.</p>
+                      <p class="text-red font-weight-bold">G. N. M.</p>
                     </td>
                     <td class="d-none">
                       <p class="text-red font-weight-bold">G. N. M.</p>
@@ -136,7 +131,7 @@
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">Duration</th>
                     <td>
-                      <p class="text-red">24 Months</p>
+                      <p class="text-red">3 years</p>
                     </td>
                     <td class="d-none">
                       <p class="text-red">36 Months</p>
@@ -241,10 +236,7 @@
                 <tbody>
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">1</th>
-                    <td>Most ANM Nursing Colleges offering the course admits students based on performance in a relevant
-                      entrance test followed by a round of PI (Personal Interview), wherein general aptitude for the
-                      course is tested. Admission process generally varies across colleges. The final admission to the
-                      ANM course depends on the candidate's score in entrance exam and PI.</td>
+                    <td> Most GNM Nursing Colleges offering the course admit students based on their performance in a relevant entrance test, followed by a Personal Interview (PI), where the candidate's general aptitude for the course is assessed. The admission process generally varies across colleges. Final admission to the GNM course depends on the candidate's score in the entrance exam and the Personal Interview.</td>
                   </tr>
                   <tr class="wow animate__ animate__zoomIn  animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <th scope="row">2</th>
@@ -256,6 +248,50 @@
             </div>
           </div>
         </div>
+
+
+        <section>
+        <div class="container mt-lg-5 mt-3 px-4"style="border-left:6px solid #588729;border-radius:11px;">
+        <div class="row" >
+        <div class="col-md-12">
+        <h3 class="text-danger mb-2 wow animate__ animate__zoomIn animated" data-wow-delay="0.5s"
+        data-wow-duration="1.5s"><span class="special-font">Top 6 Career & Job Opportunities After GNM Nursing Course</span></h3>
+        <p class="text-justify text-dark wow animate__ animate__zoomIn animated" data-wow-delay="0.5s" data-wow-duration="1.5s">
+        A graduate who has completed a gnm nursing course has several options for pursuing a nursing career. Government & Private Hospitals, Old Age Homes, NGOs, Dispensaries, Nursing Homes, Private Clinics, Community Health Centres, Nurse Coaching academies etc. are some of the top sectors that unlock career prospects. The following list includes some of the top nursing job opportunities-
+        </p>
+        </div>
+        </div>
+
+        <div class="row mt-4">
+         <div class="col-md-12"style="display:flex;">
+          <div class=""><i class="fa fa-check-square" aria-hidden="true" style="font-size:20px;">&nbsp;&nbsp;</i></div>
+          <div class=""> Community Nurse - Community health nurses focus on treating patients and educating the local population about maintaining good health. Their duties include organizing educational events, distributing health materials, conducting health checks, administering medications, and providing vaccinations to reduce illness and mortality.</div>
+         </div>
+         <div class="col-md-12"style="display:flex;">
+          <div class=""><i class="fa fa-check-square" aria-hidden="true" style="font-size:20px;">&nbsp;&nbsp;</i></div>
+          <div class=""> Forensic Nurse - Forensic nurses are registered nurses who specialize in handling cases involving rape, violence, or assault. Their role involves assessing victims, preserving crucial evidence, providing medical care, and offering expert testimony during legal proceedings.</div>
+         </div>
+         <div class="col-md-12"style="display:flex;">
+          <div class=""><i class="fa fa-check-square" aria-hidden="true" style="font-size:20px;"></i>&nbsp;&nbsp;</div>
+          <div class=""> Midwife Nurse </div>
+         </div>
+         <div class="col-md-12"style="display:flex;">
+          <div class=""><i class="fa fa-check-square" aria-hidden="true" style="font-size:20px;"></i>&nbsp;&nbsp;</div>
+          <div class=""> Emergency Care Nurse </div>
+         </div>
+         <div class="col-md-12"style="display:flex;">
+          <div class=""><i class="fa fa-check-square" aria-hidden="true" style="font-size:20px;"></i>&nbsp;&nbsp;</div>
+          <div class=""> Nurse Educator </div>
+         </div>
+        </div>
+
+
+        </div>
+ 
+        </section>
+
+
+
     </section>
   </main>
   <?php

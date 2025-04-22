@@ -1,7 +1,6 @@
 /* 1c82aa63 */
 
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
-
 * {
     box-sizing: border-box;
 }
@@ -54,6 +53,34 @@
 .dropdown-content a:hover {
     background-color: #186003;
     color: #fff;
+}
+
+.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-sub>a::after {
+    float: right;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+
+/* Sub dropdown */
+
+.dropdown-content-1 {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 236px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999 !important;
+}
+
+.dropdown-sub:hover .dropdown-content-1 {
+    display: block;
 }
 
 .main_grid_contact .input-group1 button {
@@ -329,14 +356,12 @@ a.reqe-button {
         padding: 7px 12px;
         font-size: 14px;
     }
-
     #logo a {
         font-size: 32px;
     }
 }
 
 @media all and (max-width: 375px) {
-
     nav a,
     .menu .toggle {
         font-size: 13px;
@@ -1144,7 +1169,7 @@ header .topnav ul li>a:hover {
     padding: 0 0;
     display: none;
     background-color: #ffffff;
-    min-width: 160px;
+    min-width: 176px;
     z-index: 10000 !important;
     line-height: 7px;
     top: 20px;
@@ -1243,85 +1268,68 @@ footer .table th {
         font-size: 1.5rem;
         margin-bottom: 2px;
     }
-
     .slider .card-img-overlay .row h3.card-title,
     .slider .card-img-overlay .row h1.card-title {
         font-size: 1.5rem;
         margin-bottom: 2px;
     }
-
     .slider .card-img-overlay .row p {
         font-size: .5rem;
     }
-
     .logo-img {
         width: 40% !important;
     }
-
     nav .navbar-nav {
         margin-top: 1ppx !important;
     }
-
     nav li:first-child {
         border-top: 1px solid #777;
     }
-
     .navbar {
         padding: 10px 0px;
     }
-
     nav ul {
         margin-top: 10px !important;
         background: #f5f5f5 !important;
         width: 100%;
         margin-bottom: opx;
     }
-
     nav li.nav-item {
         padding: 5px 0px 5px 0px;
         border-bottom: 1px solid #777;
     }
-
     nav li:hover li {
         background: #dc3545 !important;
         color: #fff !important;
     }
-
     nav button.navbar-toggler {
         margin-right: 24px;
         color: #dc3545 !important;
     }
-
     nav button.navbar-toggler-icon {
         color: #dc3545 !important;
     }
 }
 
 @media(max-width:767px) {
-
     .slider .card-img-overlay .row h3.card-title,
     .slider .card-img-overlay .row h1.card-title {
         font-size: 1rem;
         margin-bottom: 2px;
     }
-
     .slider .card-img-overlay .row .row {
         display: none;
     }
-
     .banner .card-img-overlay .row h3.card-title {
         font-size: 1rem;
         margin-bottom: 2px;
     }
-
     .banner .card-img-overlay .row p {
         display: none;
     }
-
     .banner .card-img-overlay .row a.btn {
         display: none;
     }
-
     .banner img {
         min-height: auto;
     }
@@ -1337,7 +1345,6 @@ footer .table th {
     .banner-info_w3ls h3 {
         font-size: 58px;
     }
-
     .banner-info_w3ls h5 {
         font-size: 18px;
     }
@@ -1347,11 +1354,9 @@ footer .table th {
     section.about-bottom {
         margin-top: -6em;
     }
-
     .who-left-w3pvt {
         padding: 0 4em !important;
     }
-
     .left-test-w3pvt {
         padding-right: 8em !important;
     }
@@ -1361,7 +1366,6 @@ footer .table th {
     .banner-info_w3ls h3 {
         font-size: 52px;
     }
-
     .banner-info_w3ls h5 {
         font-size: 16px;
     }
@@ -1371,70 +1375,54 @@ footer .table th {
     p {
         font-size: 15px;
     }
-
     a.navbar-brand span {
         font-size: 9.5px;
         right: 11px;
         bottom: 10px;
     }
-
     .navbar-light .navbar-nav .nav-link {
         font-size: 12px;
     }
-
     img.logo-img {
         width: auto;
     }
-
     a.login-button-2 {
         font-size: 13px;
         padding: 27px 32px;
     }
-
     .banner-info_w3ls h3 {
         font-size: 44px;
     }
-
     .banner-info_w3ls h5 {
         font-size: 15px;
     }
-
     .banner-info_w3ls p {
         font-size: 13px;
     }
-
     .service-subgrids span {
         font-size: 3em;
     }
-
     .team-img:after {
         height: 40%;
     }
-
     .who-left-w3pvt {
         padding: 0 6em !important;
     }
-
     .w3_testi_grid p {
         font-size: 12px;
     }
-
     .counter {
         font-size: 35px;
     }
-
     .stats-info p.text-colors {
         font-size: 13px;
     }
-
     .news-right-w3ls input[type="submit"] {
         padding: 13px 0;
     }
-
     .left-test-w3pvt {
         padding-right: 1em !important;
     }
-
     section.about-bottom {
         margin-top: -4em;
     }
@@ -1444,45 +1432,36 @@ footer .table th {
     .w3ls-about-grid h4 {
         font-size: 22px;
     }
-
     .w3ls-about-grid p {
         font-size: 13px;
     }
-
     .team-info h4 {
         font-size: 17px;
     }
-
     .team-img:after {
         height: 52%;
     }
-
     .newsletter_right_w3w3pvt-lau .border-right {
         border-right: none !important;
     }
-
     .map iframe {
         height: 40vw;
     }
-
     .main-brand h5 {
         font-size: 18px;
     }
-
     p.copy-right-grids {
         font-size: 14px;
     }
 }
 
 @media(max-width: 900px) {
-
     .footer-grid ul li a,
     .footer-grid ul li,
     .address-right p,
     .address-right p a {
         font-size: 13px;
     }
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
@@ -1494,27 +1473,21 @@ footer .table th {
     .banner-info_w3ls h3 {
         font-size: 36px;
     }
-
     .banner-info_w3ls h5 {
         font-size: 14px;
     }
-
     section.about-bottom {
         margin-top: -3em;
     }
-
     .main-brand {
         padding: 1.5em 1em;
     }
-
     .main-brand span {
         font-size: 32px;
     }
-
     .main-brand h5 {
         font-size: 16px;
     }
-
     .who-left-w3pvt {
         padding: 0 4em !important;
     }
@@ -1524,24 +1497,19 @@ footer .table th {
     .par-so {
         font-size: 13px;
     }
-
     a.navbar-brand {
         font-size: 28px;
     }
-
     a.navbar-brand span {
         font-size: 9px;
         letter-spacing: 2px;
     }
-
     .team-info h4 {
         font-size: 19px;
     }
-
     .team-img:after {
         height: 36%;
     }
-
     .popup {
         margin: 5em auto;
     }
@@ -1551,16 +1519,13 @@ footer .table th {
     .banner-info_w3ls h3 {
         font-size: 30px;
     }
-
     .banner-info_w3ls h5 {
         font-size: 13px;
         letter-spacing: 3px;
     }
-
     .banner-info_w3ls p:before {
         bottom: -28px;
     }
-
     .counter {
         font-size: 32px;
     }
@@ -1570,20 +1535,16 @@ footer .table th {
     section.about-bottom {
         padding: 0 2em;
     }
-
     .team-grid {
         width: 54%;
         margin: 0 auto;
     }
-
     p {
         font-size: 14px;
     }
-
     .popup {
         margin: 5em 1em;
     }
-
     h2.text-bg-click {
         font-size: 24px;
     }
@@ -1593,17 +1554,14 @@ footer .table th {
     .banner-info_w3ls {
         padding: 14vw 0 26vw;
     }
-
     .top-w3layouts,
     .socila-brek {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .socila-brek {
         margin-top: 1em;
     }
-
     .counter {
         font-size: 30px;
     }
@@ -1613,21 +1571,17 @@ footer .table th {
     .footer-grid h3 {
         font-size: 20px;
     }
-
     .w3social-icons ul li a {
         font-size: 13px;
         width: 32px;
         height: 32px;
     }
-
     .who-left-w3pvt {
         padding: 0 2em !important;
     }
-
     .team-grid {
         width: 60%;
     }
-
     .team-img:after {
         height: 41%;
     }
@@ -1644,15 +1598,12 @@ footer .table th {
         font-size: 13px;
         letter-spacing: 1px;
     }
-
     .main_grid_contact .input-group1 input[type="submit"] {
         width: 55%;
     }
-
     ul.list-unstyled.who-lists {
         margin-left: 1em !important;
     }
-
     .banner-info_w3ls {
         padding: 4em 0 8em;
     }
@@ -1665,26 +1616,21 @@ footer .table th {
 }
 
 @media(max-width: 320px) {
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
         font-size: 12px;
     }
-
     a.login-button-2 {
         font-size: 12px;
         padding: 24px 22px;
     }
-
     .form-w3ls {
         padding: 1.5em .5em !important;
     }
-
     .form-w3ls h4 {
         font-size: 21px;
     }
-
     .team-grid {
         width: 80%;
     }
@@ -1716,8 +1662,6 @@ footer .table th {
 @media (min-width:992px) and (max-width:1200px) {}
 
 @media (min-width:1200px) {}
-
-
 
 
 /* //responsive */

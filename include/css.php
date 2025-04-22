@@ -22,6 +22,7 @@
 
 
 <style>
+
     /* General Styles */
     .text-center {
         text-align: center;
@@ -65,5 +66,10 @@
         .textMan {
             display: none;
         }
+        
+    }
+    @media(min-width:991px)
+    {
+        .cus-height{height:260px;}
     }
 </style>
