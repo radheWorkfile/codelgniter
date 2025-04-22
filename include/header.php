@@ -54,7 +54,7 @@
                         <li class="nav-item dropdown" title="Click Me">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="true">
-                                Service
+                                Courses
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="anm_course.php">A. N. M.</a></li>
