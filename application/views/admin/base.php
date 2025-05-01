@@ -17,6 +17,8 @@
 		} else {
 		?>
 
+
+
 <!-- Heading section start from here.  -->
 <div class="page-wrapper">
 			<div class="page-content">

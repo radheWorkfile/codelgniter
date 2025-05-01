@@ -1,23 +1,20 @@
-        <!-- Heading section start from here.  -->
-        <div class="page-wrapper">
-        <div class="page-content">
-        <!--breadcrumb-->
-        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3"><i class="bx bx-home-alt"></i>&nbsp;&nbsp;<?php echo $title;?></div>
-        <div class="ms-auto">
-        <div class="btn-group">
-        <button class="btn btn-primary"><a href="" class="text-white">+ Create Employee</a></button>
-        </button>
-        </div>
-        </div>
-        </div>
-        <!-- Heading section 1st End here.  -->
 
+			<div class="page-wrapper">
+			<div class="page-content">
+			<div id="repeater">
+			<div class="card">
+			<div class="card-body">
 
-        <div class="card">
-							<div class="card-body p-4">
-								<h5 class="mb-4">Create Employee</h5>
-								<form class="row g-3">
+			<div class="d-flex align-items-center justify-content-between">
+			<h5 class="mb-4"><i class="bx bx-home-alt"></i> Create Employee</h5>
+			<button class="btn btn-primary"><a href="" class="text-white">+ Create Employee</a></button>
+			</div>
+
+		<!--===============================================================-->
+
+			<div class="card-body p-4">
+			<form class="row g-3">
+				
 									<div class="col-md-6">
 										<label for="input25" class="form-label">First Name</label>
 										 <div class="input-group">
@@ -105,11 +102,12 @@
 									</div>
 								</form>
 							</div>
-						</div>
 
 
+                    <!-- Repeater Items ==================================-->
+					</div>
+					</div>
+					</div>
+					</div>		
+					</div>
 
-        <!-- Heading section 2st End section start from here.  -->
-        </div>
-        </div>
-        <!-- Heading section End here.  -->
