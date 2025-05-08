@@ -22,7 +22,9 @@
     </div>
     <ul class="nav-links">
     <li class="mx-2"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
-    <li class="mx-2"><a href="about.php">About</a></li>
+    <li class="mx-2"><a href="about.php">About Us</a></li>
+    
+
     <li class="dropdown mx-2">
     <a href="#">Services</a>
     <ul class="dropdown-menu">
@@ -31,9 +33,42 @@
     <li><a href="digital_marketing.php">Digital Marketing</a></li>
     </ul>
     </li class="mx-2">
-    <li class="mx-2"><a href="contact.php">Contact</a></li>
+
+    <li class="dropdown mx-2">
+    <a href="#">Pages</a>
+    <ul class="dropdown-menu">
+    <li><a href="web_design.php">Full Section</a></li>
+    <li><a href="app_development.php">About Section</a></li>
+    <li><a href="digital_marketing.php">Card Section </a></li>
+    <li><a href="digital_marketing.php">Get In Touch </a></li>
+    <li><a href="digital_marketing.php">Faq Section </a></li>
+    <li><a href="digital_marketing.php">Client Message </a></li>
     </ul>
-    <p class="m-0"><a href="#" class="button"><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Register Now</a></p>
+    </li class="mx-2">
+
+    <li class="mx-2"><a href="gallery.php">Gallery</a></li>
+    <li class="mx-2"><a href="about.php">Media</a></li>  
+    <li class="mx-2"><a href="blog.php">Blog</a></li> 
+
+    <li class="dropdown mx-2">
+    <a href="#">Contact</a>
+    <ul class="dropdown-menu">
+    <li class="mx-2"><a href="contact.php">Contact-1</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-2</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-3</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-4</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-5</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-6</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-7</a></li>
+    <li class="mx-2"><a href="contact.php">Contact-8</a></li>
+    
+    </ul>
+    </li class="mx-2">
+
+
+    
+    </ul>
+    <p class="m-0"><a href="#" class="button"><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Login</a></p>
     <div class="burger" id="burger">
     <div class="line"></div>
     <div class="line"></div>
