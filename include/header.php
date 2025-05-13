@@ -1,6 +1,6 @@
   <?php include('default.php');?>
   <!-- top bar section start from here. -->
-  <section class="pt-2" style="background-color:#790000;">
+  <section class="pt-2" style="background-color:#000c2d;">
     <div class="container">
     <div class="row">
     <div class="col-md-6 col-sm-6">
@@ -18,7 +18,7 @@
     <!-- desk menu section start from here. -->
     <nav class="navbar cus-desk-menu">
     <div class="logo">
-    <a href="#">MyLogo</a>
+    <a href="#" class="text-dark">MyLogo</a>
     </div>
     <ul class="nav-links">
     <li class="mx-2"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
@@ -150,7 +150,7 @@ li{list-style:none;}
 }
 * {margin: 0;padding: 0;box-sizing: border-box;}
  body {font-family: Arial, sans-serif;}
-.navbar {display: flex;justify-content: space-between;align-items: center;  background-color: #333;padding: 10px 20px;}
+.navbar {display: flex;justify-content: space-between;align-items: center;  background-color: #fff;padding: 10px 20px;}
 
 .navbar .logo a {
   color: white;
@@ -166,7 +166,7 @@ li{list-style:none;}
 
 
 .nav-links li a {
-  color: white;
+  color: #000c2d; 
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
@@ -176,7 +176,7 @@ li{list-style:none;}
 
 .nav-links li a:hover {
   background-color: #555;
-  color: #f1f1f1;
+  color: #e90808;
 }
 
 

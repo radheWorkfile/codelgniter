@@ -1,22 +1,22 @@
 
   <?php include('default.php');?>
     <!-- footer section start here. -->
-    <section class="py-5" style="background-color:#d2d2d2;">
+    <section class="py-5" style="background-color:black;">
     <div class="container">
     <div class="row">
 
         <div class="col-md-5">
-        <h2>Radhe Radhe</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur eligendi cupiditate corporis, veritatis itaque molestiae labore consectetur accusantium libero ipsam iste?
+        <h2 class="text-c">Radhe Radhe</h2>
+        <p class="text-c"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur eligendi cupiditate corporis, veritatis itaque molestiae labore consectetur accusantium libero ipsam iste?</p>
         </div>
         <div class="col-md-3">
-        <h3>Quick Link</h3>
-        <li class="action-per"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;Home Page</li>
-        <li class="action-per"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;About page</li>
-        <li class="action-per"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;Contact Us</li>
+        <h3 class="text-c">Quick Link</h3>
+        <li class="action-per text-c"><i class="fa fa-link text-c" aria-hidden="true"></i>&nbsp;Home Page</li>
+        <li class="action-per text-c"><i class="fa fa-link text-c" aria-hidden="true"></i>&nbsp;About page</li>
+        <li class="action-per text-c"><i class="fa fa-link text-c" aria-hidden="true"></i>&nbsp;Contact Us</li>
         </div>
         <div class="col-md-4">
-        <h3>Address</h3>
+        <h3 class="text-c">Address</h3>
         <div class="action-per"style="display:flex;">
         <div class=""><i class="fa fa-home" aria-hidden="true"></i> &nbsp;</div>
         <div class="">Rajgir Nalanda.</div>
@@ -40,7 +40,7 @@
 
 
      <!-- top bar section start from here. -->
-     <section class="pt-2 m-0" style="background-color:#790000;">
+     <section class="pt-2 m-0" style="background-color:#000c2d;">
     <div class="container">
     <div class="row">
     <div class="col-md-12 col-sm-12">
@@ -59,6 +59,6 @@
     @media (min-width: 601px) {.custom-mob-menu {display: none; }
     .us-desk-menu {display: block; }}
       /* for meobile view menu section start from here */
-
+    .text-c{color:#d2d2d2;}
     
     </style>
