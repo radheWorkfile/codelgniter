@@ -1,7 +1,7 @@
 
   <?php include('default.php');?>
     <!-- footer section start here. -->
-    <section class="py-5" style="background-color:black;">
+    <section class="py-5 custom-border" style="background-color:black;">
     <div class="container">
     <div class="row">
 
@@ -18,16 +18,16 @@
         <div class="col-md-4">
         <h3 class="text-c">Address</h3>
         <div class="action-per"style="display:flex;">
-        <div class=""><i class="fa fa-home" aria-hidden="true"></i> &nbsp;</div>
-        <div class="">Rajgir Nalanda.</div>
+        <div class=""><i class="fa fa-home text-c" aria-hidden="true"></i> &nbsp;</div>
+        <div class="text-c">Rajgir Nalanda.</div>
         </div>
         <div class="action-per"style="display:flex;">
-        <div class=""><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; </div>
-        <div class="">radhekumarfromrajgir@gmail.com</div>
+        <div class=""><i class="fa fa-envelope text-c" aria-hidden="true"></i> &nbsp; </div>
+        <div class="text-c">radhekumarfromrajgir@gmail.com</div>
         </div>
         <div class="action-per">
-        <div><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; </div>
-        <div>+91 8709732783 | 9113346300</div>
+        <div><i class="fa fa-phone text-c" aria-hidden="true"></i> &nbsp; </div>
+        <div class="text-c">+91 8709732783 | 9113346300</div>
         </div>
 
       </div>
@@ -61,4 +61,8 @@
       /* for meobile view menu section start from here */
     .text-c{color:#d2d2d2;}
     
+    .custom-border {
+      border-top: 1px solid #444343;
+      border-bottom: 1px solid #201f1f;
+    }
     </style>

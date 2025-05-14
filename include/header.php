@@ -137,11 +137,12 @@ li{list-style:none;}
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #333;
+  background-color: #fff;
   list-style: none;
   padding: 10px 0;
   border-radius: 5px;
   width:300%;
+  border:none;
 }
 .nav-links {
   display: flex;
@@ -175,8 +176,8 @@ li{list-style:none;}
 }
 
 .nav-links li a:hover {
-  background-color: #555;
-  color: #e90808;
+  /* background-color: #f0c5a6; */
+  color:rgb(233, 109, 8);
 }
 
 
@@ -194,7 +195,7 @@ li{list-style:none;}
   left: 0;
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: rgb(233, 109, 8);
   transition: width 0.5s ease-in-out;
 }
 

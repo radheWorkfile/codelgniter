@@ -19,7 +19,25 @@
     </head>
     <body>
     <?php include('include/header.php');?>
+    <style>
+    .scroll-wrapper {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
 
+    .scroll-wrapper::-webkit-scrollbar {
+      display: none; /* optional: hide scrollbar */
+    }
+
+    .message-card {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: start;
+    }
+    </style>
 
       <!-- Banner section start. -->
       <style>
@@ -245,84 +263,72 @@
     <!-- Border content section start -->
 
 
-   <!-- client message section start -->
-    <section class="py-5"style="background-color:#f8f8f8;">
-    <div class="container">
-
+<!-- Client message section start. -->
+<section class="py-5" style="background-color:#f8f8f8;">
+  <div class="container">
     <div class="row">
-    <div class="col-md-8 offset-md-2">
-    <h2 class="text-center">Client Message</h2>
-    <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus quibusdam nobis delectus dolorum excepturi commodi dignissimos laborum provident vero?</p>
-    </div>
+      <div class="col-md-8 offset-md-2">
+        <h2 class="text-center">Client Message</h2>
+        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus quibusdam nobis delectus dolorum excepturi commodi dignissimos laborum provident vero?</p>
+      </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-4">
+      <div class="scroll-wrapper">
 
-            <div class="col-md-3">
-            <div class="message-card p-4 border rounded shadow-sm">
-            <div class="text-center mb-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile" class="img-fluid" style="max-width: 80px;">
-            </div>
-            <div class="d-flex justify-content-between mb-3">
+        <!-- Card 1 -->
+        <div class="message-card p-4 border rounded shadow-sm bg-white">
+          <div class="text-center mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="img-fluid" style="max-width: 80px;">
+          </div>
+          <div class="d-flex justify-content-between mb-3">
             <p class="mb-0 fw-bold">Radhe Kumar</p>
             <p class="mb-0 text-warning">*****</p>
-            </div>
-            <div class="text-justify">
-            <p  class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
-            </div>
-            </div>
-            </div>
+          </div>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
+        </div>
 
-             <div class="col-md-3">
-            <div class="message-card p-4 border rounded shadow-sm">
-            <div class="text-center mb-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile" class="img-fluid" style="max-width: 80px;">
-            </div>
-            <div class="d-flex justify-content-between mb-3">
+        <!-- Card 2 -->
+        <div class="message-card p-4 border rounded shadow-sm bg-white">
+          <div class="text-center mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="img-fluid" style="max-width: 80px;">
+          </div>
+          <div class="d-flex justify-content-between mb-3">
             <p class="mb-0 fw-bold">Radhe Kumar</p>
             <p class="mb-0 text-danger">*****</p>
-            </div>
-            <div class="text-justify">
-            <p  class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
-            </div>
-            </div>
-            </div>
+          </div>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
+        </div>
 
-             <div class="col-md-3">
-            <div class="message-card p-4 border rounded shadow-sm">
-            <div class="text-center mb-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile" class="img-fluid" style="max-width: 80px;">
-            </div>
-            <div class="d-flex justify-content-between mb-3">
+        <!-- Card 3 -->
+        <div class="message-card p-4 border rounded shadow-sm bg-white">
+          <div class="text-center mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="img-fluid" style="max-width: 80px;">
+          </div>
+          <div class="d-flex justify-content-between mb-3">
             <p class="mb-0 fw-bold">Radhe Kumar</p>
             <p class="mb-0 text-warning">*****</p>
-            </div>
-            <div class="text-justify">
-            <p  class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
-            </div>
-            </div>
-            </div>
+          </div>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
+        </div>
 
-             <div class="col-md-3">
-            <div class="message-card p-4 border rounded shadow-sm">
-            <div class="text-center mb-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile" class="img-fluid" style="max-width: 80px;">
-            </div>
-            <div class="d-flex justify-content-between mb-3">
+        <!-- Card 4 -->
+        <div class="message-card p-4 border rounded shadow-sm bg-white">
+          <div class="text-center mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="img-fluid" style="max-width: 80px;">
+          </div>
+          <div class="d-flex justify-content-between mb-3">
             <p class="mb-0 fw-bold">Radhe Kumar</p>
             <p class="mb-0 text-warning">*****</p>
-            </div>
-            <div class="text-justify">
-            <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
-            </div>
-            </div>
-            </div>
-            
-    </div>
-    </div>
-    </section>
+          </div>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit deleniti dolores, ea rem mollitia.</p>
+        </div>
 
-   <!-- client message section end -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Client message section end -->
 
 
    <!-- Get ready section start -->

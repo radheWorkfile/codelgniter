@@ -3,7 +3,7 @@
 <style>
 /* bottom border on off section start from here with this class action-per .  */
 .action-per {display: flex;position: relative;padding: 4px;font-size: 16px;cursor: pointer;}
-.action-per::before {content: "";position: absolute;bottom: 0;left: 0;width: 0;height: 2px; background-color: red; transition: width 0.5s ease-in-out; }
+.action-per::before {content: "";position: absolute;bottom: 0;left: 0;width: 0;height: 2px; background-color:#fff; transition: width 0.5s ease-in-out; }
 .action-per:hover::before { width: 60%; }
 /* bottom border on off section start from here with this class test .  */
 </style>
