@@ -1,16 +1,23 @@
-<script src="<?php echo base_url();?>soft_assets/js/bootstrap.bundle.min.js"></script>
-	<!--plugins-->
-	<script src="<?php echo base_url();?>soft_assets/js/jquery.min.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/simplebar/js/simplebar.min.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/metismenu/js/metisMenu.min.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="<?php echo base_url();?>soft_assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/chartjs/js/chart.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
-	<!--notification js -->
-	<script src="<?php echo base_url();?>soft_assets/plugins/notifications/js/lobibox.min.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/plugins/notifications/js/notifications.min.js"></script>
-	<script src="<?php echo base_url();?>soft_assets/js/index3.js"></script>
-	<!--app JS-->
-	<script src="<?php echo base_url();?>soft_assets/js/app.js"></script>
+
+    <script src="<?php echo base_url();?>soft_assets/js/jquery-3.3.1.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/plugins.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/jquery.counterup.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/moment.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/jquery.scrollUp.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/fullcalendar.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/Chart.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/main.js"></script>
+
+
+    <script src="<?php echo base_url();?>soft_assets/js/jquery-3.3.1.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/plugins.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/select2.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/jquery.scrollUp.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/datepicker.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/main.js"></script>

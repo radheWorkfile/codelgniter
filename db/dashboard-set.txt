@@ -1,0 +1,12 @@
+
+
+1. download codelgniter
+2. Login page
+3. Copy controller.
+4. Copy Model.
+5. demo table
+6. set router name Login.
+7. base Url ( paste some code in config.php ), 
+8. 65 => $autoload['libraries'] = array('session','database','form_validation');
+9. $autoload['helper'] = array('url','security');
+10. in view admin/base and dashboard set and inclide with base_url all link and your dashboard compelted.

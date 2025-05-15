@@ -15,9 +15,9 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $return = array(
-            'title' => 'Manage Income',
-            'breadcrums' => 'Create Income',
-            'targetListItem' => base_url('administrator/accounting/income/incomeList'),
+            'title' => 'Admin Dashboard',
+            'breadcrums' => 'Admin Dashboard',
+            // 'targetListItem' => base_url('administrator/accounting/income/incomeList'),
             'layout' => 'dashboard.php',
         );
         $this->load->view('admin/base', $return);

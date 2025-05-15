@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
-$autoload['libraries'] = array('session','database','form_validation');
-$autoload['helper'] = array('url','security');
-$autoload['config'] = array('global');
-$autoload['model'] = array('setting/common_model'=>'common');
 | AUTO-LOADER
 | -------------------------------------------------------------------
 | This file specifies which systems should be loaded by default.
@@ -108,6 +104,7 @@ $autoload['helper'] = array('url','security');
 |
 */
 $autoload['config'] = array();
+
 
 /*
 | -------------------------------------------------------------------

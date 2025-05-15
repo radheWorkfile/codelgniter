@@ -9,14 +9,13 @@ class Login extends CI_Controller
         $this->load->model('login_model');
         $this->load->library('form_validation');
         $this->load->library('user_agent');
-		$this->target=base_url('login/reset_password');
         error_reporting(0);
     }
     public function index()
     {
         $user_cate = $this->session->userdata('user_cate'); 
         if ($user_cate == 1) {
-            redirect('' . base_url() . 'super_admin/dashboard', 'refresh');
+            redirect('' . base_url() . 'Admin/dashboard', 'refresh');
         } else
 		{
 			$data=array('title'=>'Login Panel');
