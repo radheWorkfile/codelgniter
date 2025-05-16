@@ -7,6 +7,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include('include/css.php');?>
+
+    <style>
+    .actProtate { animation: spin 0.5s linear infinite;}
+    @keyframes spin {from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+    </style>
+
     </head>
     <body>
     <?php include('include/header.php');?>

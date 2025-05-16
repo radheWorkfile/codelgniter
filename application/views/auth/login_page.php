@@ -136,7 +136,7 @@ body {
 
 			
 			
-			<div class="title text-info">Login </div>
+			<div class="title text-info text-shadow">Login </div>
 			<div class="fields">
 			<div class="username">
 			<svg class="svg-icon" viewBox="0 0 20 20">
