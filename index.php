@@ -172,7 +172,7 @@
     <img src="https://img.freepik.com/free-photo/beautiful-young-woman-working-her-laptop-her-office-home_231208-13967.jpg" alt="" class="p-4" style="height:50vh;">
     </div>
     <div class="col-md-7">
-    <h3 class="actPtitle">Lorem ipsum dolor sit amet.</h3>
+    <h3 class="actPtitle" data-aos="fade-up">Lorem ipsum dolor sit amet. ddd</h3>
     <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, mollitia harum eaque, vel distinctio delectus quo eveniet non culpa nesciunt iste similique reprehenderit est ab, quasi voluptate obcaecati maiores! Magnam necessitatibus cupiditate quia eos, odit voluptatem adipisci. Dolorem, laudantium! Est vitae eius veritatis accusamus sunt delectus ipsam ducimus nemo repudiandae aspernatur sapiente, nostrum rerum esse!</p>
     <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, mollitia harum eaque, vel distinctio delectus quo eveniet non culpa nesciunt iste similique reprehenderit est ab, quasi voluptate obcaecati maiores! Magnam necessitatibus cupiditate quia eos, odit voluptatem adipisci. Dolorem, laudantium! Est vitae eius veritatis accusamus sunt delectus ipsam ducimus nemo repudiandae aspernatur sapiente, nostrum rerum esse!</p>
     <a href="" class="custom-btn"><span>Contact Us</span></a>
