@@ -15,14 +15,13 @@
 
     <!-- Right side: Buttons -->
     <div class="d-flex">
-        <button type="submit" class="fw-btn-fill btn-gradient-yellow px-5">Create</button>&nbsp;
-        <button type="submit" class="fw-btn-fill bg-blue-dark btn-hover-yellow px-5">Back</button>
+        <button class="fw-btn-fill btn-gradient-yellow px-5" id="actPfList">Create</button>&nbsp;
     </div>
 </div>
                 <!-- Breadcubs Area End Here -->
                 <!-- Exam Schedule Area Start Here -->
-                <div class="row">
-                    <div class="col-4-xxxl col-12">
+                <div class="row"> 
+                    <div class="col-4-xxxl col-12" id="showForm">
                         <div class="card height-auto">
                             <div class="card-body">
                                 <div class="heading-layout1">
@@ -82,8 +81,7 @@
                         </div>
                     </div>
 
-
-                    <div class="col-8-xxxl col-12">
+                    <div class="col-8-xxxl col-12" id="showList">
                         <div class="card height-auto">
                             <div class="card-body">
                                 <div class="heading-layout1">
@@ -698,11 +696,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- Exam Schedule Area End Here -->
-                <footer class="footer-wrap-layout1">
-                    <div class="copyright">© Copyrights <a href="#">akkhor</a> 2019. All rights reserved. Designed by
-                        <a href="#">PsdBosS</a></div>
-                </footer>
-            </div>
-        </div>
-        <!-- Page Area End Here -->
+         
+
+
+<script>
+  $(document).ready(function () {
+    $('#showForm').hide();
+    $('#showList').show();
+    $('#actPfList').on('click', function (e) {
+        alert("Hello Radhe kumar");
+      e.preventDefault(); 
+      $('#showList').hide();     
+      $('#showForm').show();      
+      $('#actPfList').hide();      
+    });
+  });
+</script>
+
+
+
+

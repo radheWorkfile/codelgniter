@@ -53,6 +53,7 @@ class Employee extends CI_Controller
         } else {
             $data = array(
                 'title' => 'Create Employee',
+                'actPfList' => array('showList,showForm'),
                 'targetItem' => 'targetItem',
                 'createAction' => base_url('admin/employee/index/create'), 
                 'breadecrumb' => 'Create Employee',
