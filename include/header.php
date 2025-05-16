@@ -1,8 +1,8 @@
   <?php include('default.php');?>
   <!-- top bar section start from here. -->
   <section class="pt-2" style="background-color:#000c2d;">
-    <div class="container">
-    <div class="row">
+    <div class="container-flude">
+    <div class="row px-4">
     <div class="col-md-6 col-sm-6">
     <p class="text-white"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; +91 8709732783</p>
     </div>
