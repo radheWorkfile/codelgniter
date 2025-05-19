@@ -58,6 +58,66 @@ Version: 1.0
 /*=======================================================================
 [01] TYPOGRAPHY
 =========================================================================*/
+
+
+.dataTables_wrapper .table thead .sorting {
+  background-image: none;
+  position: relative;
+   font-weight: 600;
+    text-shadow: 1px 1px 1px #c7b1b1;
+    color: #b54d10;
+}
+.nav-bar-header-one {
+  background: linear-gradient(to right, #35a5e9, #81b3ff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 26rem;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-left: -1rem;
+}
+
+.btn-gradient-yellow {
+  background-color: #3d94cb;
+}
+.sidebar-menu-one .sidebar-menu-content .nav-sidebar-menu > .nav-item > .nav-link i:before {
+  color: #b7b5b5;
+  font-size: 18px;
+  margin-right: 15px;
+  margin-left: 0;
+}
+.sidebar-menu-one .sidebar-menu-content .nav-sidebar-menu > .nav-item > .nav-link:hover i::before {
+  color: #59c7f1;
+  font-size: 18px;
+  margin-right: 15px;
+  margin-left: 0;
+}
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current:hover {
+  background: transparent;
+  border-color: #59c7f1;
+}
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+  background: -webkit-gradient(linear, left top, right top, from(#ff9d01), to(#ffae01));
+  background: -webkit-linear-gradient(left, #ff9d01, #ffae01);
+  background: linear-gradient(to right, #4e4a4a, #504c4c);
+  background: linear-gradient(to right, #4e4a4a, #504c4c);
+  border: 1px solid black;
+  padding: 0px 11px;
+}
+
+.header-main-menu .navbar-nav .header-admin .dropdown-menu .item-header {
+  text-align: center;
+  background-color: #59c7f1;
+  padding: 20px 25px;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+}
+.sidebar-color {
+  background-color: #051d38;
+}
+/* ========================================== */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
 html {
   height: 100%;
@@ -823,10 +883,7 @@ h6 {
   border-collapse: collapse;
   border: 1px solid #e1e1e1;
 }
-.dataTables_wrapper .table thead .sorting {
-  background-image: none;
-  position: relative;
-}
+
 .dataTables_wrapper .table thead .sorting:before {
   content: "\f0d8";
   font-family: "Font Awesome 5 Free";
@@ -885,7 +942,7 @@ h6 {
   font-size: 16px;
   font-weight: 500;
   color: #111111;
-  padding: 14px 15px;
+  /* padding: 14px 15px; */
 }
 @media only screen and (max-width: 991px) {
   .dataTables_wrapper .table thead tr th {
@@ -942,18 +999,8 @@ h6 {
   background: linear-gradient(to right, #ff9d01, #ffae01);
   border-color: #ffae01;
 }
-.dataTables_wrapper .dataTables_paginate span .paginate_button.current {
-  background: -webkit-gradient(linear, left top, right top, from(#ff9d01), to(#ffae01));
-  background: -webkit-linear-gradient(left, #ff9d01, #ffae01);
-  background: -o-linear-gradient(left, #ff9d01, #ffae01);
-  background: linear-gradient(to right, #ff9d01, #ffae01);
-  border: 1px solid #ffae01;
-  padding: 8px 18px;
-}
-.dataTables_wrapper .dataTables_paginate span .paginate_button.current:hover {
-  background: transparent;
-  border-color: #ffae01;
-}
+
+
 /*=============== 3.2 Full Calender ==================*/
 .fc-calender .fc-header-toolbar .fc-left {
   width: 50%;
@@ -1213,12 +1260,12 @@ h6 {
 .btn-fill-lg {
   display: inline-block;
   border: none;
-  background-color: transparent;
+  background-color:black;
   border-radius: 4px;
   font-weight: 500;
   color: #ffffff;
   letter-spacing: 1px;
-  padding: 12px 45px;
+  padding: 3px 44px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -1492,16 +1539,7 @@ ul {
   -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.nav-bar-header-one {
-  background: linear-gradient(to right, #ff9d01, #ffaa01);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 26rem;
-  margin-top: -5px;
-  margin-bottom: -5px;
-  margin-left: -1rem;
-}
+
 @media only screen and (max-width: 767px) {
   .nav-bar-header-one {
     display: block;
@@ -2032,13 +2070,7 @@ ul {
     min-width: 200px;
   }
 }
-.header-main-menu .navbar-nav .header-admin .dropdown-menu .item-header {
-  text-align: center;
-  background-color: #ffa001;
-  padding: 20px 25px;
-  border-radius: 4px 4px 0 0;
-  position: relative;
-}
+
 .header-main-menu .navbar-nav .header-admin .dropdown-menu .item-header:after {
   content: "";
   height: 0;
@@ -2117,12 +2149,7 @@ ul {
   position: relative;
   padding: 12px 25px;
 }
-.sidebar-menu-one .sidebar-menu-content .nav-sidebar-menu > .nav-item > .nav-link i:before {
-  color: #ffa901;
-  font-size: 18px;
-  margin-right: 15px;
-  margin-left: 0;
-}
+
 .sidebar-menu-one .sidebar-menu-content .nav-sidebar-menu > .nav-item > .nav-link span {
   font-size: 15px;
   color: #9ea8b5;
@@ -2140,8 +2167,8 @@ ul {
 }
 .sidebar-menu-one .sidebar-menu-content .nav-sidebar-menu > .nav-item .sub-group-menu {
   display: none;
-  background-color: #051f3e;
-  padding: 10px 0;
+  background-color: black;
+  padding: 2px 0;
 }
 .sidebar-menu-one .sidebar-menu-content .nav-sidebar-menu > .nav-item .sub-group-menu > .nav-item .nav-link {
   font-size: 14px;
@@ -4245,9 +4272,7 @@ ul {
 .bg-git {
   background-color: #997f75;
 }
-.sidebar-color {
-  background-color: #042954;
-}
+
 .bg-gradient-fb {
   background: -webkit-gradient(linear, left top, right top, from(#546ca9), to(#5c77bc));
   background: -webkit-linear-gradient(left, #546ca9, #5c77bc);
@@ -4272,9 +4297,7 @@ ul {
   background: -o-linear-gradient(left, #1565c0, #314ce0);
   background: linear-gradient(to right, #1565c0, #314ce0);
 }
-.btn-gradient-yellow {
-  background-color: #ffae01;
-}
+
 .gradient-dodger-blue {
   background: -webkit-gradient(linear, left top, right top, from(#2196f3), to(#21bff3));
   background: -webkit-linear-gradient(left, #2196f3, #21bff3);

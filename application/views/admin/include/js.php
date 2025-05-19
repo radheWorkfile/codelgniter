@@ -10,6 +10,9 @@
     <script src="<?php echo base_url();?>soft_assets/js/fullcalendar.min.js"></script>
     <script src="<?php echo base_url();?>soft_assets/js/Chart.min.js"></script>
     <script src="<?php echo base_url();?>soft_assets/js/main.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/select2.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/datepicker.min.js"></script>
+    <script src="<?php echo base_url();?>soft_assets/js/jquery.dataTables.min.js"></script>
 
-
+    
  

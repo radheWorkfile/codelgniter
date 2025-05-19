@@ -7,7 +7,7 @@
             <div class="nav-bar-header-one">
                 <div class="header-logo">
                     <a href="index-2.html">
-                        <img src="<?php echo base_url();?>soft_assets/img/logo.png" alt="logo">
+                    <img src="<?php $logo= (config_item('logo')!= '')?config_item('logo'):'soft_assets/img/default-logo.png'; echo base_url().$logo; ?>" alt="logo">
                     </a>
                 </div>
                  <div class="toggle-button sidebar-toggle">
@@ -188,9 +188,7 @@
                             <div class="item-content">
                                 <ul class="settings-list">
                                     <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
-                                    <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                                     <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
-                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
                                     <li><a href="<?php echo base_url('login/logout');?>"><i class="flaticon-turn-off"></i>Log Out</a></li>
                                 </ul>
                             </div>
