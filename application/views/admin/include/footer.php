@@ -246,8 +246,8 @@
 	<div class="d-flex justify-content-end gap-2 mt-4">
 	<button type="button" class="btn btn-outline-dark py-2 px-4" data-bs-dismiss="modal">
 	<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back </button>&nbsp;&nbsp;
-	<button type="button" class="btn btn-outline-danger pu-2 px-4"> Confirm Delete <i class="fa fa-trash fs-5" aria-hidden="true"></i>
-	</button>
+	<button type="button" class="btn btn-outline-danger pu-2 px-4 statusConfirmBtn" data-id="">Confirm Delete <i class="fa fa-trash fs-5" aria-hidden="true"></i>
+</button>
 	</div>  </div>  </div> 
     </div> </div>
 
@@ -274,32 +274,34 @@
 <!-- ========================================== Delete Model end ================================  -->
 
 <script>
-      function print_member_details(id, user_id) {
-        $.ajax({
-            url: '<?= base_url() ?>' + 'admin/employee/certificate',
-            type: "POST",
-            data: {
-                'id': id,
-                'user_id': user_id,
-            },
-            success: function (data) {
-                popup(data);
-            },
-        });}
 
-		     function print_id_card(id, user_id) {
-        $.ajax({
-            url: '<?= base_url() ?>' + 'admin/employee/id_card',
-            type: "POST",
-            data: {
-                'id': id,
-                'user_id': user_id,
-            },
-            success: function (data) {
-                popup(data);
-            },
-        });} 
+		function print_member_details(elem, id) {
+		const originalIcon = elem.querySelector('i');
+		const originalHTML = originalIcon.outerHTML;
+		elem.innerHTML = '<i class="fas fa-refresh actProtate text-white"></i>';
+		setTimeout(() => {
+		elem.innerHTML = originalHTML;
+		}, 1000); $.ajax({ url: '<?= base_url() ?>admin/employee/certificate',
+		type: "POST", data: { 'id': id}, 
+		success: function (data) { popup(data); } }); }
 
+
+		function print_id_card(elem, id) {
+		const originalIcon = elem.querySelector('i');
+		const originalHTML = originalIcon.outerHTML;
+		elem.innerHTML = '<i class="fas fa-refresh actProtate text-white"></i>';
+		setTimeout(() => {
+		elem.innerHTML = originalHTML;
+		}, 1000);
+		$.ajax({
+		url: '<?= base_url() ?>admin/employee/id_card',
+		type: "POST",
+		data: { 'id': id },
+		success: function (data) {
+		popup(data);
+		},
+		});
+		}
 
 		    function popup(data) {
         var base_url = '<?php echo base_url() ?>';
@@ -331,3 +333,40 @@
     }
     
 </script>
+
+		<script>
+	
+		function openStatusModal(id) {
+			alert(id);
+		$.ajax({
+		url: '<?= base_url() ?>' + 'admin/employee/changeStatus',
+		type: "POST", data: { 'id': id, },
+		success: function (data) {
+		console.log(data); 
+		}, }); }
+		</script>
+		
+
+<!-- ++++++++++++++++++++++++++ Rotate icon section start +++++++++++++  -->
+<script>
+    function rotateAndRedirect(anchor, url) {
+        anchor.innerHTML = '';
+        const cog = document.createElement('i');
+        cog.className = 'fas fa-refresh actProtate text-white me-1';
+        const waitText = document.createElement('span');
+        waitText.innerText = ' processing...';
+        waitText.style.color = '#fff'; 
+        waitText.style.fontSize = '0.875rem'; 
+        anchor.appendChild(cog);
+        anchor.appendChild(waitText);
+        setTimeout(function () {
+            window.location.href = url;
+        }, 1000);
+        return false;
+    }
+</script>
+<!-- ++++++++++++++++++++++++++ Rotate icon section end +++++++++++++  -->
+
+
+
+

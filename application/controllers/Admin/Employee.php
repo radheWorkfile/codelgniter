@@ -144,11 +144,15 @@ $login_branch = base_url('admin/employee/view_emp/' . urlencode(base64_encode(js
 $view = base_url('admin/employee/index/view_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
 $editUid = base_url('admin/employee/index/edit_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
 
-$id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#print_bill" onclick="print_id_card('. $row->id .')" title="Print ID Card"><i class="fas fa-id-card text-white"></i></a>';
+// $id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#print_bill" onclick="print_id_card('. $row->id .')" title="Print ID Card"><i class="fas fa-id-card text-white"></i></a>';
 
-$certificate = '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#print_bill" onclick="print_member_details('. $row->id .')" title="Print Certificate"><i class="fas fa-certificate text-white"></i></a>';
+$id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp" onclick="print_id_card(this, '. $row->id .')" title="Print ID Card"><i class="fas fa-id-card text-white"></i></a>';
 
-$isDel = '<a href="javascript:void(0);" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp getAction" id="delAr--' . $row->id . '" data-id="viewDelete===admin/employee/accPermision===' . $row->id . '" data-bs-toggle="modal" data-bs-target="#deletePanel" title="Delete"><i class="fa fa-trash"></i></a>';
+$certificate = '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" onclick="print_member_details(this, ' . $row->id .')" title="Print Certificate">
+    <i class="fas fa-certificate text-white"></i>
+</a>';
+
+$isDel = '<a href="javascript:void(0);" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#actPdelete" onclick="showStatusId('. $row->id .')" title="Print ID Card"><i class="fas fa-trash text-white"></i></a>';
 
 $actionBtn = '
 <div class="d-flex justify-content-center align-items-center flex-nowrap">
@@ -162,9 +166,21 @@ $actionBtn = '
 
 
 
-                    $status = ($row->status == 1) ? 
-                    '<a class="badge border border-success text-success bg-transparent getAction miLvs" href="javascript:void(0)" data-id="miStatusView===website/recent_activity/manageEvent==='.$row->id.'" data-toggle="modal" data-target="#actPstatus" title="Click to De-Active" id="arvs--'.$row->id.'">Active</a>' : 
-                    '<a href="javascript:void(0)" data-id="miStatusView===website/recent_activity/manageEvent==='.$row->id.'" data-toggle="modal" data-target="#actPstatus" title="Click to Active" class="badge border border-danger text-danger bg-transparent getAction" id="arvs--'.$row->id.'">Deactive</a>';
+
+                    $status_aaa = ($row->status == 1) ? 
+                   '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#actPstatus" onclick="openStatusModal('. $row->id .')" title="Print ID Card"><i class="fas fa-power-off text-white"></i> Active </a>':
+                   '<a href="javascript:void(0);" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#actPstatus" onclick="openStatusModal('. $row->id .')" title="Print ID Card"><i class="fas fa-power-off text-white"></i> Deactive</a>';
+
+
+                    $status = ($row->status == 1) ?
+                    '<a href="javascript:void(0);" onclick="return rotateAndRedirect(this, \'' . base_url('admin/employee/actAct/' . $row->id) . '\')" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" title="Print ID Card">
+                    <i class="fas fa-power-off text-white"></i> Active
+                    </a>' :
+                    '<a href="javascript:void(0);" onclick="return rotateAndRedirect(this, \'' . base_url('admin/employee/actAct/' . $row->id) . '\')" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp" title="Print ID Card">
+                    <i class="fas fa-power-off text-white"></i> Deactive
+                    </a>';
+
+
 
                     $shortText = (mb_strlen($row->e_text) > 20) ? mb_substr($row->e_text, 0, 20) . '...' : $row->e_text;
                     $image= '<span><img src="' . base_url($row->e_images) . '" alt="" style="height:2rem; border:1px solid #f2a6a6; border-radius:10%;"></span>';
@@ -209,6 +225,41 @@ $actionBtn = '
 
         }
     }  
+
+
+
+ public function actAct($id)
+{
+    $this->db->where('id', $id);
+    $query = $this->db->get('employee');
+    $row = $query->row();
+    if ($row) {
+        $newStatus = ($row->status == 1) ? 0 : 1;
+        $this->db->where('id', $id);
+        $this->db->update('employee', ['status' => $newStatus]);
+        redirect('admin/employee');
+    }
+}
+
+
+
+
+ public function changeStatus()
+{
+    $data = $this->input->post();
+    $this->db->where('id', $data['id']);
+    $query = $this->db->get('employee');
+    $row = $query->row();
+    if ($row) {
+        $newStatus = ($row->status == 1) ? 0 : 1;
+        $this->db->where('id', $data['id']);
+        $this->db->update('employee', ['status' => $newStatus]);
+        echo json_encode(['status' => 'success', 'newStatus' => $newStatus]);
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'Employee not found']);
+    }
+}
+
 
 
    

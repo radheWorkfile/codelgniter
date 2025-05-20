@@ -6,11 +6,10 @@
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/all.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>fonts/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/fonts/flaticon.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/animate.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/datepicker.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/select2.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/style.css">
     <script src="<?php echo base_url();?>soft_assets/js/modernizr-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/fonts/flaticon.css">

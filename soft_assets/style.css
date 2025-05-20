@@ -65,7 +65,7 @@ Version: 1.0
   position: relative;
    font-weight: 600;
     text-shadow: 1px 1px 1px #c7b1b1;
-    color: #b54d10;
+    color: #000000;
 }
 .nav-bar-header-one {
   background: linear-gradient(to right, #35a5e9, #81b3ff);
