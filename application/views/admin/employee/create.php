@@ -127,7 +127,7 @@
     </div>
     </form>
     <div class="table-responsive">
-    <table class="table display data-table text-nowrap" id="listItem">
+      <table class="table display data-table text-nowrap" id="listItem" data-id="<?php echo $targetLIstItem;?>">
     <thead>
     <tr class="bg-light-yellow m-0 p-0">
     <th>Si-No.</th>

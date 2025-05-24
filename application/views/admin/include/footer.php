@@ -191,17 +191,19 @@
 // targetLIstItem  listItem
 
 
-        var accPermission = '';
-        $(document).ready(function () {
-        let searchObj = {};
-        var targetAction = $('#targetLIstItem').attr('data-id');
-        accPermission = {
+    var accPermission = '';
+$(document).ready(function () {
+    let searchObj = {};
+    var targetAction = $('#listItem').attr('data-id'); // Corrected ID
+
+    accPermission = {
         printTable: function (search_data) {
-        getpaginate(search_data, '#listItem', targetAction, 'Search');
+            getpaginate(search_data, '#listItem', targetAction, 'Search');
         }
-        };
-        accPermission.printTable(searchObj);
-        });
+    };
+    accPermission.printTable(searchObj);
+});
+
 
 
 		    $(function () {
@@ -271,101 +273,129 @@
 
 
 
-<!-- ========================================== Delete Model end ================================  -->
+<!-- ========================================== print id-card & certificate ================================  -->
 
 <script>
-
-		function print_member_details(elem, id) {
-		const originalIcon = elem.querySelector('i');
-		const originalHTML = originalIcon.outerHTML;
-		elem.innerHTML = '<i class="fas fa-refresh actProtate text-white"></i>';
-		setTimeout(() => {
-		elem.innerHTML = originalHTML;
-		}, 1000); $.ajax({ url: '<?= base_url() ?>admin/employee/certificate',
-		type: "POST", data: { 'id': id}, 
-		success: function (data) { popup(data); } }); }
-
-
-		function print_id_card(elem, id) {
-		const originalIcon = elem.querySelector('i');
-		const originalHTML = originalIcon.outerHTML;
-		elem.innerHTML = '<i class="fas fa-refresh actProtate text-white"></i>';
-		setTimeout(() => {
-		elem.innerHTML = originalHTML;
-		}, 1000);
-		$.ajax({
-		url: '<?= base_url() ?>admin/employee/id_card',
-		type: "POST",
-		data: { 'id': id },
-		success: function (data) {
-		popup(data);
-		},
-		});
-		}
-
-		    function popup(data) {
-        var base_url = '<?php echo base_url() ?>';
-        var frame1 = $('<iframe />');
-        frame1[0].name = "frame1";
-        frame1.css({
-            "position": "absolute",
-            "top": "-1000000px"
+		
+function print_id_card(elem, id) {
+    const originalIcon = elem.querySelector('i');
+    const originalHTML = originalIcon.outerHTML;
+    elem.innerHTML = '<i class="fas fa-cog actProtate text-white"></i>';
+    setTimeout(() => {
+        elem.innerHTML = originalHTML;
+        $.ajax({
+            url: '<?= base_url() ?>admin/employee/id_card',
+            type: "POST",
+            data: { id: id },
+            success: function (data) {
+                popup(data);
+            }
         });
-        $("body").append(frame1);
-        var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
-        frameDoc.document.open();
-        //Create a new HTML document.
-        frameDoc.document.write('<html>');
-        frameDoc.document.write('<head>');
-        frameDoc.document.write('<title></title>');
-        frameDoc.document.write('</head>');
-        frameDoc.document.write('<body>');
-        frameDoc.document.write(data);
-        frameDoc.document.write('</body>');
-        frameDoc.document.write('</html>');
-        frameDoc.document.close();
-        setTimeout(function () {
-            window.frames["frame1"].focus();
-            window.frames["frame1"].print();
-            frame1.remove();
-        }, 500);
-        return true;
-    }
-    
+    }, 2000);
+}
+
+function print_certificate(elem, id) {
+    const originalIcon = elem.querySelector('i');
+    const originalHTML = originalIcon.outerHTML;
+    elem.innerHTML = '<i class="fas fa-cog actProtate text-white"></i>';
+    setTimeout(() => {
+        elem.innerHTML = originalHTML;
+        $.ajax({
+            url: '<?= base_url() ?>admin/employee/certificate',
+            type: "POST",
+            data: { id: id },
+            success: function (data) {
+                popup(data);
+            }
+        });
+    }, 2000);
+}
+
+function popup(data) {
+    var frame1 = $('<iframe />');
+    frame1[0].name = "frame1";
+    frame1.css({ "position": "absolute", "top": "-1000000px" });
+    $("body").append(frame1);
+    var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : 
+        frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+    frameDoc.document.open();
+    frameDoc.document.write('<html><head><title></title></head><body>' + data + '</body></html>');
+    frameDoc.document.close();
+    setTimeout(function () {
+        window.frames["frame1"].focus();
+        window.frames["frame1"].print();
+        frame1.remove();
+    }, 500);
+}
+
+
 </script>
 
-		<script>
-	
-		function openStatusModal(id) {
-			alert(id);
-		$.ajax({
-		url: '<?= base_url() ?>' + 'admin/employee/changeStatus',
-		type: "POST", data: { 'id': id, },
-		success: function (data) {
-		console.log(data); 
-		}, }); }
-		</script>
+<!-- ========================================== print id-card & certificate ================================  -->
 		
 
-<!-- ++++++++++++++++++++++++++ Rotate icon section start +++++++++++++  -->
+<!-- ++++++++++++++++++++++++++ status section start +++++++++++++  -->
+
+	<script>
+	function rotateAndRedirect(anchor, url, changeStatusURL) {
+	anchor.innerHTML = ''; const cog = document.createElement('i');
+	cog.className = 'fas fa-refresh actProtate text-white me-1';
+	const waitText = document.createElement('span');
+	waitText.innerText = ' processing...';waitText.style.color = '#fff';
+	waitText.style.fontSize = '0.875rem';anchor.appendChild(cog);
+	anchor.appendChild(waitText);const id = url.split('/').pop(); 
+	$.ajax({ url: changeStatusURL, type: 'POST',data: { id: id }, dataType: 'json',
+	success: function (response) { if (response.status === 'success') {
+	showMessage('<i class="fa fa-power-off text-success text-samll"></i> Status changed successfully!', 'success');
+	const newStatus = response.newStatus == 1 ? 'Active' : 'Deactive';
+	const newClass = response.newStatus == 1 ? 'btn-success' : 'btn-danger';
+	anchor.className = `btn ${newClass} btn-sm mx-1 shadow btn-xs sharp`;
+	anchor.innerHTML = `<i class="fas fa-power-off text-white"></i> ${newStatus}`;
+	} else { showMessage(response.message || '<i class="fa fa-power-off text-danger" aria-hidden="true"></i> Something went wrong!', 'error');
+	anchor.innerHTML = `<i class="fas fa-power-off text-white"></i> Retry`;
+	} }, error: function () {
+	showMessage('<i class="fa fa-power-off text-danger text-samll" aria-hidden="true"></i> Server error occurred.', 'error');
+	anchor.innerHTML = `<i class="fas fa-power-off text-white"></i> Retry`;
+	} }); return false; }
+	function showMessage(message, type) {
+	const alertBox = document.createElement('div');
+	alertBox.className = `alert alert-${type === 'success' ? 'success' : 'danger'} mt-2`;
+	alertBox.innerHTML = message; alertBox.style.position = 'fixed'; alertBox.style.top = '10px';
+	alertBox.style.right = '10px'; alertBox.style.zIndex = '9999'; alertBox.style.minWidth = '20%';
+	document.body.appendChild(alertBox); setTimeout(() => { alertBox.remove(); }, 3000); }
+	</script>
+
+<!-- ++++++++++++++++++++++++++ status section end +++++++++++++  -->
+
+
 <script>
-    function rotateAndRedirect(anchor, url) {
-        anchor.innerHTML = '';
-        const cog = document.createElement('i');
-        cog.className = 'fas fa-refresh actProtate text-white me-1';
-        const waitText = document.createElement('span');
-        waitText.innerText = ' processing...';
-        waitText.style.color = '#fff'; 
-        waitText.style.fontSize = '0.875rem'; 
-        anchor.appendChild(cog);
-        anchor.appendChild(waitText);
-        setTimeout(function () {
-            window.location.href = url;
-        }, 1000);
-        return false;
-    }
+function rotateAndRedirectView(elem, url) {
+    const icon = elem.querySelector('i');
+    const originalClass = icon.className;
+
+    icon.className = 'fas fa-cog fa-spin text-white actProtate';
+
+    setTimeout(() => {
+        icon.className = originalClass;
+        window.location.href = url;
+    }, 2000);
+}
+
+function rotateAndRedirectEdit(elem, url) {
+    const icon = elem.querySelector('i');
+    const originalClass = icon.className;
+
+    icon.className = 'fas fa-cog fa-spin text-white actProtate';
+
+    setTimeout(() => {
+        icon.className = originalClass;
+        window.location.href = url;
+    }, 2000);
+}
 </script>
-<!-- ++++++++++++++++++++++++++ Rotate icon section end +++++++++++++  -->
+
+
+
 
 
 

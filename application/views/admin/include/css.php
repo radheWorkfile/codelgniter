@@ -13,3 +13,5 @@
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/style.css">
     <script src="<?php echo base_url();?>soft_assets/js/modernizr-3.6.0.min.js"></script>
+
+
