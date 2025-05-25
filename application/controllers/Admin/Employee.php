@@ -14,8 +14,6 @@ class Employee extends CI_Controller
     }
 
 
-
-
     public function index($action = NULL, $getId = NULL)
     {
         if ($action === 'create') {
@@ -136,68 +134,36 @@ class Employee extends CI_Controller
     public function showLIst()
     {
         $post_data = $this->input->post();
-                $return['data'] = array();
-                $i = $post_data['start'] + 1;
-                $record = $this->common->showLIst_model($post_data);
-                 $emp_id = 1001;
-                foreach ($record as $row) {
+        $return['data'] = array();
+        $i = $post_data['start'] + 1;
+        $record = $this->common->showLIst_model($post_data);
+         $emp_id = 1001;
+        foreach ($record as $row) {
                    
-$login_branch = base_url('admin/employee/view_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
+        $login_branch = base_url('admin/employee/view_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
 
+        $viewURL = base_url('admin/employee/index/view_emp/' . urlencode(base64_encode(json_encode([ 'action' => 'editDetails', 'id' => $row->id ]))));
 
+        $editURL = base_url('admin/employee/index/edit_emp/' . urlencode(base64_encode(json_encode([ 'action' => 'editDetails', 'id' => $row->id ]))));
 
-$viewURL = base_url('admin/employee/index/view_emp/' . urlencode(base64_encode(json_encode([
-    'action' => 'editDetails',
-    'id' => $row->id
-]))));
+        $id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp actPIdCard" onclick="print_id_card(this, ' . $row->id . ')" title="Print ID Card">  <i class="fas fa-id-card text-white"></i> </a>';
 
-$editURL = base_url('admin/employee/index/edit_emp/' . urlencode(base64_encode(json_encode([
-    'action' => 'editDetails',
-    'id' => $row->id
-]))));
+        $certificate = '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp actPCertificate" onclick="print_certificate(this, ' . $row->id . ')" title="Print Certificate">  <i class="fas fa-certificate text-white"></i>  </a>';
 
+        $isDel = '<a href="javascript:void(0);" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp open-delete-modal" data-id="'. $row->id .'"  data-table="employee"
+        data-url="' . base_url('admin/employee/accessPerRemove') . '"  data-bs-toggle="modal" data-bs-target="#actPdelete"  title="Delete Record">
+        <i class="fas fa-trash text-white delete-icon"></i> <i class="fas fa-sync-alt text-white refresh-icon d-none actProtate"></i> 
+        </a>';
 
+        $actionBtn = '<div class="d-flex justify-content-center align-items-center flex-nowrap">
+        <a href="' . $login_branch . '" class="btn btn-dark btn-sm mx-1 shadow btn-xs sharp" title="Login"><i class="fas fa-power-off text-white"></i></a>
+        ' . $id_card . ' ' . $certificate . '
+        <a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" onclick="rotateAndRedirectView(this, \'' . $viewURL . '\')" title="View"> <i class="fas fa-eye text-white"></i> </a>
+        <a href="javascript:void(0);" class="btn btn-primary btn-sm mx-1 shadow btn-xs sharp" onclick="rotateAndRedirectEdit(this, \'' . $editURL . '\')" title="Edit"> <i class="fas fa-edit text-white"></i> </a>
+        ' . $isDel . '
+        </div>';
 
-$id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp actPIdCard" onclick="print_id_card(this, ' . $row->id . ')" title="Print ID Card"> 
-    <i class="fas fa-id-card text-white"></i>
-</a>';
-
-$certificate = '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp actPCertificate" onclick="print_certificate(this, ' . $row->id . ')" title="Print Certificate"> 
-    <i class="fas fa-certificate text-white"></i> 
-</a>';
-
-
-$isDel = '<a href="javascript:void(0);" 
-    class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp open-delete-modal" 
-    data-id="'. $row->id .'" 
-    data-table="employee"
-    data-url="' . base_url('admin/employee/accessPerRemove') . '" 
-    data-bs-toggle="modal" 
-    data-bs-target="#actPdelete" 
-    title="Delete Record">
-    <i class="fas fa-trash text-white delete-icon"></i>
-    <i class="fas fa-sync-alt text-white refresh-icon d-none actProtate"></i>
-</a>';
-
-
-
-$actionBtn = '
-<div class="d-flex justify-content-center align-items-center flex-nowrap">
-    <a href="' . $login_branch . '" class="btn btn-dark btn-sm mx-1 shadow btn-xs sharp" title="Login"><i class="fas fa-power-off text-white"></i></a>
-    ' . $id_card . '
-    ' . $certificate . '
-     <a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" onclick="rotateAndRedirectView(this, \'' . $viewURL . '\')" title="View">
-        <i class="fas fa-eye text-white"></i>
-    </a>
-    <a href="javascript:void(0);" class="btn btn-primary btn-sm mx-1 shadow btn-xs sharp" onclick="rotateAndRedirectEdit(this, \'' . $editURL . '\')" title="Edit">
-        <i class="fas fa-edit text-white"></i>
-    </a>
-    ' . $isDel . '
-</div>';
-
-
-
-    $status = ($row->status == 1) ?
+        $status = ($row->status == 1) ?
         '<a href="javascript:void(0);" onclick="return rotateAndRedirect(this, \'' . base_url('admin/employee_1111/status/' . $row->id) . '\', \'' . base_url('admin/employee/changeStatus') . '\')" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" title="Change Status">
         <i class="fas fa-power-off text-white"></i> Active
         </a>' :
@@ -205,65 +171,41 @@ $actionBtn = '
         <i class="fas fa-power-off text-white"></i> Deactive
         </a>';
       
+        $hasStatus = ($row->status == 1) ? '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp actHasStatus" data-id="' . $row->id . '"  data-status="1"
+        data-table="employee" data-url="' . base_url('admin/employee/statusToggle') . '"  title="Change Status"> <i class="fas fa-power-off text-white"></i> Active
+        </a>' : '<a href="javascript:void(0);"  class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp actHasStatus" data-id="' . $row->id . '" data-status="0" data-table="employee"
+        data-url="' . base_url('admin/employee/statusToggle') . '" title="Change Status"> <i class="fas fa-power-off text-white"></i> Deactive
+        </a>';
 
-$hasStatus = ($row->status == 1) ?
-    '<a href="javascript:void(0);" 
-        class="btn btn-success btn-sm mx-1 shadow btn-xs sharp actHasStatus"
-        data-id="' . $row->id . '" 
-        data-status="1"
-        data-table="employee"
-        data-url="' . base_url('admin/employee/statusToggle') . '" 
-        title="Change Status">
-        <i class="fas fa-power-off text-white"></i> Active
-    </a>' :
-    '<a href="javascript:void(0);" 
-        class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp actHasStatus"
-        data-id="' . $row->id . '" 
-        data-status="0"
-        data-table="employee"
-        data-url="' . base_url('admin/employee/statusToggle') . '" 
-        title="Change Status">
-        <i class="fas fa-power-off text-white"></i> Deactive
-    </a>';
+        $shortText = (mb_strlen($row->e_text) > 20) ? mb_substr($row->e_text, 0, 20) . '...' : $row->e_text;
 
+        $image= '<span><img src="' . base_url($row->e_images) . '" alt="" style="height:2rem; border:1px solid #f2a6a6; border-radius:10%;"></span>';
 
+        $amount = $row->amount ? '<span class="success">₹ ' . $row->amount . '</span>' : '<span class="text-danger">N/A</span>';
 
+        $image= '<span><img src="' . base_url($row->image) . '" class="imageView" alt="" style="height:2rem; border:1px solid #f2a6a6; border-radius:10%;"></span>';
 
-
-
-
-
-
-
-
-                    $shortText = (mb_strlen($row->e_text) > 20) ? mb_substr($row->e_text, 0, 20) . '...' : $row->e_text;
-                    $image= '<span><img src="' . base_url($row->e_images) . '" alt="" style="height:2rem; border:1px solid #f2a6a6; border-radius:10%;"></span>';
-
-                    $amount = $row->amount ? '<span class="success">₹ ' . $row->amount . '</span>' : '<span class="text-danger">N/A</span>';
-                    $image= '<span><img src="' . base_url($row->image) . '" class="imageView" alt="" style="height:2rem; border:1px solid #f2a6a6; border-radius:10%;"></span>';
-                    $return['data'][] = array(
-                          $i,
-                          'EMP'.$emp_id++ ,
-                          $row->name,
-                          $row->fname,
-                          $row->mobile,
-                          $row->email,
-                          $status,
-                          $hasStatus,
-                          $actionBtn
-                    );
-                    $i++;
-                }
+        $return['data'][] = array(
+            $i,
+            'EMP'.$emp_id++ ,
+            $row->name,
+            $row->fname,
+            $row->mobile,
+            $row->email,
+            $status,
+            $hasStatus,
+            $actionBtn
+        ); $i++; }
         
-                $return['recordsTotal'] = $this->common->total_count();
-                $return['recordsFiltered'] = $this->common->total_filter_count($post_data);
-                echo json_encode($return);
+            $return['recordsTotal'] = $this->common->total_count();
+            $return['recordsFiltered'] = $this->common->total_filter_count($post_data);
+            echo json_encode($return);
+
     }
 
 
 
-    public function statusToggle()
-{
+    public function statusToggle() {
     $id = $this->input->post('id');
     $table = $this->input->post('table');
     $current = $this->input->post('current');
@@ -290,97 +232,73 @@ $hasStatus = ($row->status == 1) ?
     } else {
         echo json_encode(['status' => 'error', 'msg' => 'Failed to update status']);
     }
-}
 
-
-
-
-
-public function accessPerRemove() {
-    $id = $this->input->post('id');
-    $table = $this->input->post('table');
-    $permission = $this->input->post('permission');
-
-    $allowed_tables = ['employee', 'guest', 'members'];
-
-    if (!$id || !$table || !in_array($table, $allowed_tables)) {
-        echo json_encode(['status' => 'error', 'msg' => 'Invalid request']);
-        return;
     }
 
-    $record = $this->db->select('id, name')->from($table)->where('id', $id)->get()->row();
 
-    if (!$record) {
-        echo json_encode(['status' => 'error', 'msg' => 'Record not found']);
-        return;
+
+
+
+    public function accessPerRemove() {
+        $id = $this->input->post('id');
+        $table = $this->input->post('table');
+        $permission = $this->input->post('permission');
+        $allowed_tables = ['employee', 'guest', 'members'];
+
+        if (!$id || !$table || !in_array($table, $allowed_tables)) {
+            echo json_encode(['status' => 'error', 'msg' => 'Invalid request']);
+            return;
+        }
+        $record = $this->db->select('id, name')->from($table)->where('id', $id)->get()->row();
+        if (!$record) {
+            echo json_encode(['status' => 'error', 'msg' => 'Record not found']);
+            return;
+        }
+        if ($permission === 'yes') {
+            $this->db->where('id', $id)->delete($table);
+            echo json_encode(['status' => 'success', 'data' => $record]);
+        } else {
+            echo json_encode(['status' => 'error', 'msg' => 'Permission denied. Try again later.']);
+        }
     }
 
-    if ($permission === 'yes') {
-        $this->db->where('id', $id)->delete($table);
-        echo json_encode(['status' => 'success', 'data' => $record]);
-    } else {
-        echo json_encode(['status' => 'error', 'msg' => 'Permission denied. Try again later.']);
+    public function certificate(){
+        if ($this->input->is_ajax_request()) {
+            $getId = $this->input->post();
+            $data['pribound'] = $this->common->showLIst_model($getId['id']);
+            $this->load->view('admin/employee/certificate', $data);
+        }
+    }  
+    
+    public function id_card(){
+        if ($this->input->is_ajax_request()) {
+            $getId = $this->input->post();
+            $data['pribound'] = $this->common->showLIst_model($getId['id']);
+            $this->load->view('admin/employee/id_card', $data);
+        }
     }
-}
-
-
-
-public function certificate()
-{
-    if ($this->input->is_ajax_request()) {
-        $getId = $this->input->post();
-        $data['pribound'] = $this->common->showLIst_model($getId['id']);
-        $this->load->view('admin/employee/certificate', $data);
-    }
-}  
-
-public function id_card()
-{
-    if ($this->input->is_ajax_request()) {
-        $getId = $this->input->post();
-        $data['pribound'] = $this->common->showLIst_model($getId['id']);
-        $this->load->view('admin/employee/id_card', $data);
-    }
-}
  
-
-
-
-
-
-
-
- 
-public function changeStatus()
-{
-    $data = $this->input->post();
-    $this->db->where('id', $data['id']);
-    $query = $this->db->get('employee');
-    $row = $query->row();
-
-    if ($row) {
-        $newStatus = ($row->status == 1) ? 0 : 1;
+    public function changeStatus()
+    {
+        $data = $this->input->post();
         $this->db->where('id', $data['id']);
-        $this->db->update('employee', ['status' => $newStatus]);
-
-        echo json_encode([
-            'status' => 'success',
-            'newStatus' => $newStatus
-        ]);
-    } else {
-        echo json_encode([
-            'status' => 'error',
-            'message' => 'Employee not found'
-        ]);
+        $query = $this->db->get('employee');
+        $row = $query->row();
+        if ($row) {
+            $newStatus = ($row->status == 1) ? 0 : 1;
+            $this->db->where('id', $data['id']);
+            $this->db->update('employee', ['status' => $newStatus]);
+            echo json_encode([
+                'status' => 'success',
+                'newStatus' => $newStatus
+            ]);
+        } else {
+            echo json_encode([
+                'status' => 'error',
+                'message' => 'Employee not found'
+            ]);
+        }
     }
-}
-
-
-
-
-
-
-	 
 
 
 
