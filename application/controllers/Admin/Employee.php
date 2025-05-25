@@ -296,7 +296,32 @@ $hasStatus = ($row->status == 1) ?
 
 
 
+public function accessPerRemove() {
+    $id = $this->input->post('id');
+    $table = $this->input->post('table');
+    $permission = $this->input->post('permission');
 
+    $allowed_tables = ['employee', 'guest', 'members'];
+
+    if (!$id || !$table || !in_array($table, $allowed_tables)) {
+        echo json_encode(['status' => 'error', 'msg' => 'Invalid request']);
+        return;
+    }
+
+    $record = $this->db->select('id, name')->from($table)->where('id', $id)->get()->row();
+
+    if (!$record) {
+        echo json_encode(['status' => 'error', 'msg' => 'Record not found']);
+        return;
+    }
+
+    if ($permission === 'yes') {
+        $this->db->where('id', $id)->delete($table);
+        echo json_encode(['status' => 'success', 'data' => $record]);
+    } else {
+        echo json_encode(['status' => 'error', 'msg' => 'Permission denied. Try again later.']);
+    }
+}
 
 
 
