@@ -99,7 +99,8 @@ class Employee extends CI_Controller
              } echo json_encode($data);
 
          }elseif($action === 'view_emp'){
-            $whereCon = json_decode(base64_decode(urldecode($getId)));
+            
+             $whereCon = json_decode(base64_decode(urldecode($getId)));
             $emp_info = $this->db->select('id,name,email,fname,mobile,address,dob,status,created_at')->from('employee')->where('id',$whereCon->id)->get()->row();
              $data = array(
                 'title' => 'View Details',
@@ -110,7 +111,7 @@ class Employee extends CI_Controller
                 'layout' => 'employee/view_emp.php',
             );
             $this->load->view('admin/base', $data);
-
+           
           }elseif($action === 'certificate'){
             $whereCon = json_decode(base64_decode(urldecode($getId)));
             $getIDCardDetails = $this->common->getRowData('employee', 'id', $whereCon->id);
@@ -124,6 +125,7 @@ class Employee extends CI_Controller
                 'breadcrumb' => 'Manage Employee',
                 'targetItem' => base_url('admin/employee/index/create'), 
                 'targetLIstItem' => base_url('admin/employee/showLIst'), 
+                'actBakc' => base_url('admin/employee'), 
                 'layout' => 'employee/create.php',
             );
             $this->load->view('admin/base', $data);
@@ -141,30 +143,79 @@ class Employee extends CI_Controller
                 foreach ($record as $row) {
                    
 $login_branch = base_url('admin/employee/view_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
-$view = base_url('admin/employee/index/view_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
-$editUid = base_url('admin/employee/index/edit_emp/' . urlencode(base64_encode(json_encode(array('action' => 'editDetails', 'id' => $row->id)))));
 
-$id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#print_bill" onclick="print_id_card('. $row->id .')" title="Print ID Card"><i class="fas fa-id-card text-white"></i></a>';
 
-$certificate = '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#print_bill" onclick="print_member_details('. $row->id .')" title="Print Certificate"><i class="fas fa-certificate text-white"></i></a>';
 
-$isDel = '<a href="javascript:void(0);" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp getAction" id="delAr--' . $row->id . '" data-id="viewDelete===admin/employee/accPermision===' . $row->id . '" data-bs-toggle="modal" data-bs-target="#deletePanel" title="Delete"><i class="fa fa-trash"></i></a>';
+$viewURL = base_url('admin/employee/index/view_emp/' . urlencode(base64_encode(json_encode([
+    'action' => 'editDetails',
+    'id' => $row->id
+]))));
+
+$editURL = base_url('admin/employee/index/edit_emp/' . urlencode(base64_encode(json_encode([
+    'action' => 'editDetails',
+    'id' => $row->id
+]))));
+
+
+
+$id_card = '<a href="javascript:void(0);" class="btn btn-warning btn-sm mx-1 shadow btn-xs sharp actPIdCard" onclick="print_id_card(this, ' . $row->id . ')" title="Print ID Card"> 
+    <i class="fas fa-id-card text-white"></i>
+</a>';
+
+$certificate = '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp actPCertificate" onclick="print_certificate(this, ' . $row->id . ')" title="Print Certificate"> 
+    <i class="fas fa-certificate text-white"></i> 
+</a>';
+
+
+$isDel = '<a href="javascript:void(0);" 
+    class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp open-delete-modal" 
+    data-id="'. $row->id .'" 
+    data-table="employee"
+    data-url="' . base_url('admin/employee/accessPerRemove') . '" 
+    data-bs-toggle="modal" 
+    data-bs-target="#actPdelete" 
+    title="Delete Record">
+    <i class="fas fa-trash text-white delete-icon"></i>
+    <i class="fas fa-sync-alt text-white refresh-icon d-none actProtate"></i>
+</a>';
+
+
 
 $actionBtn = '
 <div class="d-flex justify-content-center align-items-center flex-nowrap">
     <a href="' . $login_branch . '" class="btn btn-dark btn-sm mx-1 shadow btn-xs sharp" title="Login"><i class="fas fa-power-off text-white"></i></a>
     ' . $id_card . '
     ' . $certificate . '
-    <a href="' . $view . '" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" title="View"><i class="fas fa-eye text-white"></i></a>
-    <a href="' . $editUid . '" class="btn btn-primary btn-sm mx-1 shadow btn-xs sharp" title="Edit"><i class="fas fa-edit text-white"></i></a>
+     <a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" onclick="rotateAndRedirectView(this, \'' . $viewURL . '\')" title="View">
+        <i class="fas fa-eye text-white"></i>
+    </a>
+    <a href="javascript:void(0);" class="btn btn-primary btn-sm mx-1 shadow btn-xs sharp" onclick="rotateAndRedirectEdit(this, \'' . $editURL . '\')" title="Edit">
+        <i class="fas fa-edit text-white"></i>
+    </a>
     ' . $isDel . '
 </div>';
 
 
 
-                    $status = ($row->status == 1) ? 
-                    '<a class="badge border border-success text-success bg-transparent getAction miLvs" href="javascript:void(0)" data-id="miStatusView===website/recent_activity/manageEvent==='.$row->id.'" data-toggle="modal" data-target="#actPstatus" title="Click to De-Active" id="arvs--'.$row->id.'">Active</a>' : 
-                    '<a href="javascript:void(0)" data-id="miStatusView===website/recent_activity/manageEvent==='.$row->id.'" data-toggle="modal" data-target="#actPstatus" title="Click to Active" class="badge border border-danger text-danger bg-transparent getAction" id="arvs--'.$row->id.'">Deactive</a>';
+
+                    $status_aaa = ($row->status == 1) ? 
+                   '<a href="javascript:void(0);" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#actPstatus" onclick="openStatusModal('. $row->id .')" title="Print ID Card"><i class="fas fa-power-off text-white"></i> Active </a>':
+                   '<a href="javascript:void(0);" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp" data-toggle="modal" data-target="#actPstatus" onclick="openStatusModal('. $row->id .')" title="Print ID Card"><i class="fas fa-power-off text-white"></i> Deactive</a>';
+
+      
+
+        $status = ($row->status == 1) ?
+        '<a href="javascript:void(0);" onclick="return rotateAndRedirect(this, \'' . base_url('admin/employee_1111/status/' . $row->id) . '\', \'' . base_url('admin/employee/changeStatus') . '\')" class="btn btn-success btn-sm mx-1 shadow btn-xs sharp" title="Change Status">
+        <i class="fas fa-power-off text-white"></i> Active
+        </a>' :
+        '<a href="javascript:void(0);" onclick="return rotateAndRedirect(this, \'' . base_url('admin/employee_1111/status/' . $row->id) . '\', \'' . base_url('admin/employee/changeStatus') . '\')" class="btn btn-danger btn-sm mx-1 shadow btn-xs sharp" title="Change Status">
+        <i class="fas fa-power-off text-white"></i> Deactive
+        </a>';
+
+
+
+
+
 
                     $shortText = (mb_strlen($row->e_text) > 20) ? mb_substr($row->e_text, 0, 20) . '...' : $row->e_text;
                     $image= '<span><img src="' . base_url($row->e_images) . '" alt="" style="height:2rem; border:1px solid #f2a6a6; border-radius:10%;"></span>';
@@ -190,64 +241,92 @@ $actionBtn = '
     }
 
 
-      public function certificate()
-    {
-        if ($this->input->is_ajax_request()) {
-            $getId = $this->input->post();
-            $data['pribound'] = $this->common->showLIst_model($getId['id']);
-            $this->load->view('admin/employee/certificate', $data);
+public function accessPerRemove() {
+    $id = $this->input->post('id');
+    $table = $this->input->post('table');
+    $permission = $this->input->post('permission');
 
-        }
-    }  
+    $allowed_tables = ['employee', 'guest', 'members'];
 
-       public function id_card()
-    {
-        if ($this->input->is_ajax_request()) {
-            $getId = $this->input->post();
-            $data['pribound'] = $this->common->showLIst_model($getId['id']);
-            $this->load->view('admin/employee/id_card', $data);
+    if (!$id || !$table || !in_array($table, $allowed_tables)) {
+        echo json_encode(['status' => 'error', 'msg' => 'Invalid request']);
+        return;
+    }
 
-        }
-    }  
+    $record = $this->db->select('id, name')->from($table)->where('id', $id)->get()->row();
+
+    if (!$record) {
+        echo json_encode(['status' => 'error', 'msg' => 'Record not found']);
+        return;
+    }
+
+    if ($permission === 'yes') {
+        $this->db->where('id', $id)->delete($table);
+        echo json_encode(['status' => 'success', 'data' => $record]);
+    } else {
+        echo json_encode(['status' => 'error', 'msg' => 'Permission denied. Try again later.']);
+    }
+}
 
 
-   
 
-	public function accPermision()
-	{
-		$post = $this->input->post();
-		$return = '';
-		if ($post['oprType'] == 'viewDelete') {
-			$isMember = $this->common->getRowData('employee', 'id', $post['id']);
-			if ($isMember) {
-				$return = array('msg' => '<i class="fa-solid fa-circle-exclamation"></i> Do you wish to delete <span style="font-weight:900;">' . $isMember->name . ' (ID #' . $isMember->member_id . ') </span> ?.', 'action' => 'cnfDeleteDetail===administrator/member/accPermision===' . $isMember->id, 'tClor' => '#db3704');
-			} else {
-				$return = array('msg' => "Sorry, we couldn't retrieve the data at this time.", 'action' => '', 'tClor' => '#db3704');
-			}
-		} else if ($post['oprType'] == 'cnfDeleteDetail') {
-			$isMember = $this->common->getRowData('employee', 'id', $post['id']);
-			if ($isMember) {
-				$deltResult = $this->common->del_data_multi_con('employee', array('id' => $post['id']));
-				if ($deltResult) {
-					$return = array(
-						'msg' => '<i class="fa-regular fa-circle-check"></i> Data deletion completed.<br> <span style="font-weight:900;">' . $isMember->name . ' (ID #' . $isMember->member_id . ') </span>  has been removed.',
-						'action' => 'success',
-						'tClor' => '#008038'
-					);
-				} else {
-					$return = array(
-						'msg' => '<i class="fa-solid fa-circle-exclamation"></i> Deletion failed for  <span style="font-weight:900;">' . $isMember->name . ' (ID #' . $isMember->member_id . ') </span>.<br> Please check the details and try again.',
-						'action' => 'errorShw',
-						'tClor' => '#db3704'
-					);
-				}
-			} else {
-				$return = array('msg' => "Sorry, we couldn't retrieve the data at this time.", 'action' => '', 'tClor' => '#db3704');
-			}
-		}
-		sleep(1);
-		echo json_encode($return);
-	}
+
+
+
+public function certificate()
+{
+    if ($this->input->is_ajax_request()) {
+        $getId = $this->input->post();
+        $data['pribound'] = $this->common->showLIst_model($getId['id']);
+        $this->load->view('admin/employee/certificate', $data);
+    }
+}  
+
+public function id_card()
+{
+    if ($this->input->is_ajax_request()) {
+        $getId = $this->input->post();
+        $data['pribound'] = $this->common->showLIst_model($getId['id']);
+        $this->load->view('admin/employee/id_card', $data);
+    }
+}
+ 
+
+
+
+
+
+
+
+ 
+public function changeStatus()
+{
+    $data = $this->input->post();
+    $this->db->where('id', $data['id']);
+    $query = $this->db->get('employee');
+    $row = $query->row();
+
+    if ($row) {
+        $newStatus = ($row->status == 1) ? 0 : 1;
+        $this->db->where('id', $data['id']);
+        $this->db->update('employee', ['status' => $newStatus]);
+
+        echo json_encode([
+            'status' => 'success',
+            'newStatus' => $newStatus
+        ]);
+    } else {
+        echo json_encode([
+            'status' => 'error',
+            'message' => 'Employee not found'
+        ]);
+    }
+}
+
+
+
+
+
 
 	 
 

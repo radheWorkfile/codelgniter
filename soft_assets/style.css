@@ -116,6 +116,14 @@ Version: 1.0
 .sidebar-color {
   background-color: #051d38;
 }
+
+  .new-added-form .subBtn i {
+  top: 56px;
+  right: 34px;
+  padding:1rem 0.5rem!important;
+  font-size: 15px;
+  color: #000;
+  }
 /* ========================================== */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);

@@ -139,7 +139,6 @@
     <th>Mobile Number</th>
     <th>Email-Id</th>
     <th>Address</th>
-    <th>Permission</th>
     <th>Status</th>
     <th>Action</th>
     </tr>
