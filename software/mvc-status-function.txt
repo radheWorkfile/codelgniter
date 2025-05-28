@@ -1,0 +1,45 @@
+===============================================  js function ======================
+		<script>
+			var base_url="<?php echo base_url()?>";
+			function changeStatus(id, status, table, loader) {
+				
+         if (confirm("Do You Want To Changes")) {
+		
+        // $("#" + id).html('<img src="' + base_url + 'media/images/loading.gif" style="width:57px;" />');
+        $.ajax({
+            type: 'POST',
+            url: base_url + loader,
+            data: { 'id': id, 'status': status, 'table': table},
+            success: function(data) {
+                $("#" + id);
+            }
+        });
+    }
+}
+
+		</script>
+====================================================== con and set path also =====================
+
+
+  function chageStatus()
+    {
+      
+        if ($this->input->is_ajax_request()) {
+            $data = $this->input->post();
+            //print_r($data);die;
+            $val = $this->ComModel->chageStatus($data);
+          
+            echo ($data['status'] == 1) ? "
+            <a style='color:green' href='javascript:void()'onClick='return changeStatus(\"" . $data['id'] . "\",\"0\",\"" . $data['table'] . "\",\"" . $data['loader'] . "\")'title='click to block user'><b><i class='fa fa-check'></i> </b></a>" : "
+            <a style='color:red'   href='javascript:void()'onClick='return changeStatus(\"" . $data['id'] . "\",\"1\",\"" . $data['table'] . "\",\"" . $data['loader'] . "\")'title='click to active user'><b><i class='fa fa-times'></i></b></a>";
+        }
+    }
+}
+
+
+======================================================== model with path ============================
+
+      function chageStatus($value)
+    {
+        $this->db->where('id', $value['id'])->update($value['table'], array('status' => $value['status']));
+    }

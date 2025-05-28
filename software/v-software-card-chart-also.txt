@@ -1,0 +1,206 @@
+<link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+
+
+
+
+
+    <div class="container container-new">
+    <div class="row my-5">
+    <h1 class="anim-heading font-m mb-4">Inventory Status Dashboard</h1>
+    <!-- ------------------------------------------------- -->
+                    <div class="col-md-4">
+                    <div class="card-manage bg-light">
+                    <div class="icon-box p-4">
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                    <h5>Total Earn</h5>
+                    <p class="pro-bar">₹ 5,000.00</p>
+                    <div class="progress">
+                    <div class="progress-bar-1" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="mt-2">
+                    <span>Gross Earn</span>
+                    <span>10/02/2025</span>
+                    </p>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-4">
+                    <div class="card-manage bg-light">
+                    <div class="icon-box p-4">
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                    <h5>Total Earn</h5>
+                    <p class="pro-bar">₹ 10,000.00</p>
+                    <div class="progress">
+                    <div class="progress-bar-2" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="mt-2">
+                    <span>Gross Earn</span>
+                    <span>10/02/2025</span>
+                    </p>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-4">
+                    <div class="card-manage bg-light">
+                    <div class="icon-box p-4">
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                    <h5>Total Earn</h5>
+                    <p class="pro-bar">₹ 10,000.00</p>
+                    <div class="progress">
+                    <div class="progress-bar-2" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="mt-2">
+                    <span>Gross Earn</span>
+                    <span>10/02/2025</span>
+                    </p>
+                    </div>
+                    </div>
+                    </div>
+    <!-- ------------------------------------------------- -->
+    </div>
+    </div>
+
+
+
+  <style>
+    /* Main card style */
+    .card-manage {
+      display: flex;
+      border: 1px solid #f1d8d8;
+      padding: 2% 5%;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    /* Card hover effect */
+    .card-manage:hover {
+      background-color: white;
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Icon box */
+    .card-manage .icon-box {
+      min-width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffc107;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Change icon box background on hover */
+    .card-manage:hover .icon-box {
+      background-color: #ff9800; /* darker warning */
+    }
+
+    .card-manage .icon-box i {
+      font-size: 24px;
+      color: #000;
+    }
+
+    .card-manage .content {
+      margin-left: 20px;
+      flex: 1;
+    }
+
+    .card-manage .content p {
+      margin: 0;
+    }
+
+    .card-manage .content span {
+      margin-right: 15px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Progress bar style */
+    .pro-bar + .progress {
+      height: 6px;
+      margin-top: 5px;
+    }
+
+    .progress-bar-1 {
+      background-color:rgb(212, 56, 35);
+    }
+     .progress-bar-2 {
+      background-color:rgb(29, 231, 137);
+    }
+  </style>
+  <style>
+
+   html, .container-new {
+      /* height: 100vh; */
+      margin: 0;
+      font-family: 'Philosopher', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .anim-heading {
+      font-size: 2.5rem;
+      display: inline-block;
+    }
+
+    .anim-heading span {
+      opacity: 0;
+      display: inline-block;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .font-m{color: #0e0e47;
+  text-shadow: 2px 2px 2px #878080;
+  font-weight: 701;
+    }
+  </style>
+
+  <style>
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+  
+<script>
+  const heading = document.querySelector('.anim-heading');
+  const text = heading.textContent;
+  heading.textContent = ''; // Clear the original text
+
+  [...text].forEach((char, index) => {
+    const span = document.createElement('span');
+    span.textContent = char === ' ' ? '\u00A0' : char; // Non-breaking space
+    span.style.animationDelay = `${index * 0.05}s`;
+    heading.appendChild(span);
+  });
+</script

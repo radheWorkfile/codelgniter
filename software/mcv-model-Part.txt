@@ -1,0 +1,23 @@
+
+<a href="javascript:void(0);" onclick="viewCatItem(' . $row->id . ')" title="Click to View Salary Details" data-bs-target="#categoryModelOn" data-bs-toggle="modal" class="px-2 btn ripple miView btn-sm"> <i class="ti-eye"></i></a>&emsp;
+
+public function viewCatItem()
+{
+    $id = $this->input->post('id');
+    $data = $this->db->select('product_id,product') ->from('inventoryitem')->where('id', $id)->get()->row();
+    echo json_encode($data);
+}
+
+function viewCatItem(id) {
+    $.ajax({
+        type: "POST",
+        url: '<?= base_url() ?>admin/Inventory/viewCatItem',
+        data: { id: id },
+        dataType: 'json',
+        success: function(data) {
+          console.log(data);
+            $('#item_product_id').text(data.product_id); 
+            $('#item_product').text(data.product);       
+        },
+    });
+}

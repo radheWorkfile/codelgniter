@@ -1,0 +1,216 @@
+$start_year  = date("Y-m-d", strtotime($start_date. '+1 year'));
+return $this->db->select('id')->order_by('id', 'desc')->limit(1)->get('registration')->row_array();
+$this->form_validation->set_rules('loan_product', 'Loan Product', 'required');
+$balance_amt = $balance_amt < 0 ? $balance_amt : 0;
+=> date('Y-m-d')=> date('W as week') => $this->session->userdata('user_id')
+<img src="<?php echo base_url().'uploads/payDetails/'.$pay_details['pay_det'];?>" alt=""style="height:2rem;">
+$count = $this->db->select('*')->where('staff_id', $row->st_id)->get('member')->num_rows();
+<th><?php echo ($vw_rdpay[0]['plan_type'] == 1) ?  "Contribution" : "Interest Amount"?></th>
+
+
+ $staff=$this->db->select('staff_id')->where('id',$user_id)->get('users')->row();
+ $staff_id=$this->db->select('id')->where('staff_id',$staff->staff_id)->get('staff')->row();
+ $staff_id=$staff_id->id;
+ $data['staff_id'] = $staff_id;
+
+
+
+
+.docAmiImg {border: 1px solid #d9dcdd;position:relative;margin: 0 auto; cursor: pointer;border-bottom: 0px;}
+.docAmiImg img{width: 100%;height: 100%;transition: 0.5s all ease-in-out;}
+.docAmiImg:hover img {transform: scale(2.5);width: 200px;height: 200px;}
+                                 
+             
+
+
+
+
+	public function save_closeIng_data()
+    {
+        if ($this->input->is_ajax_request()) {
+            $this->form_validation->set_rules('client_id', 'Enter Client Id', 'required');
+            if ($this->form_validation->run() ==  true) {
+                $data = array(
+					'name' => $this->input->post('name');
+				);
+				$this->common_model->save_data('users', $use);
+                $data = array('icon' => 'success', 'text' => 'New Staff Added Successfully');
+                
+            } else {
+                $data = array( 'client_id'    => form_error('client_id'), );
+                $data = array('text' => $data, 'icon' => 'error');
+            }
+        }
+        echo json_encode($data);
+    }
+
+
+
+function group_loan_product_datas(id) {
+    dispatchEvent;
+    dispatchEvent;
+    $.ajax({
+        url: base_url + 'super_admin/Group_loan/get_group_loan_product_data',
+        type: "POST",
+        data: {
+            'id': id
+        },
+        dataType: 'json',
+        success: function(data) {
+            $('#amount').val(data.amount);
+            $('#roi').val(data.interest_percentage + data.interest_amount);
+            $('#interest_type').val(data.interest_type);
+            var int_type = data.interest_type;
+            if (int_type == 1) {
+                $('#reducing_section').show('slow')
+            } else {
+                $('#reducing_section').hide('slow');
+                $('#btn_reducing').hide('slow');
+            }
+        },
+    });
+}
+
+
+
+ public function all_group_data($id) {
+            $this->db->select('mg.grp_id, mg.name as group_name');
+            $this->db->where('mg.center_id', $id);
+            $val22 = $this->db->get('master_group as mg')->result_array();
+            if($val22)
+            {
+                $isExistDetails=array();
+                foreach($val22 as $v)
+                {
+                   $count=$this->db->select('id','group_name')->where(array('group_name' => $v['grp_id']))->get('member')->num_rows();
+                    if($count <= 5)
+                    {
+                            $val1=array('grp_id'=>$v['grp_id'],'group_name'=>$v['group_name'],'member No'=>$count);
+                            // print_r($val1);
+                            array_push($isExistDetails, $val1);
+                        }
+                    }
+                }
+                
+                return $isExistDetails;
+          }
+
+
+
+public function AllData($id) 
+		{
+            $result=array();
+			$this->db->select('mem.*,mem.id as mem_id,agl.*,gmpd.*,ROUND((agl.roi*agl.amount)/100,2) as intAmt,sum(gmpd.paid_amount) as PaIdAmo,(ROUND((agl.roi*agl.amount)/100,2)+sum(gmpd.paid_amount)) as frclsAmt,gmpd.paid_amount as lstRecAmo');
+            $this->db->where('mem.member_id',$id['client_id']); 
+            $this->db->order_by('gmpd.id','DESC');
+            $this->db->join('add_group_loan as agl', 'mem.id = agl.member_id');
+            $this->db->join('group_member_payment_details as gmpd', 'mem.id = gmpd.member_id');
+            $result=$this->db->get('member as mem')->row_array();
+			if($result)
+			{
+			$lastRecord=$this->db->select('paid_amount as lstRecAmo')->where('member_id',$result['member_id'])->order_by('id', 'desc')->limit(1)->get('group_member_payment_details')->row();
+			        $lastRecord=$lastRecord->lstRecAmo?$lastRecord->lstRecAmo:'0';
+					$result['lstRecAmoooo']=$lastRecord;
+       			}
+				return $result;
+	   
+	    }
+
+------------------------------------------------------------- get value first form to second form start ----------------------------------
+<script>
+        $(document).ready(function() {
+        $(".getId_firFor").unbind("change").change(function() {
+            var actNbtn = $(this).attr('id');
+            if (actNbtn == 'id_secFor') {
+                let nbID = $('#' + actNbtn).val();
+                $("#sec_inp_B_Id").val(nbID);
+            }
+        });
+    });
+
+1. gor value of first form in second.
+2. copy paste print sec of manage js and enter form id two place not table Id.
+3. paste jquery get id fun in js above print sec of manage and remove jquery first line or last Line.
+</script>
+
+--------------------------------------------------- data table learning part section of db or_where condition ----------------------------------
+
+foreach ($record as $i => $row) {
+
+$count = $this->db->select('*')->where('staff_id', $row->st_id)->get('member')->num_rows();
+if($count > 0)
+{
+$client_id = $this->db->select('id')->where('staff_id', $row->st_id)->get('member')->result();
+$staff=$this->db->select('full_name')->where('id', $row->staff_id)->get('staff')->row();
+
+        $this->db->select('sum(paid_amount) as total');
+        $this->db->group_start();
+        foreach ($client_id as $c_id) {
+            $this->db->or_where('member_id', $c_id->id);
+        }
+        $this->db->group_end();
+        $recoAmount=$this->db->get('group_member_payment_details')->row();
+
+		$this->db->select('sum(paid_amount) as dues_total');
+        $this->db->group_start();
+        foreach ($client_id as $c_id) {
+            $this->db->or_where(array('member_id'=> $c_id->id, 'is_od' => 2, 'status' => 2));
+        }
+        $this->db->group_end();
+        $duesAmount=$this->db->get('group_member_payment_details')->row();
+		// echo $this->db->last_query();die;
+
+		$this->db->select('sum(paid_amount) as rec_Posting_amo');   
+        $this->db->group_start();
+        foreach ($client_id as $c_id) {
+            $this->db->or_where(array('member_id'=> $c_id->id, 'is_od' => 1, 'status' => 2));
+        }
+        $this->db->group_end();
+        $RecPost=$this->db->get('group_member_payment_details')->row();
+
+		$this->db->select('sum(paid_amount) as due_posting');   
+        $this->db->group_start();
+        foreach ($client_id as $c_id) {
+            $this->db->or_where(array('member_id'=> $c_id->id, 'is_od' => 2, 'status' => 1));
+        }
+        $this->db->group_end();
+        $duePost=$this->db->get('group_member_payment_details')->row();
+
+
+
+
+        $radhe[$i]['count'] = $count;
+        $radhe[$i]['center_id'] = $row->center_id;
+        $radhe[$i]['center_name'] = $row->center_name;
+        $radhe[$i]['full_name'] = $staff->full_name;
+        $radhe[$i]['paid_amount'] = ($recoAmount->total)?($recoAmount->total):0;
+        $radhe[$i]['dues_total'] =  ($duesAmount->dues_total)?($duesAmount->dues_total):0;    
+        $radhe[$i]['sum_reco'] = ($recoAmount->total+  $duesAmount->dues_total)?($recoAmount->total+  $duesAmount->dues_total):0;    
+        $radhe[$i]['rec_Posting_amo'] =  ($RecPost->rec_Posting_amo)?($RecPost->rec_Posting_amo):0;  
+        $radhe[$i]['due_posting'] = ($duePost->due_posting)?($duePost->due_posting):0;
+        $radhe[$i]['sum_rec_posting'] = (($RecPost->rec_Posting_amo)+($duePost->due_posting))?(($RecPost->rec_Posting_amo)+($duePost->due_posting)):0;
+        $radhe[$i]['rec_Dues'] = (($recoAmount->total)-($RecPost->rec_Posting_amo))?(($recoAmount->total)-($RecPost->rec_Posting_amo)):0;
+}
+}
+
+foreach ($radhe as $row) {
+
+    $return['data'][] = array(
+
+         $i++,
+         $row['center_id'],
+         $row['center_name'],
+         $row['full_name'],
+         $row['count'],
+         $row['paid_amount'],
+         $row['dues_total'],
+         $row['sum_reco'],
+         $row['rec_Posting_amo'],
+         $row['due_posting'],
+         $row['sum_rec_posting'],
+         $row['rec_Dues']
+
+    );
+}
+
+--------------------------------------------------- data table learning part section of db or_where condition ----------------------------------
