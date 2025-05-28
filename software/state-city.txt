@@ -1,0 +1,183 @@
+            
+            
+            <div class="col-md-6">
+            <label>State : <span class="text-danger">*</span></label>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="si si-grid"></i></span>
+            </div>
+            <div class="miSlwdth"> 
+            <select class="form-control select2-with-search arvManage"  name="state" id="state" data-id="district">
+            <option value=""> --- Select One --- </option>
+            <?php foreach($getState as $state): ?>
+            <option value="<?php echo $state->id; ?>"><?php echo htmlspecialchars($state->state_cities); ?></option>
+            <?php endforeach; ?>
+            </select>
+            </div>  
+            </div>
+            </div>
+            <div class="col-md-6">
+            <label>District : <span class="text-danger">*</span></label>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="si si-grid"></i></span>
+            </div>
+            <div class="miSlwdth"> 
+            <select class="form-control select2-with-search arvOnChange" name="district" id="district">
+            <option value=""> --- Select One --- </option>
+            </select>
+            </div>  
+            </div>
+            </div>
+            /*********************************************************************/
+            $(document).ready(function() {
+            $(".arvManage").change(function() 
+            {
+            alert("Hello Radhe kuamr");
+            let actNbtn = $(this).attr('id');
+            let getTrgtId = $(this).attr('data-id');
+            let getResourceLoc = $('#base_url').val() + "admin/inventory/cityList";
+            $('#' + getTrgtId).css('color', '#099b7e !important').html('<option>Please Wait.....</option>');
+            $.post(getResourceLoc, { id: $('#' + actNbtn).val(), actnType: getTrgtId, brID: $('#state').val(), clsId: $('#class_manage').val(), secID: $('#sec_manage').val() },
+            function(htmlAmi) {
+            if (getTrgtId == "rollNo") {
+            $('#' + getTrgtId).val(htmlAmi);
+            $('#' + getTrgtId).css('color', 'rgb(62, 62, 62) !important');
+            } else {
+            $('#' + getTrgtId).html(htmlAmi);
+            $('#' + getTrgtId).css('color', 'rgb(62, 62, 62) !important');
+            }
+            });
+            }); });
+            /*********************************************************************/
+            public function cityList()
+            {
+            $id = $this->input->post('id');
+            $getCity = $this->common->getDataList('states_cities', 'parent_id', $id);
+            sleep(1);  
+            echo '<option value=""> --- Choose One --- </option>';
+            if ($getCity) {
+            foreach ($getCity as $list) {
+            echo '<option value="' . htmlspecialchars($list->id) . '">' . htmlspecialchars($list->state_cities) . '</option>';
+            }
+            }
+            }
+            
+            
+            ***********************************************************************
+            
+            
+            
+            
+            
+            
+            <div class="col-md-4">
+            <label>Branch: <span class="text-danger">*</span> </label>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-building"></i></span></div>
+            <div class="miSlwdth4w">
+            <select name="branch" id="branch" class="form-control select2-with-search arvManage" data-id="class_manage">
+            <option value=""> --- Select Branch --- </option>
+            <?php foreach ($branch as $brnch) { ?>
+            <option value="<?php echo $brnch->id; ?>"><?php echo $brnch->branch_name; ?></option>
+            <?php } ?>
+            </select>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <label>Class : <span class="text-danger">*</span></label>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-building"></i></span>
+            </div>
+            <div class="miSlwdth4w">
+            <select name="class_manage" id="class_manage" class="form-control select2-with-search arvManage" data-id="sec_manage">
+            <option value=""> --- Select Class --- </option>
+            </select>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <label>Section : <span class="text-danger">*</span></label>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+            </div>
+            <div class="miSlwdth4w">
+            <select name="sec_manage" id="sec_manage" class="form-control select2-with-search arvManage" data-id="rollNo">
+            <option value=""> --- Select Section ---</option>
+            </select>
+            </div>
+            </div>
+            </div>
+            
+            
+            /*********************************************************************/
+            $(".arvManage").change(function() {
+            let actNbtn = $(this).attr('id');
+            let getTrgtId = $(this).attr('data-id');
+            let getResourceLoc = $('#base_url').val() + "admin/student/findBranchDetails";
+            $('#' + getTrgtId).css('color', '#099b7e !important').html('<option>Please Wait.....</option>');
+            $.post(getResourceLoc, { id: $('#' + actNbtn).val(), actnType: getTrgtId, brID: $('#branch').val(), clsId: $('#class_manage').val(), secID: $('#sec_manage').val() },
+            function(htmlAmi) {
+            if (getTrgtId == "rollNo") {
+            $('#' + getTrgtId).val(htmlAmi);
+            $('#' + getTrgtId).css('color', 'rgb(62, 62, 62) !important');
+            } else {
+            $('#' + getTrgtId).html(htmlAmi);
+            $('#' + getTrgtId).css('color', 'rgb(62, 62, 62) !important');
+            }
+            });
+            });
+            /*********************************************************************/
+            
+            
+            public function findBranchDetails()
+            {
+            $post = $this->input->post();
+            $result = '';
+            if ($post['actnType'] == 'class_manage') {
+            
+            $allClassData = $this->db->select('*')->from('class_configer')->where(array('branch_id' => $post['id'] ))->get()->result_array();
+            if ($allClassData != "") {
+            $result .= '<option value=""> --- Select Class --- </option>';
+            foreach ($allClassData as $class) {
+            $result .= '<option value="' . $class['id'] . '">' . $class['class_name'] . '</option>';
+            }
+            } else {
+            $result = '<option value="">Choose Class</option>';
+            }
+            }
+            elseif ($post['actnType'] == 'sec_manage') {
+            $classId = $post['id'];  
+            if ($classId != "") {
+            $allSectionData = $this->db->select('*')->from('section_configer')->where('class_id',$classId)->get()->result_array();
+            if ($allSectionData != "") {
+            $result .= '<option value=""> --- Select Section --- </option>';
+            foreach ($allSectionData as $section) {
+            $result .= '<option value="' . $section['id'] . '">' . $section['section_name'] . '</option>';
+            }
+            } else {
+            $result = '<option value="">N/A</option>';
+            }
+            }
+            }
+            
+            elseif ($post['actnType'] == 'rollNo') {
+            // Array ( [id] => 2 [actnType] => rollNo [brID] => 2 [clsId] => 2 [secID] => 2 ) 
+            $sectionId = $post['id'];  
+            if ($sectionId != "") {
+            $allRollNoData = $this->db->select('id,roll_no')->from('student')->where(array('branch_id' => $post['brID'], 'class_manage' => $post['clsId'], 'sec_manage' => $post['secID']))->order_by('id', 'DESC')->limit(1)->get()->result_array();
+            if ($allRollNoData != "") {
+            $lastRollNo = $allRollNoData[0]['roll_no']; 
+            $nextRollNo = $lastRollNo + 1;
+            $result .= $nextRollNo;
+            } else {
+            $result = 'N/A';
+            }
+            }
+            }
+            sleep(0.5);
+            echo $result;
+            }
