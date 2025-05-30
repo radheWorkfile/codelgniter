@@ -2,6 +2,14 @@
     <!-- 2 => on hover image view  -->
     <!-- 3 => password increase one by one  -->
 
+    <!-- $getCurrentLi=$this->router->fetch_class().$this->router->fetch_method(); -->
+    <li class="nav-sub-item <?php if($getCurrentLi=='inventoryproducts'){echo 'active';}?>">
+    <a class="nav-sub-link <?php if($getCurrentLi=='inventoryproducts'){echo'active';}?>" href="<?php echo base_url('admin/inventory/products');?>">
+    Products
+    </a>
+    </li>
+
+
     <!-- *********************************************************************** -->
     <?php 
   // <!-- ---------- call base file --------------------------- -->
@@ -22,7 +30,7 @@
     $ticketId = 'TIC1001';
   }
     
-  
+
   ?>
 
 
