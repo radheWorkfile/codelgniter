@@ -26,11 +26,20 @@
 <!-- Banner section start -->
 
 
-<!-- card-itam section start -->
+
 
 <!-- product start -->
-<section>
+<section class="pb-5" style="background-color:#f1f1f1;">
     <div class="container">
+
+     <div class="row pt-5 pb-3 wow fadeInRight animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInRight;">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="text-center text-info fs-1 fw-bold">Our Product</h2>
+                <p class="text-center text-dark lh-1 fs-6">Our product showcases timeless elegance through exquisite craftsmanship. This semi-stitched embellished lehenga seamlessly combines precision, tradition, and style, making it ideal for any special occasion.</p>
+            </div>
+        </div>
+
+        
         <div class="row">
 
 
@@ -39,12 +48,12 @@
         <div class="product-card">
                 <div class="product-tilt-effect">
                 <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Premium Watch">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20220310/NIp3/622a125af997dd03e20bde58/-473Wx593H-463979053-red-MODEL4.jpg" class="w-100" alt="Premium Watch">
                 </div>
                 </div>
                 <div class="product-info">
-                <div class="product-category">Luxury Timepiece</div>
-                <h2 class="product-title">Chrono S-Series Watch</h2>
+                <div class="product-category">MANVAA</div>
+                <h2 class="product-title">Embellished Semi-Stitched Lehenga</h2>
                 <div class="product-description-1">
                 <p>Precision engineering meets timeless design.</p>
                 </div>
@@ -75,14 +84,14 @@
         <div class="product-card">
                 <div class="product-tilt-effect">
                 <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Premium Watch">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20250304/XCPq/67c72d5559f83539801a1461/-473Wx593H-701301256-purple-MODEL.jpg" class="w-100" alt="Premium Watch">
                 </div>
                 </div>
                 <div class="product-info">
-                <div class="product-category">Luxury Timepiece</div>
-                <h2 class="product-title">Chrono S-Series Watch</h2>
+                <div class="product-category">PEACHMODE</div>
+                <h2 class="product-title">Women Embellished Saree with Contrast Border.</h2>
                 <div class="product-description-1">
-                <p>Precision engineering meets timeless design.</p>
+                <p>Royal purple colored saree is made</p>
                 </div>
                 <div class="product-bottom">
                 <div class="product-price">
@@ -112,12 +121,12 @@
         <div class="product-card">
                 <div class="product-tilt-effect">
                 <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Premium Watch">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20220310/cg7y/622a125af997dd03e20bdec3/-473Wx593H-463979053-red-MODEL.jpg" class="w-100" alt="Premium Watch"style="background-image:cover;">
                 </div>
                 </div>
                 <div class="product-info">
-                <div class="product-category">Luxury Timepiece</div>
-                <h2 class="product-title">Chrono S-Series Watch</h2>
+                <div class="product-category">WARTHY ENT</div>
+                <h2 class="product-title">Women Embroidered Flared Lehenga</h2>
                 <div class="product-description-1">
                 <p>Precision engineering meets timeless design.</p>
                 </div>
@@ -193,8 +202,6 @@
 .product-button { width: 100%; justify-content: center; }
 }
 </style>
-<!-- card-itam section end -->
-
 
 
 
