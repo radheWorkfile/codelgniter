@@ -1,6 +1,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
     <link rel="shortcut icon" href="<?php $logo= (config_item('favicon')!= '')?config_item('favicon'):'soft_assets/img/favicon.png'; echo base_url().$logo;?>"type="image/x-icon">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/normalize.css">
     <link rel="stylesheet" href="<?php echo base_url();?>soft_assets/css/main.css">
