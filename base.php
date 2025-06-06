@@ -1,6 +1,6 @@
     <!-- 1 => call base file  -->
     <!-- 2 => on hover image view  -->
-    <!-- 3 => password increase one by one  -->
+    <!-- 3 => password increase one by one  55-->
 
     <!-- $getCurrentLi=$this->router->fetch_class().$this->router->fetch_method(); -->
     <li class="nav-sub-item <?php if($getCurrentLi=='inventoryproducts'){echo 'active';}?>">
