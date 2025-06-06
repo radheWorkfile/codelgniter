@@ -85,3 +85,5 @@ class Attendance_model extends CI_Model
 		$this->daily_attendance_query($where,$cShift=NULL);
 		return $this->db->get()->num_rows();
 	}
+
+}

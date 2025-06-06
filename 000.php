@@ -1,5 +1,80 @@
 
-    <script>
+
+<script>
+    
+     var targeteventList_item = '';            
+     $(document).ready(function() {
+     let searchObj = {};
+     var targetAction = $('#product_category').attr('data-id');
+     targeteventList_item = {
+     printTable: function(search_data) {
+     getpaginate(search_data, '#product_category', targetAction, 'Only For Tnx id, Month.');
+     }
+     };
+     targeteventList_item.printTable(searchObj);           
+     });
+
+
+   $('#add_unit').submit(function(e) {
+     let target = $(this).attr('data-id');
+    e.preventDefault();
+    $.ajax({
+        url: target,
+        type: "POST",
+        data: $(this).serialize(),
+        dataType: 'json',
+        beforeSend: function() { $('#btnSubmit').html('<i class="fe fe-settings bx-spin"></i> Please Wait'); },
+        complete: function() { $('#btnSubmit').html('<i class="ti-save"></i> Save'); },
+        success: function(response) {
+            toastMultiShow(response.addClas, response.msg, response.icon);
+           if (response.addClas === 'tst_success') {
+                $('#add_unit')[0].reset();
+            }
+        }
+    });
+});
+
+$('#edit_unit').submit(function(e) {
+    let target = $(this).attr('data-id');
+    e.preventDefault();
+    $.ajax({
+        url: target, type: "POST", data: $(this).serialize(), dataType: 'json',
+        beforeSend: function() {  $('#btnSubmit').html('<i class="fe fe-settings bx-spin"></i> Please Wait'); },
+        complete: function() {  $('#btnSubmit').html('<i class="ti-save"></i> Save');  },
+        success: function(htmlAmi) { toastMultiShow(htmlAmi.addClas, htmlAmi.msg, htmlAmi.icon);
+        if (htmlAmi.addClas === 'tst_success') { 
+            if (htmlAmi.actReload) { 
+              setTimeout(function() {
+                window.location.href = htmlAmi.actReload;},1000); 
+              }
+           }
+        }
+    });
+});
+
+
+</script>
+
+<script>
+
+
+$("#addIpdData").on("submit", function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: base_url + 'admin/Patient/discharge_cerificate_man',
+        data: new FormData(this),
+        processData: false, contentType: false, cache: false,
+        beforeSend: function() {$('#btn_reset').html('Please Wait.....');},
+        complete: function() {$('#btn_reset').html('Update Now');},dataType: 'json',
+        success: function(data) {
+        console.log(data);
+        $("#addIpdData")[0].reset();
+        }
+    });
+});
+
+    
         $("#addFouData").on("submit", function(e) {
             e.preventDefault();
             $.ajax({
@@ -185,8 +260,3 @@ $('#add_agent_data').submit(function(e) {
     });
 });
     </script>
-
-</body>
-
-
-</html>

@@ -1,6 +1,6 @@
     <!-- 1 => call base file  -->
     <!-- 2 => on hover image view  -->
-    <!-- 3 => password increase one by one  55-->
+    <!-- 3 => password increase one by one  -->
 
     <!-- $getCurrentLi=$this->router->fetch_class().$this->router->fetch_method(); -->
     <li class="nav-sub-item <?php if($getCurrentLi=='inventoryproducts'){echo 'active';}?>">
@@ -8,6 +8,37 @@
     Products
     </a>
     </li>
+
+
+    <?php if (!empty($layout) && trim($layout) !== ""){require_once($layout);} else { ?><?php } ?>
+    public function page($actn){
+    $layout['layout'] = "website/".$actn.".php";
+    $this->load->view('base', $layout);
+    }
+
+
+    <?php $this->session->set_flashdata('flash-error','<div class="alert alert-danger">Successfully added....</div>');?>
+    <?php echo $this->session->flashdata('flash-error');?>          
+    $this->form_validation->set_rules('bioMtric', 'Bio Metric ID', 'trim|required|xss_clean|numeric|max_length[8] OR valid_email|match['password']|min_length[5]|max_length[12]|is_unique[users.email]');
+    <?php echo form_error('email');?>
+
+
+     success: function(data) 
+     {
+     if (data.icon == 'errorText') {
+     if (data.text.email != "") {
+     $("#errEmail").html(data.text.email).fadeIn().delay(3000).fadeOut();
+     }
+     if (data.text.mobile != "") {
+     $("#errMobile").html(data.text.mobile).fadeIn().delay(3000).fadeOut();
+     }
+     } else if (data.icon == 'error') {
+     $("#heading").hide();
+     $("#getMass").html(data.text).show();
+     } else {
+     $("#heading").hide();
+     $("#getMass").html(data.text).show();
+     }
 
 
     <!-- *********************************************************************** -->

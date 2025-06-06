@@ -1,0 +1,95 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    </head>
+    <body>
+    
+    <style>
+
+
+  section{background-color:black;color:white;padding:20px 0px;margin:0px;}
+
+  ul{list-style-type:none; margin:0px; padding:0px;} /* added margin and padding reset */
+
+  ul li{display:inline-block;padding:10px 20px;position: relative;cursor: pointer;}
+
+  ul li:hover{background-color:green;}
+
+  .dropdown ul{padding:0px; margin:0px;}
+
+  .dropdown ul li{display:block;}
+
+  .dropdown{display:none; min-width:200px;position:absolute;top:100%;left:0px;z-index:1000;background-color:black;}
+  
+  .dropdown2 ul{padding:0px; margin:0px;}
+  
+  .dropdown2 ul li{display:block;}
+  
+  .dropdown2{display:none; min-width:200px;position: absolute;top:0px; left:100%;background-color:black;z-index:1000;}
+  
+  .dropdown3 ul{padding:0px;margin:0px;}
+
+  .dropdown3 ul li{display:block;}
+
+  .dropdown3{display:none; min-width:200px;position:absolute;top:0px;left:100%;z-index:1000;background-color:black;} /* added display:none */
+
+  ul li:hover > .dropdown{display:block;} /* added > for direct child hover */
+  .dropdown ul li:hover > .dropdown2{display:block;} /* added > for direct child hover */
+  .dropdown ul li .dropdown2 ul li:hover > .dropdown3{display:block;} /* added > and fixed display block logic */
+
+</style>
+
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Gallery</li>
+            <li>Services
+                 <div class="dropdown">
+                  <ul>
+                    <li>Services 1</li>
+                    <li>Services 2</li>
+                    <li>Services 3</li>
+                    <li>Services 4
+                      <div class="dropdown2">
+                        <ul>
+                          <li>Website 1</li>
+                          <li>Website 2</li>
+                          <li>Website 3
+                            <div class="dropdown3">
+                              <ul>
+                                <li>Software 1</li>
+                                <li>Software 2</li>
+                                <li>Software 3</li>
+                                <li>Software 4</li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>Website 4</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                 </div>
+            </li>
+            <li>Contact us</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+  </html>
