@@ -130,7 +130,7 @@
         <div class="slide-track" id="slideTrack">
         <div class="slide" style="background-image:url('https://img.freepik.com/free-photo/beautiful-young-woman-working-her-laptop-her-office-home_231208-13967.jpg');">
         <div class="text-box first-text">
-        <h2 class="actYrk">Lorem ipsum dolor sit amet.</h2>
+        <h2 class="actYrk__">Lorem ipsum dolor sit amet.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore praesentium perferendis corporis perspiciatis dolorem voluptatum esse magni accusamus totam fugit. Placeat, ratione.</p>
         <a href="" class="custom-btn"><span>Contact Us</span></a>
         </div>
