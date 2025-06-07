@@ -115,6 +115,7 @@
         </div>
         </nav>
 <!-- Mobile menu section start from here. -->
+  <?php include('message.php');?>
 
 
 
