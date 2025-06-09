@@ -2,6 +2,17 @@
     <!-- 2 => on hover image view  -->
     <!-- 3 => password increase one by one  -->
 
+
+    <!-- full screen image on click by this class="actPrk" -->
+    <style>
+    .actPbrk { position: relative; display: inline-block; overflow: hidden; cursor: zoom-in; }
+    .actPbrk img { transition: transform 0.3s ease; display: block; max-width: 100%; height: auto; }
+    .actPbrk::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); opacity: 0; transition: opacity 0.3s ease; z-index: 1; }
+    .actPbrk:hover img { transform: scale(1.1); z-index: 2; }
+    .actPbrk:hover::after { opacity: 1; }
+    </style>
+    <!-- -----------  full screen image on click -------- -->
+
     <!-- $getCurrentLi=$this->router->fetch_class().$this->router->fetch_method(); -->
     <li class="nav-sub-item <?php if($getCurrentLi=='inventoryproducts'){echo 'active';}?>">
     <a class="nav-sub-link <?php if($getCurrentLi=='inventoryproducts'){echo'active';}?>" href="<?php echo base_url('admin/inventory/products');?>">
