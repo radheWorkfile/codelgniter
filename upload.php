@@ -22,7 +22,14 @@
 </script>
 <?php 
 
-
+        $img = $this->upload_image('customer', 'file');
+        
+        if ($img['icon'] == 'success') {
+        unlink($doc->pan_card);
+        $images = $img['text'];
+        } else {
+        $panCard = $doc->pan_card;
+        }
 
 
  	function upload_image($path, $name){
