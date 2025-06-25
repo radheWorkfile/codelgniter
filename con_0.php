@@ -57,6 +57,41 @@ function sellerFun(id) {
 });
 
 
+ 
+
+
+    public function pass_settings()
+    {
+        $this->form_validation->set_rules('oldpass', 'Current Password', 'trim|required');
+        $this->form_validation->set_rules('newpass', 'New Password', 'trim|required');
+        $this->form_validation->set_rules('repass', 'Retype Password', 'trim|required|matches[newpass]');
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Change Password';
+            $data['layout'] = 'profile/pass_setting.php';
+            $this->load->view('customer/base', $data);
+        } else {
+
+            $mypass = $this->db_model->select('password', 'realestate_customer', array('userid' => $this->session->customer_id));
+
+            if (password_verify($this->input->post('oldpass'), $mypass) == true) {
+
+                $array = array(
+                    'password' => password_hash($this->input->post('newpass'), PASSWORD_DEFAULT),
+                    'show_password' => $this->input->post('newpass'),
+                );
+
+                $this->db->where('userid', $this->session->customer_id);
+                $this->db->update('realestate_customer', $array);
+                $this->session->set_flashdata('common_flash', '<div class="alert alert-success">Password Change Successfully.</div>');
+                redirect('customer/pass_settings');
+            } else {
+                $this->session->set_flashdata('common_flash', '<div class="alert alert-danger">The entered "Current Password" is wrong.</div>');
+                redirect('customer/pass_settings');
+            }
+        }
+    }
+
+
 
 public function kyc_verified_mem()
 	{

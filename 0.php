@@ -8,6 +8,24 @@
     }
 }
 
+// <a href="javascript:void(0)" class="manage_property"  data-toggle="modal"  data-target="#myModal" ><i class="fa fa-eye text-danger"></i></a>&emsp;
+
+    var base_url = "<?php echo base_url() ?>";
+    $(document).on('click', ".manage_property", function() {
+        var id = $(this).data('id');               
+        $.ajax({
+            url: base_url + 'customer/'+id,
+            type: 'post',
+            data: {
+                'id': id
+            },
+            success: function(data) {
+                $("#property_details").html(data);
+            }
+
+        });
+    });
+
 
     $(document).ready(function(){
     $('#bankInformation').submit(function(e) {
