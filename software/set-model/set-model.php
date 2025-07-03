@@ -1,7 +1,29 @@
+<!-- target =>  data-bs-toggle="modal" data-bs-target="#exampleModal"  -->
+<!-- Model Section start from  here by radhe -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"><i class="fa fa-arrow-left"></i> Close</button>
+        <button type="button" class="btn btn-outline-success"><i class="fas fa-save"></i> Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Model Section end -->
 
 
 
- <a href="javascript:void(0)" data-id="<?php echo $e->project_block_id;?>" class="manage_property"  data-toggle="modal"  data-target="#myModal" ><i class="fa fa-eye text-danger"></i></a>&emsp;
+<!-- **********************************************  -->
+
+ <a href="javascript:void(0)" data-id="<?php echo $e->project_block_id;?>" class="viewa_section"  data-toggle="modal"  data-target="#view_model" ><i class="fa fa-eye text-danger"></i></a>&emsp;
 
 
      <!-- Model section start from here by r@rk -->
@@ -26,7 +48,7 @@
 
         <script>
     var base_url = "<?php echo base_url() ?>";
-    $(document).on('click', ".manage_property", function() {
+    $(document).on('click', ".viewa_section", function() {
         var id = $(this).data('id');  
         $.ajax({
             url: base_url + 'customer/property_details/'+id,
