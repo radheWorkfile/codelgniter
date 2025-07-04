@@ -1,4 +1,0 @@
-
-right bv => SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_userid` = 'WLC90812' OR `customer_userid` = 'WLC16716' OR `customer_userid` = 'WLC36430'
-self-bv => SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_id` = '1'
-left-bv => SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_userid` = 'WLC79158' OR `customer_userid` = 'WLC76447' OR `customer_userid` = 'WLC25714' OR `customer_userid` = 'WLC63394' OR `customer_userid` = 'WLC71265' OR `customer_userid` = 'WLC24314'

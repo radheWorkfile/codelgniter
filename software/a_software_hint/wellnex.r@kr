@@ -1,0 +1,16 @@
+
+right bv => SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_userid` = 'WLC90812' OR `customer_userid` = 'WLC16716' OR `customer_userid` = 'WLC36430'
+self-bv => SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_id` = '1'
+left-bv => SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_userid` = 'WLC79158' OR `customer_userid` = 'WLC76447' OR `customer_userid` = 'WLC25714' OR `customer_userid` = 'WLC63394' OR `customer_userid` = 'WLC71265' OR `customer_userid` = 'WLC24314'
+
+
+
+Member payout member to admin => (a-crone => m-payout-report+payout => a-earning & payout + make payment) Table (Nc-wallet,closing_record,member_deposit,withdraw_request)
+1=> ( Table ) => member_deposit(dc,di), withdraw_request(dc,di), closing_record(dc,di), wallet( register time created )
+2 => weekly closing, payout-report, payout( m-dashboard )
+2.1=> check pin,kyc,wallet exit or not after that start to work.
+3=> if choose wallet then update wallet amount & insert in member_deposit,
+4 => if choose account  then insert in withdraw_request ( to show a-dashboard ) & member_deposit( to show m-dashboard)
+
+
+
