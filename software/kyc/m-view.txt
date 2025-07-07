@@ -1,0 +1,776 @@
+<!-- start page title -->
+
+
+<div class="row">
+	<div class="col-12">
+	<div class="page-title-box d-sm-flex align-items-center justify-content-between card flex-sm-row border-0">
+	<h4 class="mb-sm-0 font-size-16 fw-bold"><?php echo $title ?></h4>
+	<div class="page-title-right">
+	<ol class="breadcrumb m-0">
+	<li class="breadcrumb-item"><a href="javascript: void(0);"></a></li>
+	<li class="breadcrumb-item active"><?php echo $breadcrums ?></li>
+	</ol>
+	</div>
+	</div>
+	</div>
+</div>
+
+
+<?php //print_r($member);
+if ($member->my_img) {
+	$getImg = $this->baseUrl . $member->my_img;
+} else {
+	$getImg = $this->baseUrl . 'uploads/member/no_profile.png';
+}
+if ($member->status == 'Active') {
+	$statusClr = '#049504';
+	$backClr = 'background-color:rgba(179, 227, 179, 0.4)';
+} elseif ($member->status == 'Block') {
+	$statusClr = '#970000';
+	$backClr = 'background-color:rgba(176, 137, 137,0.4)';
+}
+if ($member->status == 'Suspend') {
+	$statusClr = '#bd7b02';
+	$backClr = 'background-color:rgba(215, 192, 151,0.4)';
+}
+
+//print_r($member);
+//echo $this->db->last_query();
+
+//print_r($member);
+?>
+<input type="hidden" id="id" value="<?php echo $member->id; ?>" />
+<div class="row mb-4">
+
+
+<div class="col-md-12 mb-4">
+	<div class="ami_title" style="padding-right:1rem;">
+
+			<!-- <i class="bx bx-detail"></i> <?//php echo $member->name.' ( '.$member->mem_id.' )';?> Update Your KYC -->
+			<i class="bx bx-detail"></i> <?php echo $member->name;?> Update Your KYC
+
+			<span class="joinM"><?php if ($member->create_date) {
+			echo date('H:i:s d-M-Y', strtotime($member->create_date));
+			} else {
+			echo 'N/A';
+			} ?></span>
+			<span>Joining Date :</span>
+			
+	</div>
+</div>
+
+<!-- ===============================================  -->
+
+<div class="col-xl-4">
+		<div class="card">
+			<div class="card-body">
+				<div>
+					<div class="clearfix"></div>
+					<div class="text-center bg-pattern">
+					<div id="proPic"><img id="setPrImg" src="<?php echo $getImg; ?>" alt="<?php echo $member->name; ?>" class="avatar-xl rounded-circle mb-3 mi_thumb"></div>
+					<div id="getProfileImageChange" class="imageUploadActn"><i class="icon fa fa-camera"></i></div>
+					<h4 class="text-primary mb-2"><?php echo $member->name; ?></h4>
+					<h5 class="text-muted font-size-13 mb-3">ID. <?php echo $member->username; ?></h5>
+					<h6 class="text-muted font-size-13 mb-3" style="margin-top:-10px;"><span style="color:<?php echo $statusClr . ';' . $backClr; ?>;padding: 0px 10px 2px 10px;"><?php echo $member->status; ?></span></h6>
+					<div class="text-center">
+					<a href="mailto:<?php echo $member->email; ?>" class="btn btn-success me-2 waves-effect waves-light btn-sm" target="_blank"><i class="mdi mdi-email-outline me-1"></i>Send Mail</a>
+					<a href="tel:<?php echo $member->mobile; ?>" class="btn btn-primary waves-effect waves-light btn-sm" target="_blank"><i class="mdi mdi-phone-outline me-1"></i>Phone Call</a>
+					</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<!----------------------------------------->
+
+
+				<div class="input-group" id="uploadMemberIMg" style="padding: 0px 0px 20px 0px;border-bottom: 1px solid #d7d7d7; display:none;">
+				<input type="file" class="form-control" name="file" id="mem_file">
+				<button type="button" class="input-group-text memberImgUploadActn" id="proBtnUpload"><i class="bx bx-save"></i> Upload</button>
+				</div>
+				<!----------------------------------------->
+				
+			</div>
+
+
+			<div class="table-responsive" id="perInfo_Sec">
+				
+			<div class="bg-new-pro w-100 p-2" style="display:flex;justify-content:space-between" data-target="perInfo">
+    <h6 class="text-white"><i class="fas fa-user"></i>&nbsp;&nbsp;Personal Information</h6>
+    <h6>
+    <?php 
+        echo ($new_kyc_status->per_remark == 'completed' && $new_kyc_status->per_status == '1') ? 
+            '<span class="fw-bold text-success" style="font-size:0.8rem;">Approved</span>' :
+            (($new_kyc_status->per_remark != '' && $new_kyc_status->per_remark != 'completed') ? 
+                '<span class="fw-bold text-warning" style="font-size:0.8rem;">Rejected</span>' : 
+                '<span class="fw-bold" style="color:#fc5353;font-size:0.8rem;">Pending</span>');
+    ?>
+    </h6>
+</div>
+
+<div class="bg-new-pro w-100 p-2" style="display:flex;justify-content:space-between" data-target="aadhaarInfo">
+    <h6 class="text-white"><i class="fas fa-id-card"></i>&nbsp;&nbsp;Aadhar Information</h6>
+    <h6>
+    <?php 
+        echo ($new_kyc_status->aadhaar_remark == 'completed' && $new_kyc_status->aadhaar_status == '1') ? 
+            '<span class="fw-bold text-success" style="font-size:0.8rem;">Approved</span>' :
+            (($new_kyc_status->aadhaar_remark != '' && $new_kyc_status->aadhaar_remark != 'completed') ? 
+                '<span class="fw-bold text-warning" style="font-size:0.8rem;">Rejected</span>' : 
+                '<span class="fw-bold" style="color:#fc5353;font-size:0.8rem;">Pending</span>');
+    ?>
+</h6>
+</div>
+
+<div class="bg-new-pro w-100 p-2" style="display:flex;justify-content:space-between" data-target="PanInfo">
+    <h6 class="text-white"><i class="fas fa-address-card"></i>&nbsp;&nbsp;PAN Information</h6>
+    <h6>
+    <?php 
+        echo ($new_kyc_status->pan_remark == 'completed' && $new_kyc_status->pan_status == '1') ? 
+            '<span class="fw-bold text-success" style="font-size:0.8rem;">Approved</span>' :
+            (($new_kyc_status->pan_remark != '' && $new_kyc_status->pan_remark != 'completed') ? 
+                '<span class="fw-bold text-warning" style="font-size:0.8rem;">Rejected</span>' : 
+                '<span class="fw-bold" style="color:#fc5353;font-size:0.8rem;">Pending</span>');
+    ?>
+</h6>
+
+</div>
+
+<div class="bg-new-pro w-100 p-2" style="display:flex;justify-content:space-between" data-target="bankInfoUpdate">
+    <h6 class="text-white"><i class="fas fa-university"></i>&nbsp;&nbsp;Banking Information</h6>
+    
+<h6>
+    <?php 
+        echo ($new_kyc_status->bank_remark == 'completed' && $new_kyc_status->bank_status == '1') ? 
+            '<span class="fw-bold text-success" style="font-size:0.8rem;">Approved</span>' :
+            (($new_kyc_status->bank_remark != '' && $new_kyc_status->bank_remark != 'completed') ? 
+                '<span class="fw-bold text-warning" style="font-size:0.8rem;">Rejected</span>' : 
+                '<span class="fw-bold" style="color:#fc5353;font-size:0.8rem;">Pending</span>');
+    ?>
+</h6>
+
+
+</div>
+
+<div class="bg-new-pro w-100 p-2" style="display:flex;justify-content:space-between" data-target="nommineeInfo">
+    <h6 class="text-white"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;Nominee Information</h6>
+    <h6>
+    <?php 
+        echo ($new_kyc_status->nomnee_remark == 'completed' && $new_kyc_status->nomnee_status == '1') ? 
+            '<span class="fw-bold text-success" style="font-size:0.8rem;">Approved</span>' :
+            (($new_kyc_status->nomnee_remark != '' && $new_kyc_status->nomnee_remark != 'completed') ? 
+                '<span class="fw-bold text-warning" style="font-size:0.8rem;">Rejected</span>' : 
+                '<span class="fw-bold" style="color:#fc5353;font-size:0.8rem;">Pending</span>');
+    ?>
+</h6>
+
+</div>
+  
+		</div>
+
+		
+				
+		</div>
+		</div>
+
+
+		<div class="col-xl-8">
+		<?php if ($this->session->flashdata('flash-success')): ?><div id="flashMsg">
+		<?= $this->session->flashdata('flash-success'); ?></div>
+		<?php endif; ?>
+		<?php if ($this->session->flashdata('flash-error')): ?>
+		<div id="flashMsg"><?= $this->session->flashdata('flash-error'); ?></div>
+		<?php endif; ?> 
+
+	
+		
+		
+        <div class="row" id="perInfo">
+				<div class="ami_title">
+				<i class="bx bx-user"></i> Persional Information
+				<div class="amiBtnTgle amiBtnUp" id="jnfo"> <i class="fa fa-arrow-left" aria-hidden="true"style="font-size:15px;"></i> </div>
+				</div>
+
+		        <div class="crdDet" id="perIn">
+
+
+				
+				<?php if( $new_kyc_status->per_remark == 'completed'  &&  $new_kyc_status->per_status == '1'):?>
+				<div class="row my-2"style="background-color:#e6e6e6;">
+        		<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;">Persional Information Approved.</p>
+				</div>
+				<?php else:?>
+				<div class="row my-2"style="background-color:#e6e6e6;">
+        		<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;"><?php echo $new_kyc_status->per_remark;?></p>
+				</div>
+				<?php endif;?>
+		
+				<div class="row mt-4" id="vwPrfo">
+
+				<div class="col-md-6">
+					<div class="amiprD"><i class="bx bx-user-circle"></i>
+						<span class="amiprDspn">Name :</span>
+						<span class="joinM mitext" id="pName"><?php if ($member->name) { echo $member->name; } else { echo 'N/A'; } ?></span>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="amiprD"><i class="bx bx-mobile-alt "></i>
+						<span class="amiprDspn">Mobile Number :</span>
+						<input type="text" id="mobileE" class="edtBltxt mblW" value="<?php if ($member->mobile) { echo $member->mobile; } else { echo 'N/A'; } ?>" readonly>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="amiprD">
+						<span class="amiprDspn"><span class="text-danger">* </span>Email Id:</span>
+						<i class="bx bx-envelope amiInr jficn"></i>
+						<input type="text" id="emailTE" class="edtBltxt" value="<?php if ($member->email) { echo $member->email; } else { echo 'N/A'; } ?>" style="width: 60%;">
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="amiprD"><i class="fas fa-genderless amiInr jficn"></i>
+						<span class="amiprDspn">Gender : </span>
+						<span class="joinM mitext" id="gender"><?php if ($member->gender) { echo $member->gender; } else { echo 'N/A'; } ?></span>
+						<span class="joinM mi-select" id="genderT" style="display:none;">
+							<select id="genderE">
+								<option value="">--- Select One ---</option>
+								<option value="Male" <?php if ($member->gender == 'Male') { echo 'selected="selected"'; } ?>>Male</option>
+								<option value="Female" <?php if ($member->gender == 'Female') { echo 'selected="selected"'; } ?>>Female</option>
+							</select>
+						</span>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<input type="hidden" id="dob_t" value="<?php if ($member->date_of_birth != NULL) { echo $member->date_of_birth; } else { echo 'N/A'; } ?>">
+					<div class="amiprD">
+						<span class="amiprDspn"><span class="text-danger">* </span>Date of Birth:</span>
+						<span class="joinM" id="dob"><?php if ($member->date_of_birth != NULL) { echo date('d / m / Y', strtotime($member->date_of_birth)); } else { echo 'N/A'; } ?></span>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="amiprD"><i class="bx bx-certification"></i>
+						<span class="amiprDspn">State :</span>
+						<span class="joinM" id="state"><?php if ($member->stN) { echo $member->stN; } else { echo 'N/A'; } ?></span>
+						<span class="joinM mi-select" id="stateE">
+							<select class="empSelectR" id="statN">
+								<option value="">--- Select One ---</option>
+								<?php if ($getState) {
+									foreach ($getState as $stt) { ?>
+									<option value="<?php echo $stt->id; ?>" <?php if ($member->state == $stt->id) {
+									echo 'selected="selected"'; } ?>>
+									<?php echo $stt->state_cities; ?></option> <?php } } ?>
+							</select>
+					  </span>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="amiprD"><i class="bx bx-crosshair"></i>
+						<span class="amiprDspn">District :</span>
+						<span class="joinM" id="distrt"><?php if ($member->ctyN) { echo $member->ctyN; } else { echo 'N/A'; } ?></span>
+						<span class="joinM mi-select" id="districtE">
+							<select id="district">
+								<option value="">--- Select One ---</option>
+								<?php if ($getCity) {
+									foreach ($getCity as $city) { ?>
+										<option value="<?php echo $city->id; ?>" <?php if ($member->district == $city->id) { echo 'selected="selected"'; } ?>><?php echo $city->state_cities; ?></option> <?php } } ?>
+							</select>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="amiprD"><i class="bx bx-target-lock"></i>
+						<span class="amiprDspn">Zipcode :</span>
+						<span class="joinM" id="zipcode"><?php if ($member->zipcode) { echo $member->zipcode; } else { echo 'N/A'; } ?></span>
+					</div>
+				</div>
+									
+				<div class="col-md-12">
+					<div class="amiprD mitext"><i class="bx bx-home-circle"></i>
+						<div class="amiprDspn">Address : </div>
+						<div style="margin-left: 70px;margin-top: -20px;" id="addrr"><?php if ($member->address) { echo $member->address; } else { echo 'N/A'; } ?></div>
+					</div>
+				</div>
+
+				
+					<div class="col-md-12" id="prInf">
+						<button class="edtBtn btnIncR" onclick="proManage(2,'personalInfo')">
+							<i class="mdi mdi-comment-edit-outline"></i> Edit </button> 
+					</div>
+			
+
+
+				</div>
+		</div>
+		</div>
+
+
+
+		 <div class="row d-none" id="aadhaarInfo">
+				<div class="ami_title">
+				<i class="bx bx-user"></i> Aadhar Information
+				<div class="amiBtnTgle amiBtnUp" id="jnfo"> <i class="fa fa-arrow-left" aria-hidden="true"style="font-size:15px;"></i> </div>
+				</div>
+		
+		        <div class="crdDet" id="perIn">
+
+				<?php if( $new_kyc_status->aadhaar_remark == 'completed'  &&  $new_kyc_status->aadhaar_status == '1'):?>
+				<div class="row my-2"style="background-color:#e6e6e6;">
+        		<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;">Aadhaar Information Approved.</p>
+				</div>
+				<?php else:?>
+				<div class="row my-2"style="background-color:#e6e6e6;">
+        		<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;"><?php echo $new_kyc_status->aadhaar_remark;?></p>
+				</div>
+				<?php endif;?>
+
+				<form action="javaScript:void(0);" method="post" id="aadhaarUpdate" data-section="aadharDetails"  data-id="<?php echo $member->id;?>" class="w-100" enctype="multipart/form-data">
+				<div class="row mt-4"> 
+
+
+				<div class="col-md-12">
+				<div class="amiprD">
+				<i class="bx bx-user-circle"></i>
+				<span class="amiprDspn"> <span class="text-danger">* </span>Enter Aadhaar Number</span>
+				<input type="text" id="aadhaar_no" class="aadhaar_no"  value="<?php if ($member->aadhaar_nu) { echo $member->aadhaar_nu; }?>" maxlength="12" oninput="this.value = this.value.toUpperCase().replace(/[^0-9]/g, '').replace(/(\  *?)\  */g, '$1')">
+				</div>
+				</div>
+
+				<div class="col-md-6"> 
+				<div class="amiprD">
+				<i class="bx bx-user-circle"></i>
+				<span class="amiprDspn"><span class="text-danger">* </span>Aadhaar-Card Upload ( Front side )</span>
+				<input type="file" id="front_aadhaar" name="front_aadhaar" class="front_aadhaar">
+				<div id="preview_front_aadhaar" style="margin-top: 10px;display: flex; justify-content: center; align-items: center;"><img src="<?php echo base_url($member->front_aadhaar_img?$member->front_aadhaar_img:'');?>" style="height:3rem;" alt=""></div>
+				</div>
+				</div>
+
+				<div class="col-md-6"> 
+				<div class="amiprD">
+				<i class="bx bx-user-circle"></i>
+				<span class="amiprDspn"><span class="text-danger">* </span>Aadhaar Upload ( Back Side )</span>
+				<input type="file" id="back_aadhaar" name="back_aadhaar" class="back_aadhaar">
+				<div id="preview_back_aadhaar" style="margin-top: 10px;display: flex; justify-content: center; align-items: center;"><img src="<?php echo base_url($member->back_aadhaar_img?$member->back_aadhaar_img:'');?>" style="height:3rem;" alt=""></div>
+				</div>
+				</div>
+				
+                <div class="row">
+				<div class="col-md-10"></div>
+				<div class="col-md-2">
+				<?php if( $new_kyc_status->aadhaar_remark == 'completed'  &&  $new_kyc_status->aadhaar_status == '1'):?>
+				<p class="text-success"><i class="fa fa-check text-success" aria-hidden="true"></i>&nbsp;Approved</p> 
+				<?php else:?>
+				<button class="edtBtn saveBtn" type="submit" name="submit"> <i class="fas fa-save"></i> Save </button> 
+				<?php endif;?>
+				</div>
+				</div>		
+
+			</div>
+		</form>
+
+		</div>
+		</div>
+
+
+		<div class="row d-none" id="PanInfo">
+				<div class="ami_title">
+				<i class="bx bx-user"></i> Pan-Card Information
+				<div class="amiBtnTgle amiBtnUp" id="jnfo"> <i class="fa fa-arrow-left" aria-hidden="true"style="font-size:15px;"></i> </div>
+				</div>
+		
+		        <div class="crdDet" id="perIn">
+
+				<?php if( $new_kyc_status->pan_remark == 'completed'  &&  $new_kyc_status->pan_status == '1'):?>
+				<div class="row my-2"style="background-color:#e6e6e6;">
+				<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;">Pan Information Approved.</p>
+				</div>
+				<?php else:?>
+				<div class="row my-2"style="background-color:#e6e6e6;">
+				<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;"><?php echo $new_kyc_status->pan_remark;?></p>
+				</div>
+				<?php endif;?>
+
+			   <form action="javaScript:void(0);" method="post" id="panDataUpdate" data-section="pan"  data-id="<?php echo $member->id;?>" class="w-100" enctype="multipart/form-data">
+
+				<div class="row mt-4">
+				
+				<div class="col-md-12">
+				<div class="amiprD">
+				<i class="bx bx-user-circle"></i>
+				<span class="amiprDspn">Enter Pan Number</span>  
+				<input type="text" id="pan_no" class="pan_no" name="pan_no" value="<?php if ($member->pan_nu) { echo $member->pan_nu; }?>" maxlength="10" oninput="validatePAN(this)">
+				</div>
+				</div>
+
+				<div class="col-md-6"> 
+				<div class="amiprD">
+				<i class="bx bx-user-circle"></i>
+				<span class="amiprDspn">Pan-Card Upload ( Front side )</span>
+				<input type="file" id="front_pan" class="front_pan" name="front_pan" accept="image/*">
+				<div id="preview_front_pan" style="margin-top: 10px;display: flex; justify-content: center; align-items: center;"><img src="<?php echo base_url($member->front_pan_img?$member->front_pan_img:'');?>" style="height:3rem;" alt=""></div>
+				</div>
+				</div>
+
+				<div class="col-md-6 d-none"> 
+				<div class="amiprD">
+				<i class="bx bx-user-circle"></i>
+				<span class="amiprDspn">Pan-Card Upload ( Back side )</span> 
+				<input type="file" id="back_pan" class="back_pan" name="back_pan"  accept="image/*">
+				<div id="preview_front11_aadhaar" style="margin-top: 10px;display: flex; justify-content: center; align-items: center;"><img src="<?php echo base_url($member->back_pan_img?$member->back_pan_img:'');?>" style="height:3rem;" alt=""></div>
+				</div>
+				</div>
+				
+                <div class="row">
+				<div class="col-md-10"></div>
+				<div class="col-md-2">
+				<?php if( $new_kyc_status->pan_remark == 'completed'  &&  $new_kyc_status->pan_status == '1'):?>
+				<p class="text-success"><i class="fa fa-check text-success" aria-hidden="true"></i>&nbsp;Approved</p> 
+				<?php else:?>
+				<button class="edtBtn" type="submit" name="submit"> <i class="fas fa-save"></i> Save </button> 
+				<?php endif;?>
+				</div>
+				</div>		
+
+			</div>
+		</form>
+		</div>
+		</div> 
+
+
+		<div class="row d-none" id="bankInfoUpdate">
+						<div class="ami_title">
+						<i class="fas fa-university" id="bankInfoSec"></i> Bank Information
+						<div class="amiBtnTgle amiBtnUp" id="jnfo"> <i class="fa fa-arrow-left" aria-hidden="true"style="font-size:15px;"></i> </div>
+						</div>
+											
+		        		<div class="crdDet" id="perIn">
+
+						<?php if( $new_kyc_status->bank_remark == 'completed'  &&  $new_kyc_status->bank_status == '1'):?>
+						<div class="row my-2"style="background-color:#e6e6e6;">
+						<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;">Bank Information Approved</p>
+						</div>
+						<?php else:?>
+						<div class="row my-2"style="background-color:#e6e6e6;">
+						<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;"><?php echo $new_kyc_status->bank_remark;?></p>
+						</div>
+						<?php endif;?>
+
+						<form action="javaScript:void(0);" method="post" id="bankdataUpdate" data-section="bank_information"  data-id="<?php echo $member->id;?>" class="w-100" enctype="multipart/form-data">
+											
+						<div class="row mt-4"> 
+
+					
+
+						<div class="col-md-6">
+						<div class="amiprD">
+						<span class="amiprDspn">Bank Name :</span>
+						<i class="bx bx-user amiInr jficn"></i>
+						<input type="text" id="bName" class="bName" value="<?php if ($member->bank_name) { echo $member->bank_name; } ?>" style="width: 60%;">
+						</div>
+						</div>
+
+					    <div class="col-md-6">
+						<div class="amiprD">
+						<span class="amiprDspn">A/C Holder :</span>
+						<i class="bx bx-user amiInr jficn"></i>
+						<input type="text" id="" class="" value="<?php if ($member->name) { echo $member->name; } ?>" style="width: 60%;" readonly>
+						</div>
+						</div>
+
+						<div class="col-md-6">
+						<div class="amiprD">
+						<span class="amiprDspn">A/C Number :</span>
+						<i class="bx bx-link amiInr jficn"></i>
+						<input type="text" id="acNumber" class="acNumber" value="<?php if ($member->bank_ac_no) { echo $member->bank_ac_no; } ?>" style="width: 60%;">
+						</div>
+						</div>
+
+						<div class="col-md-6">
+						<div class="amiprD">
+						<span class="amiprDspn">IFSC Code  :</span>
+						<i class="bx bx-link amiInr jficn"></i>
+						<input type="text" id="ifsc" class="ifsc" value="<?php if ($member->bank_Ifsc) { echo $member->bank_Ifsc; }?>" style="width: 60%;">
+						</div>
+						</div>
+
+
+						<div class="col-md-6">
+						<div class="amiprD">
+						<span class="amiprDspn">Branch :</span>
+						<i class="bx bx-user amiInr jficn"></i>
+						<input type="text" id="branchName" class="branchName" value="<?php if ($member->bankBrName) { echo $member->bankBrName; }?>" style="width: 60%;">
+						</div>
+						</div>
+
+						<div class="col-md-6">
+						<div class="amiprD">
+						<span class="amiprDspn">UPI ID :</span>
+						<i class="bx bx-link amiInr jficn"></i>
+						<input type="text" id="upiID" class="upiID" value="<?php if ($member->upi_details) { echo $member->upi_details; } ?>" style="width: 60%;">
+						</div>
+						</div>
+
+						<div class="col-md-6"> 
+						<div class="amiprD">
+						<span class="amiprDspn">Bank Passbook :</span>
+						<i class="bx bx-grid amiInr jficn"></i>
+						<input type="file" id="passbook" class="passbook" value="<?php if ($member->passbook_img ) { echo $member->passbook_img; } ?>" style="width: 60%;" require>
+				        <div id="preview_passbook_aadhaar" style="margin-top: 10px;display: flex; justify-content: center; align-items: center;"><img src="<?php echo base_url($member->back_pan_img?$member->back_pan_img:'');?>" style="height:3rem;" alt=""></div>
+						</div>
+						</div>
+											
+                		<div class="row">
+						<div class="col-md-10"></div>
+						<div class="col-md-2">
+						<?php if( $new_kyc_status->bank_remark == 'completed'  &&  $new_kyc_status->bank_status == '1'):?>
+						<p class="text-success"><i class="fa fa-check text-success" aria-hidden="true"></i>&nbsp;Approved</p> 
+						<?php else:?>
+						<button class="edtBtn" type="submit" name="submit"> <i class="fas fa-save"></i> Save </button> 
+						<?php endif;?>
+						</div>
+						</div>		
+											
+					</div>
+		</form>
+		</div>
+   		</div>  
+
+
+
+		<div class="row d-none" id="nommineeInfo">
+					<div class="ami_title">
+					<i class="fas fa-university" id="bankInfoSec"></i> NOMMINEE INFORMATION 
+					<div class="amiBtnTgle amiBtnUp" id="jnfo"> <i class="fa fa-arrow-left" aria-hidden="true"style="font-size:15px;"></i> </div>
+					</div>
+										
+		        	<div class="crdDet" id="perIn">
+											
+					<?php if( $new_kyc_status->nomnee_remark == 'completed'  &&  $new_kyc_status->nomnee_status == '1'):?>
+					<div class="row my-2"style="background-color:#e6e6e6;">
+					<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;">Nomnee Information Approved.</p>
+					</div>
+					<?php else:?>
+					<div class="row my-2"style="background-color:#e6e6e6;">
+					<p class="text-center fw-bold"style="padding:0.8rem 0rem 0rem 0rem;"><?php echo $new_kyc_status->nomnee_remark;?></p>
+					</div>
+					<?php endif;?>
+
+	 <form action="javaScript:void(0);" method="post" id="nomineeDataUpdate" data-section="nominee"  data-id="<?php echo $member->id;?>" class="w-100" enctype="multipart/form-data">
+
+										
+					<div class="row mt-4"> 
+
+
+					<div class="col-md-6">
+					<div class="amiprD">
+					<span class="amiprDspn">Name :</span>
+					<i class="bx bx-user amiInr jficn"></i>
+					<input type="text" id="nomineeName" class="nomineeName" value="<?php if ($member->nominee_name) { echo $member->nominee_name; } ?>" style="width: 60%;">
+					</div>
+					</div>
+
+					<div class="col-md-6">
+					<div class="amiprD">
+					<span class="amiprDspn">Relationship :</span> 
+					<i class="bx bx-grid amiInr jficn"></i>
+					<input type="text" id="nomineeRelation" class="nomineeRelation" value="<?php if ($member->nominee_relationship) { echo $member->nominee_relationship; } ?>" style="width: 60%;">
+					</div>
+					</div>
+
+
+					<div class="col-md-12">
+					<div class="amiprD">
+					<span class="amiprDspn">Address :</span>
+					<i class="bx bx-grid amiInr jficn"></i>
+					<input type="text" id="nomineeAddr" class="nomineeAddr" value="<?php if ($member->nominee_address) { echo $member->nominee_address; } ?>" style="width: 60%;">
+					</div>
+					</div>
+
+											
+                	<div class="row">
+					<div class="col-md-10"></div>
+					<div class="col-md-2">
+					<?php if( $new_kyc_status->nomnee_remark == 'completed'  &&  $new_kyc_status->nomnee_status == '1'):?>
+					<p class="text-success"><i class="fa fa-check text-success" aria-hidden="true"></i>&nbsp;Approved</p> 
+					<?php else:?>
+					<button class="edtBtn"name="submit" > <i class="fas fa-save"></i> Save </button> 
+					<?php endif;?>
+					</div>
+					</div>		
+											
+					</div>
+
+		</form>
+		</div>
+   		</div>  
+
+	</div>
+</div>
+
+
+<style>
+	.bg-new-pro{background-color:rgb(10, 49, 72) !important;border-top:1px solid #141b20;cursor: pointer;}
+	input{border:none;}
+    input { background-color: #f2f2f2; color:rgb(80, 76, 76);border:none; border-bottom:1px solid rgb(189, 188, 188);}
+</style>
+
+<script>
+
+	$(document).ready(function () {
+	$("#flashMsg").hide().fadeIn(1000).delay(1000).fadeOut(1000);
+	});
+
+	function showImagePreview(inputId, previewId) {
+	const input = document.getElementById(inputId);
+	const preview = document.getElementById(previewId);
+	input.addEventListener('change', function () {
+	preview.innerHTML = ''; const file = this.files[0];
+	if (file && file.type.startsWith('image/')) {
+	const reader = new FileReader(); reader.onload = function (e) {
+	const img = document.createElement('img');
+	img.src = e.target.result; img.style.height = '4rem';
+	img.style.width = 'auto'; img.style.display = 'block';img.style.margin = '0 auto';   
+	preview.appendChild(img); }; reader.readAsDataURL(file); } 
+	});
+	}
+	showImagePreview('front_aadhaar', 'preview_front_aadhaar');   
+	showImagePreview('back_aadhaar', 'preview_back_aadhaar');
+	showImagePreview('front_pan', 'preview_front_pan');
+	showImagePreview('passbook', 'preview_passbook_aadhaar');
+
+
+
+$(document).ready(function () {
+  const allSections = ['perInfo', 'aadhaarInfo', 'PanInfo', 'bankInfoUpdate', 'nommineeInfo'];
+  let currentVisible = 'perInfo';
+  $('#' + currentVisible).removeClass('d-none');
+  $('#perInfo_Sec .bg-new-pro').on('click', function () {
+    const targetId = $(this).data('target');
+    if (targetId === currentVisible) {
+      if (currentVisible !== 'perInfo') {
+        $('#' + currentVisible).addClass('d-none');
+        $('#perInfo').removeClass('d-none');
+        currentVisible = 'perInfo';
+      }
+    } else {
+      $('#' + currentVisible).addClass('d-none');
+      $('#' + targetId).removeClass('d-none');
+      currentVisible = targetId;
+    }
+  });
+});
+</script>
+
+  <script>
+
+
+$("#aadhaarUpdate").on("submit", function(e) {
+    e.preventDefault();
+    const section = $(this).data('section'); 
+    const id = $(this).data('id'); 
+    const formData = new FormData();
+    formData.append('id', id);
+    formData.append('section', section);
+    formData.append('aadhaar_no', $('#aadhaar_no').val());
+    formData.append('front_aadhaar', $('#front_aadhaar')[0].files[0]);
+    formData.append('back_aadhaar', $('#back_aadhaar')[0].files[0]);
+
+    $.ajax({
+        type: "POST",
+        url: '<?= base_url("member/profile/updatesdfsdfsd") ?>',
+        data: formData,
+        contentType: false, // Very important
+        processData: false, // Very important
+        success: function(data) {
+           window.location.reload();
+        },
+        
+    });
+});
+
+
+
+
+
+$("#nomineeDataUpdate").on("submit", function(e) {
+    e.preventDefault();
+    const section = $(this).data('section'); 
+    const id = $(this).data('id'); 
+    const nomineeName = $('#nomineeName').val();
+    const nomineeRelation = $('#nomineeRelation').val();
+    const nomineeAddr = $('#nomineeAddr').val();
+    $.ajax({
+        type: "POST",
+        url: '<?= base_url("member/profile/updatesdfsdfsd") ?>',
+        data: {
+            'id': id,
+            'section': section,
+            'nomineeName': nomineeName,
+            'nomineeRelation': nomineeRelation,
+            'nomineeAddr': nomineeAddr
+        },
+        success: function(data) {
+         window.location.reload();
+        },
+    });
+});  
+
+
+$("#panDataUpdate").on("submit", function(e) {    
+    e.preventDefault();
+    const section = $(this).data('section'); 
+    const id = $(this).data('id'); 
+    const formData = new FormData();
+    formData.append('id', id);
+    formData.append('section', section);
+    formData.append('pan_no', $('#pan_no').val());
+    formData.append('front_pan', $('#front_pan')[0].files[0]);
+    formData.append('back_pan', $('#back_pan')[0].files[0]);
+
+    $.ajax({
+        type: "POST",
+        url: '<?= base_url("member/profile/updatesdfsdfsd") ?>',
+        data: formData,
+        contentType: false, // Very important
+        processData: false, // Very important
+        success: function(data) {
+           window.location.reload();
+        },
+    });
+});  
+
+
+$("#bankdataUpdate").on("submit", function(e) {    
+    e.preventDefault();
+    const section = $(this).data('section'); 
+    const id = $(this).data('id'); 
+    const formData = new FormData();
+    formData.append('id', id);
+    formData.append('section', section);
+    formData.append('bName', $('#bName').val());
+    formData.append('acNumber', $('#acNumber').val());
+    formData.append('ifsc', $('#ifsc').val());
+    formData.append('branchName', $('#branchName').val());
+    formData.append('upiID', $('#upiID').val());
+    formData.append('passbook', $('#passbook')[0].files[0]);
+    $.ajax({
+        type: "POST",
+        url: '<?= base_url("member/profile/updatesdfsdfsd") ?>',
+        data: formData,
+        contentType: false, 
+        processData: false, 
+        success: function(data) {
+           window.location.reload();
+        },
+    });
+}); 
+
+
+  </script>

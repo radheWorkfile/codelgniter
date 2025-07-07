@@ -1,0 +1,165 @@
+	public function index()
+	{
+		  $member = $this->member->profile_details($this->logId);	
+
+	      $kyc_array = explode(',', ($member->is_kyc ? $member->is_kyc : '0,0,0,0,0'));
+
+          $kyc_keys = array('per_info', 'aadhaar_info', 'pan_info', 'bank_info', 'nomanee_info');
+
+   		 $kyc_status = array();
+   		 foreach ($kyc_keys as $index => $key) {
+   		     $kyc_status[$key] = isset($kyc_array[$index]) ? $kyc_array[$index] : '0';
+   		 }
+        $data['kyc'] = $kyc_status;
+
+		$data['new_kyc_status'] = $this->db->select('*')->from('kyc_details')->where('mem_id',$member->mem_id)->get()->row();
+
+		$data['getState'] = $this->common->getDataList('states_cities', 'parent_id', '729');
+		$data['getCity'] = $this->common->getDataList('states_cities', 'parent_id', $member->state);
+		$data['member'] = $member;
+		$data['title'] = 'Profile';
+		$data['breadcrums'] = 'Profile';
+		$data['layout'] = 'profile/kyc_verify.php';
+		$this->load->view('member/base', $data);
+	}
+
+
+	public function updatesdfsdfsd(){
+
+    		$id = $this->input->post('id');
+    		$section = $this->input->post('section');
+    		$post = $this->input->post();
+        	switch ($section) {
+        	case 'aadharDetails':   
+
+            $f_aadhaar = $this->upload_image('member_document', 'front_aadhaar');
+    		$b_aadhaar = $this->upload_image('member_document', 'back_aadhaar');
+
+            if ($f_aadhaar['icon'] !== 'success' || $b_aadhaar['icon'] !== 'success') {
+            $error_msg = '';
+
+       		 if ($f_aadhaar['icon'] !== 'success') {
+       		     $error_msg .= 'Front Aadhaar image upload failed. ';
+       		 }
+		 
+       		 if ($b_aadhaar['icon'] !== 'success') {
+       		     $error_msg .= 'Back Aadhaar image upload failed.';
+       		 }
+
+       		$this->session->set_flashdata('flash-error', '<div class="alert alert-danger text-center">' . trim($error_msg) . '</div>');
+       		
+       	     	return;
+            }
+
+    		$f_aadhaar_img = $f_aadhaar['text'];
+    		$b_aadhaar_img = $b_aadhaar['text'];
+
+    		$value = array(
+    		    'aadhaar_nu'          => $post['aadhaar_no'],
+    		    'front_aadhaar_img'   => $f_aadhaar_img,
+    		    'back_aadhaar_img'    => $b_aadhaar_img,
+				'kyc_verification'  => '1',
+    		);
+
+			$f_img = $this->db->select('front_aadhaar_img')->from('msdr_member_basic')->where('mem_id', $id)->get()->row();
+			$b_img = $this->db->select('back_aadhaar_img')->from('msdr_member_basic')->where('mem_id', $id)->get()->row();
+			if ($f_img && $b_img){
+			    unlink($f_img->front_aadhaar_img);
+			    unlink($b_img->back_aadhaar_img);
+			}
+
+    		$update = $this->db->where('mem_id', $id)->update('msdr_member_basic', $value);
+
+    		if ($update) {
+    		    $this->session->set_flashdata('flash-success', '<div class="alert alert-success text-center">Successfully added.</div>');
+    		} else {
+    		    $this->session->set_flashdata('flash-error', '<div class="alert alert-danger text-center">Oops! It seems the server is taking more time. Please refresh.</div>');
+    		}
+
+            break;
+            case 'pan':
+
+		     $f_pan = $this->upload_image('member_document', 'front_pan');
+
+			if ($f_pan['icon'] !== 'success') {
+			$error_msg = '';
+			
+			if ($f_pan['icon'] !== 'success') {
+			$error_msg .= 'Front PAN image upload failed. ';
+			}
+
+           $this->session->set_flashdata('flash-error', '<div class="alert alert-danger text-center">' . trim($error_msg) . '</div>');return;}
+
+    	   $f_pan_img = $f_pan['text'];
+
+   		   $value = array(
+   		       'pan_nu'          => $post['pan_no'],
+   		       'front_pan_img'   => $f_pan_img,
+   		   );
+
+		   $existing = $this->db->select('front_pan_img')->from('msdr_member_basic')->where('mem_id', $id)->get()->row();
+			if ($existing){
+			    unlink($existing->front_pan_img);
+			}
+
+    	   $update = $this->db->where('mem_id', $id)->update('msdr_member_basic', $value);
+
+   		 if ($update) {
+   		     $this->session->set_flashdata('flash-success', '<div class="alert alert-success text-center">Successfully added.</div>');
+   		 } else {
+   		     $this->session->set_flashdata('flash-error', '<div class="alert alert-danger text-center">Oops! It seems the server is taking more time. Please refresh.</div>');
+   		 }
+
+            break;
+            case 'bank_information':
+				
+			$passbook_img = $this->upload_image('member_document', 'passbook');
+
+			if ($passbook_img['icon'] == 'success') {
+			$img_path = $passbook_img['text'];
+			}
+
+			$value = array(
+			'passbook_img'      => $img_path,
+			'bank_name'         => $post['bName'],
+			'bank_ac_no'        => $post['acNumber'],
+			'bankBrName'        => $post['branchName'],
+			'bank_Ifsc'         => $post['ifsc'],
+			'bank_info_status'  => '1',
+			'upi_details'       => $post['upiID'],
+			);
+			
+			$existing = $this->db->select('passbook_img')->from('msdr_member_basic')->where('mem_id', $id)->get()->row();
+			if ($existing){
+			    unlink($existing->passbook_img);
+			}
+
+			$update = $this->db->where('mem_id', $id)->update('msdr_member_basic', $value);
+
+			
+			if ($update) {
+			$this->session->set_flashdata('flash-success', '<div class="alert alert-success text-center">Successfully added.</div>');
+			} else {
+			$this->session->set_flashdata('flash-error', '<div class="alert text-center alert-danger">Oops it seems server taking more time please refresh.</div>');
+			}
+
+
+			
+            break;
+            case 'nominee':
+			$value = array(
+				'nominee_name'  => $post['nomineeName'],
+				'nominee_relationship'  => $post['nomineeRelation'],
+				'nominee_address'  => $post['nomineeAddr'],
+				'nomnee_info_status'  => '1',
+				'created_date'   => date('Y-m-d H:i:s')
+			);
+			if ($this->db->where('mem_id',$id)->update('msdr_member_basic',$value)) {
+			$this->session->set_flashdata('flash-success', '<div class="alert alert-success text-center">Successfully added.</div>');
+			} else {
+			$this->session->set_flashdata('flash-error', '<div class="alert text-center alert-danger">Oops it seems server taking more time please refresh.</div>');
+			}
+            break;
+    }
+    echo json_encode(['status' => 'success']);
+}

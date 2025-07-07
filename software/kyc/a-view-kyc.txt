@@ -7,17 +7,13 @@
 
 		<div class="col-md-4 py-4 px-5">
 		<div class="card shadow" id="perInfo_Sec">
-		<img src="<?php echo $getImg?$getImg:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s'; ?>"
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s"
 		class="card-img-top object-fit-contain p-3"
 		alt="User Icon"
 		style="height:10rem;width:100%;object-fit:contain;">
 		
-		<p class="card-title text-center pb-1"><small><span class="border border-success px-3 btn-outline-primary rounded"><?php echo $member->name ? $member->name : 'Welnex'; ?></span></small></p>
-		<p class="card-title text-center pb-1"><small><span class="border border-danger px-3 btn-outline-danger rounded-pill"><?php echo $member->username ? $member->username : 'Welnex'; ?></span></small></p>
-		<div class="text-center mb-1">
-		<a href="mailto:<?php echo $member->email; ?>" class="btn btn-success me-2 waves-effect waves-light btn-sm" target="_blank"><i class="mdi mdi-email-outline me-1"></i>Send Mail</a>
-		<a href="tel:<?php echo $member->mobile; ?>" class="btn btn-primary waves-effect waves-light btn-sm" target="_blank"><i class="mdi mdi-phone-outline me-1"></i>Phone Call</a>
-		</div>
+		<p class="card-title text-center pb-1"><small><span class="border border-success px-3 btn-outline-primary rounded"><?php echo $ver_member['name'] ? $ver_member['name'] : 'Welnex'; ?></span></small></p>
+		<p class="card-title text-center pb-1"><small><span class="border border-danger px-3 btn-outline-danger rounded-pill"><?php echo $ver_member['username'] ? $ver_member['username'] : 'Welnex'; ?></span></small></p>
 
 		<!-- Clickable Section Headers -->
 		<h6 class="bg-dark-n px-3 py-2 text-white m-0 pointer section-toggle" data-target="perInfo">
@@ -80,25 +76,29 @@
 		<!-- View part end -->
 
 
-		<div class="row m-0">
+		<div class="row">
 		<!-- Sections -->
 
 		
 
 
-		<div class="col-md-12" id="perInfo">
+		<div class="col-md-12 m-kyc-card" id="perInfo">
 		<div class="card rounded-top shadow">
 		<h6 class="bg-dark-g py-3 px-5 shadow-sm text-white rounded-top mb-0">
 		<i class="fas fa-id-card me-2 py-1"></i> Personal Information
+
 		<span class="float-end"> 
-		<?php if($kyc_details->per_remark != 'completed'  && $kyc_details->per_status != '1'):?>
-		<span class="bg-danger border border-danger border-2 px-4 py-1 rounded-pill text-white pointer" data-bs-toggle="modal" data-bs-target="#perInfoModel">Reject</span>
-		<span class="bg-success px-4 py-1 rounded-pill pointer" id="perInfo_Approved">Approved</span>
-		<?php else:?>
+		<?php if($kyc_details->per_status == '1'):?>
 		<span class="text-white"><i class="fa fa-check-circle"></i>&nbsp;Approved</span>
+		<?php elseif($kyc_details->per_status == '2'):?>
+		<span class="bg-success px-4 py-1 rounded-pill pointer perInfo_Approved">Approved</span>
+		<?php else:?>
+		<span class="bg-danger border border-danger border-2 px-4 py-1 rounded-pill text-white pointer" data-bs-toggle="modal" data-bs-target="#perInfoModel">Reject</span>
+		<span class="bg-success px-4 py-1 rounded-pill pointer perInfo_Approved">Approved</span>
 		<?php endif;?>
 		</form>
 		</span>
+
 		</h6>
 
 		
@@ -184,17 +184,18 @@
 
 
 		<div class="row mt-4">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
+		<div class="d-flex">
+		<div class="w-50">
 		<button type="submit" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Back </button>	
 		</div>
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
+		<div class="w-50 text-end">
 		<p class="btn btn-primary editBtn" data-section="per"><i class="fa fa-edit"></i> Edit</p>
 		<button type="submit" name="submit" class="btn btn-success updateBtn updateBtn_per" style="display:none;"><i class="fa fa-save"></i> Update</button>
 		</div>
-		<div class="col-md-1"></div>
 		</div>
+		</div>
+
+
 
 		</div>
 		</form>
@@ -204,13 +205,21 @@
 		</div>
 		</div>
 
-		<div class="col-md-12 d-none" id="aadhaarInfo">
+		<div class="col-md-12 d-none m-kyc-card" id="aadhaarInfo">
 		<div class="card rounded-top shadow">
 		<h6 class="bg-dark-g py-3 px-5 shadow-sm text-white rounded-top mb-0">
 		<i class="fas fa-address-card me-2 py-1"></i> Aadhar Information   
-		<span class="float-end">   
+
+
+		<span class="float-end">  
+		<?php if($kyc_details->aadhaar_status == '1'):?>
+		<span class="text-white"><i class="fa fa-check-circle"></i>&nbsp;Approved</span>
+		<?php elseif($kyc_details->aadhaar_status == '2'):?>
+		<span class="bg-success px-4 py-1 rounded-pill pointer aadhaarApprove">Approved</span>
+		<?php else:?>
 		<span class="bg-danger px-4 py-1 rounded-pill text-white pointer" data-bs-toggle="modal" data-bs-target="#aadhaarInfoModel"  id="aadhaarReject">Reject</span>
-		<span class="bg-success px-4 py-1 rounded-pill pointer" id="aadhaarApprove">Approved</span>
+		<span class="bg-success px-4 py-1 rounded-pill pointer aadhaarApprove">Approved</span>
+		<?php endif;?>
 		</span>
 		</h6>
 
@@ -243,17 +252,19 @@
 
 
 		<div class="row mt-4">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
+		<div class="d-flex">
+		<div class="w-50">
 		<button type="submit" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Back </button>	
 		</div>
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
+		<div class="w-50 text-end">
 		<p class="btn btn-primary editBtn" data-section="aadhaar"><i class="fa fa-edit"></i> Edit</p>
 		<button type="submit" name="submit" class="btn btn-success updateBtn updateBtn_aadhaar" style="display:none;"><i class="fa fa-save"></i> Update</button>
 		</div>
-		<div class="col-md-1"></div>
 		</div>
+		</div>
+
+
+
 
 		</div>
 		</form>
@@ -262,14 +273,24 @@
 		</div>
 		</div>
 
-		<div class="col-md-12 d-none" id="PanInfo">
+		
+
+		<div class="col-md-12 d-none m-kyc-card" id="PanInfo">
 		<div class="card rounded-top shadow">
 		<h6 class="bg-dark-g py-3 px-5 shadow-sm text-white rounded-top mb-0">
 		<i class="fas fa-address-card me-2 py-1"></i> Pan Information
+
 		<span class="float-end"> 
+		<?php if($kyc_details->pan_status == '1'):?>
+		<span class="text-white"><i class="fa fa-check-circle"></i>&nbsp;Approved</span>
+		<?php elseif($kyc_details->pan_status == '2'):?> 
+		<span class="bg-success px-4 py-1 rounded-pill pointer panInfoApproved">Approved</span>
+		<?php else:?>
 		<span class="bg-danger px-4 py-1 rounded-pill text-white pointer" data-bs-toggle="modal" data-bs-target="#panInfoModel">Reject</span>
-		<span class="bg-success px-4 py-1 rounded-pill pointer" id="panInfoApproved">Approved</span>
+		<span class="bg-success px-4 py-1 rounded-pill pointer panInfoApproved">Approved</span>
+		<?php endif;?>
 		</span>
+
 		</h6>
 
 
@@ -293,19 +314,19 @@
 		</div>
 
 
+
 		<div class="row mt-4">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
+		<div class="d-flex">
+		<div class="w-50">
 		<button type="submit" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Back </button>	
 		</div>
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
-
+		<div class="w-50 text-end">
 		<p class="btn btn-primary editBtn" data-section="pan"><i class="fa fa-edit"></i> Edit</p>
 		<button type="submit" name="submit" class="btn btn-success updateBtn updateBtn_pan" style="display:none;"><i class="fa fa-save"></i> Update</button>
 		</div>
-		<div class="col-md-1"></div>
 		</div>
+		</div>
+
 
 		</div>
 		</form>
@@ -314,14 +335,27 @@
 		</div>
 		</div>
 
-		<div class="col-md-12 d-none" id="bankInfoUpdate">
+		<div class="col-md-12 d-none m-kyc-card" id="bankInfoUpdate">
 		<div class="card rounded-top shadow">
 		<h6 class="bg-dark-g py-3 px-5 shadow-sm text-white rounded-top mb-0">
 		<i class="fas fa-university me-2 py-1"></i> Bank Information
+
+		
+
 		<span class="float-end"> 
+		
+		<?php if($kyc_details->bank_status == '1'):?>
+		<span class="text-white"><i class="fa fa-check-circle"></i>&nbsp;Approved</span>
+		<?php elseif($kyc_details->bank_status == '2'):?> 
+		<span class="bg-success px-4 py-1 rounded-pill pointer bankInfoApproved">Approved</span>
+		<?php else:?>
 		<span class="bg-danger px-4 py-1 rounded-pill text-white pointer" data-bs-toggle="modal" data-bs-target="#bankInfoModel">Reject</span>
-		<span class="bg-success px-4 py-1 rounded-pill pointer" id="bankInfoApproved">Approved</span>
+		<span class="bg-success px-4 py-1 rounded-pill pointer bankInfoApproved">Approved</span>
+		<?php endif;?> 
 		</span>
+
+
+
 		</h6>
 
 
@@ -368,36 +402,42 @@
 
 
 		<div class="row mt-4">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
+		<div class="d-flex">
+		<div class="w-50">
 		<button type="submit" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Back </button>	
 		</div>
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
-		<?php if($kyc_details->bank_remark != 'completed'  && $kyc_details->bank_status != '1'):?>
+		<div class="w-50 text-end">
 		<p class="btn btn-primary editBtn" data-section="bank"><i class="fa fa-edit"></i> Edit</p>
 		<button type="submit" name="submit" class="btn btn-success updateBtn updateBtn_bank" style="display:none;"><i class="fa fa-save"></i> Update</button>
-		<?php else:?>
-		<span class="text-white"><i class="fa fa-check-circle"></i>&nbsp;Approved</span>
-		<?php endif;?>
 		</div>
-		<div class="col-md-1"></div>
+		</div>
+		</div>
+
+
 		</div>
 
 		</div>
 		</form>
 
 		</div>
-		</div>
 
-		<div class="col-md-12 d-none" id="nommineeInfo">
+		<div class="col-md-12 d-none m-kyc-card" id="nommineeInfo">
 		<div class="card rounded-top shadow">
 		<h6 class="bg-dark-g py-3 px-5 shadow-sm text-white rounded-top mb-0">
 		<i class="fas fa-user-friends me-2 py-1"></i> Nominee Information
+
 		<span class="float-end"> 
+		<?php if($kyc_details->nomnee_status == '1'):?> 
+		<span class="text-white"><i class="fa fa-check-circle"></i>&nbsp;Approved</span>
+		<?php elseif($kyc_details->nomnee_status == '2'):?> 
+		<span class="bg-success px-4 py-1 rounded-pill pointer nomneeInfoApproved">Approved</span>
+		<?php else:?>
 		<span class="bg-danger px-4 py-1 rounded-pill text-white pointer" data-bs-toggle="modal" data-bs-target="#nomneeInfoModel">Reject</span>
-		<span class="bg-success px-4 py-1 rounded-pill pointer" id="nomneeInfoApproved">Approved</span>
+		<span class="bg-success px-4 py-1 rounded-pill pointer nomneeInfoApproved">Approved</span>
+		<?php endif;?> 
 		</span>
+
+
 		</h6>
 
 		<form action="javaScript:void(0);" id="nomneeInformation" method="post" enctype="multipart/form-data">
@@ -421,24 +461,39 @@
 		<textarea name="n_address" id="n_address" require class="w-100"><?php echo $ver_member['nominee_address']?$ver_member['nominee_address']:'';?></textarea>
 		</div>
 
+
 		<div class="row mt-4">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
+		<div class="d-flex">
+		<div class="w-50">
 		<button type="submit" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Back </button>	
 		</div>
-		<div class="col-md-6"></div>
-		<div class="col-md-2">
+		<div class="w-50 text-end">
 		<p class="btn btn-primary editBtn" data-section="nomnee"><i class="fa fa-edit"></i> Edit</p>
 		<button type="submit" name="submit" class="btn btn-success updateBtn updateBtn_nomnee" style="display:none;"><i class="fa fa-save"></i> Update</button>
 		</div>
-		<div class="col-md-1"></div>
 		</div>
+		</div>
+
+	
 
 		</div>
 		</form>
 
 
 		</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
 		</div>
 		</div>
 		</div>
@@ -610,6 +665,12 @@
 		.m-t-2{margin-top:-1.8rem;}
 		.lable-m{font-size:12px;}
 		</style>
+		<style>
+			@media(max-width:600px)
+			{
+				.m-kyc-card{margin-left:0.8rem;}
+			}
+		</style>
 
 
 		<script>
@@ -725,7 +786,7 @@
 	$('#bankInformation').submit(function(e) {
     e.preventDefault();
     $.ajax({
-        url: '<?php echo base_url(); ?>mlm_software/admin/member/bank_update',
+		 url: '<?php echo base_url(); ?>mlm_software/admin/member/bank_update',
         type: "POST",
        data: new FormData(this),
 		processData: false,
@@ -777,7 +838,7 @@
 
 		
 $(document).ready(function() {
-    $("#perInfo_Approved").click(function(e) {
+    $(".perInfo_Approved").click(function(e) {
         e.preventDefault(); 
         const formData = new FormData();
         formData.append('uId', $('#uId').val());
@@ -788,7 +849,7 @@ $(document).ready(function() {
             contentType: false,
             processData: false,
             success: function(data) {
-                // window.location.reload();
+                window.location.reload();
             },
         });
     });
@@ -797,7 +858,7 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $("#aadhaarApprove").click(function(e) {
+    $(".aadhaarApprove").click(function(e) {
         e.preventDefault(); 
         const formData = new FormData();
         formData.append('uId', $('#uId').val());
@@ -836,8 +897,8 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $("#panInfoApproved").click(function(e) {  
-		alert("Pan info");
+    $(".panInfoApproved").click(function(e) {  
+		// alert("Pan info");
         e.preventDefault(); 
         const formData = new FormData();
         formData.append('uId', $('#uId').val());
@@ -877,7 +938,7 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $("#bankInfoApproved").click(function(e) {
+    $(".bankInfoApproved").click(function(e) {
         e.preventDefault(); 
         const formData = new FormData();
         formData.append('uId', $('#uId').val()); 
@@ -917,7 +978,7 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $("#nomneeInfoApproved").click(function(e) {
+    $(".nomneeInfoApproved").click(function(e) {
         e.preventDefault(); 
         const formData = new FormData();
         formData.append('uId', $('#uId').val()); 
