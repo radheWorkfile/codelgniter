@@ -1,8 +1,9 @@
     <!-- 1 => call base file  -->
     <!-- 2 => on hover image view  -->
     <!-- 3 => password increase one by one  -->
+    <!-- 4 => line change with fix length 'wordwrap'  -->
 
-
+  <div class="col-8 col-md-8"><?php echo wordwrap($property->rmMess, 38, '<br>', true); ?></div>
     <!-- full screen image on click by this class="actPrk" -->
     <style>
     .actPbrk { position: relative; display: inline-block; overflow: hidden; cursor: zoom-in; }

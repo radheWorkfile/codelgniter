@@ -1,0 +1,35 @@
+Admin Panel Dashboard
+
+1 => T.Security Amount
+SELECT SUM(`credit_amt`) AS `credit_amt` FROM `company_income` WHERE `tnx_type` = '5'
+$data['toatal_security_amount']=$this->common->sum_all('credit_amt','company_income',array('tnx_type'=>'5'));
+
+2=> LeftBanance 
+    SELECT sum(credit_amt) as credit, sum(debit_amt) as debit FROM `company_income` WHERE `tnx_type` != '5'
+    $availableB = $lBalnce->credit - $lBalnce->debit; ( Balance Amount )
+	$avDebit = $lBalnce->debit;  ( All Debit )
+	$avCredit = $lBalnce->credit; ( T.Business Amount )
+
+Member Panel Dashboard
+
+1 => Comission % + Direct Comission  +  
+SELECT `rank_id`, `actual_rank_id`, `existing_per`, `direct_commission` FROM `msdr_members` WHERE `username` = 'WLC76447'
+
+2 => E-Wallet
+SELECT `balance` FROM `wallet` WHERE `userid` = 'WLC76447'
+
+3 => Highest Rank
+SELECT `rank_name` FROM `rank_system` WHERE `id` IS NULL
+
+4 => Total Left Purchase (ltRepurchase) + Total Left (total_left_downline)
+SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_userid` = 'WLC25714' OR `customer_userid` = 'WLC63394' OR `customer_userid` = 'WLC71265'
+$left_det = $this->Plan_model->downlineBV_downLine_count($my_details['A']);
+$data['ltRepurchase'] = $left_det['purchase'];
+$data['total_left_downline'] = $left_det['total_downline'];
+
+5 => Total Right Purchase (RtRepurchase) + Total Right (total_right_downline)
+SELECT sum(earnedBv) as earnedBv FROM `sale_history` WHERE `customer_userid` = '0' OR `customer_userid` = ''
+$right_det = $this->Plan_model->downlineBV_downLine_count($my_details['B']);
+$data['RtRepurchase'] = $right_det['purchase'];
+$data['total_right_downline'] = $right_det['total_downline'];
+
