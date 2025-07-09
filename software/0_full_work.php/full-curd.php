@@ -29,12 +29,15 @@
             <td><?php echo $inf['br_name'];?></td>
             <td><?php echo $inf['br_father'];?></td>
             <td><?php echo $inf['br_aadhaar_no'];?></td>
-            <td>Status</td>
+            <td>
+            <?php if($e['status'] == '0'){echo "<span class='bg-danger text-shadow'style='padding:2px 14px;border-radius:1rem;'>Pending</span>";}else{echo "<span class='bg-success text-shadow'style='padding:2px 10px;border-radius:1rem;'>Approved</span>";}?>
+            </td>
             <td>
             <a href="javascript:void(0)" data-id="<?php echo $inf->id;?>" class="viewa_section"  data-toggle="modal"  data-target="#view_model" ><i class="fa fa-eye"style="color:#0b8bf9;"></i></a>&emsp;
             <a href="javascript:void(0)" data-id="<?php echo $inf->id;?>" class="viewa_section"  data-toggle="modal"  data-target="#view_model" ><i class="fa fa-edit"style="color:#620baa;"></i></a>&emsp;
             <a href="javascript:void(0)" data-id="<?php echo $inf->id;?>" class="viewa_section"  data-toggle="modal"  data-target="#view_model" ><i class="fa fa-print text-danger"></i></a>&emsp;
             </td>
+            </tr>
           </tr>
            <?php endforeach;?>
         </tbody>
