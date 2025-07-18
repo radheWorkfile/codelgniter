@@ -339,6 +339,38 @@ $(document).ready(function () {
 });
 </script>
 
+
+<script>
+
+$(document).ready(function () {
+    $('#updateItem').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: '<?php echo base_url(); ?>admin/update_kanyadan_ben',
+            type: 'POST',
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (response) {
+                const res = JSON.parse(response);
+                const alertBox = $('#form-alert');
+                alertBox.html('').removeClass('alert-success alert-danger');
+                if (res.status === 'error') {
+                    for (let key in res.message) {
+                        alertBox.append(`<div class="alert-danger single-error"><i class="fa fa-exclamation-circle"></i> ${res.message[key]}</div>`);
+                    } alertBox.fadeIn(300, function () {setTimeout(() => {alertBox.fadeOut(500);}, 1000);
+                    });}if (res.status === 'success') {alertBox
+                    .addClass('alert-success').html('<i class="fa fa-check-circle"></i> ' + res.message).fadeIn();
+                    setTimeout(() => {window.location.href = res.actReload;}, 1000); 
+                }
+            }
+        });
+    });
+});
+
+</script>
+
 <style>
 #form-alert {position: fixed;top: 20px;right: 20px;width: 310px;display: none;z-index: 9999;animation: slideInLeft 0.3s ease-out;}
 .alert-danger.single-error {background-color: #f8d7da;color: #721c24;padding: 6px;margin-bottom: 8px;border-radius: 5px;
@@ -477,6 +509,132 @@ border: 1px solid #f5c6cb;font-size: 14px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0
     }
     echo json_encode($data);
 }
+
+
+
+
+    public function update_kanyadan_ben(){
+
+    $this->form_validation->set_rules('br_name', 'Bride Name', 'trim|required');
+    $this->form_validation->set_rules('br_fname', 'Bride Father Name', 'trim|required');
+    $this->form_validation->set_rules('br_mname', 'Bride Mother Name', 'trim|required');
+    $this->form_validation->set_rules('br_dob', 'DOB', 'trim|required');
+    $this->form_validation->set_rules('br_aadhaar_no', 'Aadhaar No', 'trim|required');
+    $this->form_validation->set_rules('br_address', 'Bride Address', 'trim|required');
+    $this->form_validation->set_rules('gr_name', 'Groom Name', 'trim|required');
+    $this->form_validation->set_rules('gr_fname', 'Groom Father Name', 'trim|required');
+    $this->form_validation->set_rules('gr_mname', 'Groom Mother Name', 'trim|required');
+    $this->form_validation->set_rules('gr_aadhaar_no', 'Groom Aadhaar No', 'trim|required');
+    $this->form_validation->set_rules('gr_address', 'Groom Address', 'trim|required');
+
+    $id = $this->input->post('id');
+
+    if ($this->form_validation->run() === false) {
+        echo json_encode(array('status' => 'error','message' => $this->form_validation->error_array(),'actReload_1' => base_url('admin/editKanYojana/' . $id)));
+        return;
+    }
+
+    $post = $this->input->post();
+    $doc = $this->db->select('*')->from('kanyadan_youjna_support')->where('id', $id)->get()->row();
+
+    $all_images = array(
+        'br_image' => 'Bride Image',
+        'br_aadhaar_img' => 'Bride Aadhaar Image',
+        'br_pan_img' => 'Bride PAN Image',
+        'br_residence_proof' => 'Bride Residence Proof',
+        'gr_image' => 'Groom Image',
+        'gr_aadhaar_img' => 'Groom Aadhaar Image',
+        'gr_residence_proof' => 'Groom Residence Proof',
+        'gr_pan_img' => 'Groom PAN Image',
+        'br_birth_certificate' => 'Bride Birth Certificate',
+        'gr_birth_certificate' => 'Groom Birth Certificate',
+        'invitation_card_img' => 'Invitation Card',
+        'marriage_photo' => 'Marriage Image'
+    );
+
+    
+    $image_data = array();
+    $errors = array();
+
+  foreach ($all_images as $field => $field_name) {
+    if (!empty($_FILES[$field]['name'])) {
+        $upload = $this->upload_image('youjna_doc', $field); 
+
+        if ($upload['icon'] === 'success') {
+            if (!empty($doc->$field) && file_exists(FCPATH . str_replace(base_url(), '', $doc->$field))) {
+                @unlink(FCPATH . str_replace(base_url(), '', $doc->$field));
+            }
+            $image_data[$field] = $upload['text'];
+        } else {
+            $image_data[$field] = !empty($doc->$field) ? $doc->$field : '';
+        }
+    } else {
+        if (!empty($doc->$field)) {
+            $image_data[$field] = $doc->$field;
+        } else {
+            $errors[] = $field_name . ' is required.';
+        }
+    }
+}
+
+    if (!empty($errors)) {
+        echo json_encode(array(
+            'status' => 'error',
+            'message' => $errors,
+            'actReload_1' => base_url('admin/editKanYojana/' . $id)
+        ));
+        return;
+    }
+
+
+    $value = array(
+        'br_image'               => $image_data['br_image'],
+        'br_birth_certificate'   => $image_data['br_birth_certificate'],
+        'br_aadhaar_img'         => $image_data['br_aadhaar_img'],
+        'br_pan_img'             => $image_data['br_pan_img'],
+        'br_residence_proof'     => $image_data['br_residence_proof'],
+        'gr_image'               => $image_data['gr_image'],
+        'gr_birth_certificate'   => $image_data['gr_birth_certificate'],
+        'gr_aadhaar_img'         => $image_data['gr_aadhaar_img'],
+        'gr_pan_img'             => $image_data['gr_pan_img'],
+        'gr_residence_proof'     => $image_data['gr_residence_proof'],
+        'invitation_card_img'    => $image_data['invitation_card_img'],
+        'marriage_photo'         => $image_data['marriage_photo'],
+        'br_name'                => $post['br_name'],
+        'br_father'              => $post['br_fname'],
+        'br_mother'              => $post['br_mname'],
+        'br_mobile'              => $post['br_mobile'],
+        'br_email'               => $post['br_email'],
+        'br_dob'                 => $post['br_dob'],
+        'br_state'               => $post['br_state'],
+        'br_district'            => $post['br_district'],
+        'br_aadhaar_no'          => $post['br_aadhaar_no'],
+        'br_address'             => $post['br_address'],
+        'gr_name'                => $post['gr_name'],
+        'gr_father'              => $post['gr_fname'],
+        'gr_mother'              => $post['gr_mname'],
+        'gr_mobile'              => $post['gr_mobile'],
+        'gr_email'               => $post['gr_email'],
+        'gr_dob'                 => $post['gr_dob'],
+        'gr_state'               => $post['gr_state'],
+        'gr_district'            => $post['gr_district'],
+        'gr_aadhaar_no'          => $post['gr_aadhaar_no'],
+        'gr_pan_no'              => $post['gr_pan_no'],
+        'gr_address'             => $post['gr_address'],
+        'remark'                 => $post['remark'],
+    );
+
+    $save = $this->db->where('id', $id)->update('kanyadan_youjna_support', $value);
+
+    if ($save) {
+        $data = array('status' => 'success','message' => 'Data saved successfully.','actReload' => base_url('admin/kanyadan_yojana'));
+    } else {
+        $data = array( 'status' => 'error','message' => 'Something went wrong. Please try again later.','actReload' => base_url('admin/editKanYojana/' . $id));
+    }
+    echo json_encode($data);
+}
+
+
 
 ?>
 
