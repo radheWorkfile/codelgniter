@@ -1,3 +1,13 @@
+    
+
+
+<!-- => JS-CSS-HTML Formatter +++ PHP Formatter  +++  Auto Rename Tag  +++  Bracket Pair Colorization Toggler
+=> CSS Formatter  +++   Format HTML in PHP   +++   Git Graph   +++   HTML CSS Support
+=> HTML to CSS autocompletion  +++  IntelliSense for CSS class names in HTML   +++   PHP Intelephense
+=> PHP IntelliSense   +++   Prettier - Code formatter   +++   Prettier - Code formatter (Rust) -->
+
+    
+    
     <!-- 1 => call base file  -->
     <!-- 2 => on hover image view  -->
     <!-- 3 => password increase one by one  -->
