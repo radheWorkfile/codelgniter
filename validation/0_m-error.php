@@ -62,22 +62,20 @@ public function update_emergency_yojana()
     $this->form_validation->set_rules('name', 'Name', 'trim|required');
     $this->form_validation->set_rules('fname', 'Father Name', 'trim|required');
 
-    if ($this->form_validation->run() === false) {
-        echo json_encode(['status' => 'error','message' => $this->form_validation->error_array()]);return;
+     if ($this->form_validation->run() === false) {
+        echo json_encode(array('status' => 'error','message' => $this->form_validation->error_array()));return; 
     }
-  
-    $value = [
+    $value = array(
         'message'                => $post['message'],
-    ];
+    );
 
     $save = $this->db->where('id', $id)->update('emergency_yojana', $value);
 
     if ($save) {
-        $data = ['status' => 'success', 'message' => 'Data saved successfully.', 'actReload' => base_url('admin/emergency_yojana')];
+        $data = array('status' => 'success', 'message' => 'Data saved successfully.', 'actReload' => base_url('admin/emergency_yojana'));
     } else {
-        $data = ['status' => 'error', 'message' => 'Something went wrong. Please try again later.', 'actReload' => base_url('admin/emergency_yojana')];
+        $data = array('status' => 'error', 'message' => 'Something went wrong. Please try again later.', 'actReload' => base_url('admin/emergency_yojana'));
     }
-
     echo json_encode($data);
 }
 
