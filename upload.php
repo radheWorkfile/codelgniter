@@ -32,6 +32,26 @@
         }
 
 
+         function update_image()
+    {
+        $mem_id = $this->input->post('mem_id');
+        $da = $this->upload_image('member', 'image');
+        if ($da['icon'] == 'success') {
+            $img = $da['text'];
+            $data = array(
+                'my_img' => $img,
+            );
+            $memb = $this->db->select('my_img')->where('id', $mem_id)->get('member')->row();
+            unlink($memb->my_img);
+            $this->db->where('id', $mem_id)->update('member', $data);
+            $data = array('text' => "<p style='padding:10px;background:green;color:white'>Successfully Updated Image!<p>", "icon" => "success");
+        } else {
+            $data = array('text' => "<p style='padding:10px;border:1px solid red;color:white'>" . $da['text'] . "</p>", "icon" => "error");
+        }
+        echo json_encode($data);
+    }
+
+
  	function upload_image($path, $name){
 		$config = array('upload_path' => 'uploads/' . $path.'/','allowed_types' => "jpg|png|jpeg|JPEG|JPG",'overwrite' => FALSE,'encrypt_name' => TRUE,'max_size' =>"10120000");
         $this->load->library('upload', $config);
