@@ -24,6 +24,7 @@
 <!-- **********************************************  -->
 
  <a href="javascript:void(0)" data-id="<?php echo $e->project_block_id;?>" class="viewa_section"  data-toggle="modal"  data-target="#view_model" ><i class="fa fa-eye text-danger"></i></a>&emsp;
+  $payment_satus = '<span class="btn bg-danger rounded-pill text-white"style="padding:0px 12px;font-size:12px;"> Un-paid </span>';
 
 
      <!-- Model section start from here by r@rk -->
